@@ -473,3 +473,847 @@ Exception rethrown at [0]:
 [2017.03.22-07.07.00:192][849]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer M_DemoWall_Inst, compiling. 
 [2017.03.22-07.07.00:259][851]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer MaterialInstanceDynamic_32, compiling. 
 [2017.03.22-07.07.00:294][851]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer MaterialInstanceDynamic_32, compiling. 
+[2017.03.22-07.07.20:830][919]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Maps/CollectionLevel" FILE="../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Maps/CollectionLevel.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2017.03.22-07.07.20:938][919]LogSavePackage: Save=55.38ms
+[2017.03.22-07.07.20:938][919]LogSavePackage: Moving '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Saved/CollectionLevelF3C2D6EF410D40B199E6E597E2CD5522.tmp' to '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Maps/CollectionLevel.umap'
+[2017.03.22-07.07.20:940][919]LogSavePackage:Display: Finished SavePackage ../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Maps/CollectionLevel.umap
+[2017.03.22-07.07.20:954][919]LogFileHelpers: Saving map 'CollectionLevel' took 2.628
+[2017.03.22-07.07.25:646][934]Job is a success!
+[2017.03.22-07.07.28:635][935]LogTexture:Display: Building textures: HQ_Lightmap0_1 (AutoDXT)
+[2017.03.22-07.07.28:635][935]LogTexture:Display: Building textures: LQ_Lightmap_0_1 (DXT1)
+[2017.03.22-07.07.28:635][935]LogTexture:Display: Building textures: HQ_Lightmap0_2 (AutoDXT)
+[2017.03.22-07.07.28:635][935]LogTexture:Display: Building textures: LQ_Lightmap_0_2 (DXT1)
+[2017.03.22-07.07.28:636][935]LogTexture:Display: Building textures: HQ_Lightmap0_3 (AutoDXT)
+[2017.03.22-07.07.28:636][935]LogTexture:Display: Building textures: LQ_Lightmap_0_3 (DXT1)
+[2017.03.22-07.07.28:636][935]LogTexture:Display: Building textures: HQ_Lightmap0_4 (AutoDXT)
+[2017.03.22-07.07.28:636][935]LogTexture:Display: Building textures: LQ_Lightmap_0_4 (DXT1)
+[2017.03.22-07.07.29:219][935]LogTexture:Display: Building textures: ShadowMapTexture2D_1 (G8)
+[2017.03.22-07.07.29:219][935]LogTexture:Display: Building textures: ShadowMapTexture2D_2 (G8)
+[2017.03.22-07.07.29:219][935]LogTexture:Display: Building textures: ShadowMapTexture2D_0 (G8)
+[2017.03.22-07.07.29:500][935]Lightmass on LOKESHPC: 24.5 sec total, 307 ms importing, 142 ms setup, 2.68 sec photons, 21.1 sec processing, 0 ms extra exporting [21/21 mappings]. Threads: 1:24 min total, 50.8 sec processing.
+[2017.03.22-07.07.29:538][935]LogStaticLightingSystem: Illumination: 39.6 sec (2.40 sec encoding lightmaps, 582 ms encoding shadowmaps)
+[2017.03.22-07.07.29:538][935]LogStaticLightingSystem: Lightmap texture memory:  4.0 MB (4.0 MB streaming, 0.0 MB non-streaming), 8 textures
+[2017.03.22-07.07.29:538][935]LogStaticLightingSystem: Shadowmap texture memory: 2.7 MB (2.7 MB streaming, 0.0 MB non-streaming), 3 textures
+[2017.03.22-07.07.29:962][935]DumpUnbuiltLightIteractions
+[2017.03.22-07.07.29:962][935]Lights with unbuilt interactions: 0
+[2017.03.22-07.07.29:962][935]
+[2017.03.22-07.07.29:962][935]Primitives with unbuilt interactions: 0
+[2017.03.22-07.07.29:991][936]Cmd: MAP CHECK NOTIFYRESULTS
+[2017.03.22-07.07.29:992][936]MapCheck: New page: CollectionLevel - Mar 22, 2017, 6:07:29 PM
+[2017.03.22-07.07.34:040][936]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 4,048.067ms to complete.
+[2017.03.22-07.08.23:363][110]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2017.03.22-07.08.34:546][221]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Maps/CollectionLevel" FILE="../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Maps/CollectionLevel.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2017.03.22-07.08.34:589][221]LogSavePackage: Save=29.12ms
+[2017.03.22-07.08.34:589][221]LogSavePackage: Moving '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Saved/CollectionLevelAD7CDF6440A2FE60593403B3E22D32C6.tmp' to '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Maps/CollectionLevel.umap'
+[2017.03.22-07.08.34:591][221]LogSavePackage:Display: Finished SavePackage ../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Maps/CollectionLevel.umap
+[2017.03.22-07.08.34:610][221]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Maps/CollectionLevel_BuiltData" FILE="../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Maps/CollectionLevel_BuiltData.uasset" SILENT=true
+[2017.03.22-07.08.35:027][221]LogSavePackage: Save=415.75ms
+[2017.03.22-07.08.35:027][221]LogSavePackage: Moving '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Saved/CollectionLevel_BuiltData2EA4DDE54ACBA2C68C1284AB39BAE552.tmp' to '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Maps/CollectionLevel_BuiltData.uasset'
+[2017.03.22-07.08.35:028][221]LogSavePackage:Display: Finished SavePackage ../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Maps/CollectionLevel_BuiltData.uasset
+[2017.03.22-07.10.59:009][120]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.10.59:026][120]Running E:/Epic Games/4.14/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/BatteryCollector.uproject" -game -rocket -progress
+[2017.03.22-07.10.59:829][120]Discovering modules, targets and source code for project...
+[2017.03.22-07.11.05:799][120]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.11.05:799][120]LogVSAccessor:Warning: Couldn't access Visual Studio
+[2017.03.22-07.11.05:809][120]Recompiling BatteryCollector...
+[2017.03.22-07.11.05:809][120]Launching UnrealBuildTool... [E:/Epic Games/4.14/Engine/Binaries/DotNET/UnrealBuildTool.exe BatteryCollector -ModuleWithSuffix BatteryCollector 9987 Win64 Development -editorrecompile -canskiplink "E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/BatteryCollector.uproject" ]
+[2017.03.22-07.12.13:367][120]CompilerResultsLog: New page: Compilation - Mar 22, 2017, 6:12:13 PM
+[2017.03.22-07.12.13:395][120]CompilerResultsLog: Info Performing full C++ include scan (hot reloading a new target)
+[2017.03.22-07.12.13:395][120]CompilerResultsLog: Info Creating makefile for hot reloading BatteryCollector (no existing makefile)
+[2017.03.22-07.12.13:395][120]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.03.22-07.12.13:395][120]CompilerResultsLog: Info Parsing headers for BatteryCollectorEditor
+[2017.03.22-07.12.13:395][120]CompilerResultsLog: Info   Running UnrealHeaderTool "E:\Lokesh Basu\GitHub\Unreal\BatteryCollector\BatteryCollector.uproject" "E:\Lokesh Basu\GitHub\Unreal\BatteryCollector\Intermediate\Build\Win64\BatteryCollectorEditor\Development\BatteryCollectorEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2017.03.22-07.12.13:395][120]CompilerResultsLog: Info Reflection code generated for BatteryCollectorEditor in 4.098593 seconds
+[2017.03.22-07.12.13:395][120]CompilerResultsLog: Info Performing 3 actions (4 in parallel)
+[2017.03.22-07.12.13:395][120]CompilerResultsLog: Info Pickup.cpp
+[2017.03.22-07.12.13:395][120]CompilerResultsLog: Info BatteryCollector.generated.cpp
+[2017.03.22-07.12.13:395][120]CompilerResultsLog: Info [3/3] Link UE4Editor-BatteryCollector-9987.dll
+[2017.03.22-07.12.13:395][120]CompilerResultsLog: Info    Creating library E:\Lokesh Basu\GitHub\Unreal\BatteryCollector\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BatteryCollector-9987.lib and object E:\Lokesh Basu\GitHub\Unreal\BatteryCollector\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BatteryCollector-9987.exp
+[2017.03.22-07.12.13:395][120]CompilerResultsLog: Info Total build time: 67.41 seconds
+[2017.03.22-07.12.13:395][120]LogMainFrame: MainFrame: Module compiling took 67.593 seconds
+[2017.03.22-07.12.13:569][120]LogClass: Could not find existing class Pickup in package /Script/BatteryCollector for HotReload, assuming new class
+[2017.03.22-07.12.13:580][120]LogContentBrowser: Native class hierarchy updated for 'BatteryCollector' in 0.0016 seconds. Added 3 classes and 2 folders.
+[2017.03.22-07.12.13:584][120]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2017.03.22-07.12.13:704][120]LogContentBrowser: Native class hierarchy populated in 0.0152 seconds. Added 2210 classes and 440 folders.
+[2017.03.22-07.12.13:730][120]Display: HotReload took 67.9s.
+[2017.03.22-07.12.13:732][120]Warning: HotReload operation took 67.9s.
+[2017.03.22-07.12.13:783][120]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.13:826][120]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.13:827][120]LogHotReload: New module detected: UE4Editor-BatteryCollector-9987.dll
+[2017.03.22-07.12.13:861][121]LogHotReload: Starting Hot-Reload from IDE
+[2017.03.22-07.12.13:936][121]LogContentBrowser: Native class hierarchy updated for 'BatteryCollector' in 0.0011 seconds. Added 3 classes and 2 folders.
+[2017.03.22-07.12.13:938][121]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2017.03.22-07.12.13:950][121]LogContentBrowser: Native class hierarchy populated in 0.0116 seconds. Added 2210 classes and 440 folders.
+[2017.03.22-07.12.13:958][121]Display: HotReload took  0.1s.
+[2017.03.22-07.12.13:963][121]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.13:990][122]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:012][123]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:029][124]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:051][125]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:069][126]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:087][127]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:104][128]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:121][129]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:140][130]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:156][131]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:173][132]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:190][133]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:208][134]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:226][135]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:245][136]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:259][137]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:272][138]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:287][139]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:302][140]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:329][141]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:342][142]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:355][143]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:370][144]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:404][145]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:413][146]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:424][147]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:435][148]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:452][149]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:469][150]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:482][151]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:498][152]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:520][153]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:531][154]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:542][155]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:556][156]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:569][157]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:586][158]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:596][159]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:606][160]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:619][161]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:633][162]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:652][163]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:662][164]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:672][165]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:689][166]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:705][167]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:720][168]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:740][169]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:756][170]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:768][171]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:784][172]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:800][173]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:820][174]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:834][175]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:846][176]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:858][177]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:869][178]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:884][179]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:897][180]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:911][181]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:923][182]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:935][183]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:950][184]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:963][185]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:976][186]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.14:990][187]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:003][188]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:019][189]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:030][190]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:044][191]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:055][192]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:069][193]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:086][194]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:100][195]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:113][196]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:124][197]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:136][198]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:149][199]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:167][200]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:182][201]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:196][202]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:207][203]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:222][204]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:233][205]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:243][206]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:254][207]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:269][208]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:286][209]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:300][210]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:311][211]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:322][212]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:336][213]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:352][214]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:367][215]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:382][216]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:402][217]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:417][218]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:430][219]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:447][220]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:463][221]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:478][222]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:490][223]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:503][224]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:518][225]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:531][226]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:545][227]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:556][228]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:569][229]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:582][230]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:598][231]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:615][232]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:629][233]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:645][234]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:656][235]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:670][236]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:682][237]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:702][238]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:711][239]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:723][240]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:735][241]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:748][242]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:763][243]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:780][244]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:791][245]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:804][246]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:818][247]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:831][248]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:849][249]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:867][250]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:879][251]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:891][252]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:902][253]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:924][254]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:936][255]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:946][256]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:959][257]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:969][258]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:978][259]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.15:989][260]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:000][261]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:010][262]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:020][263]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:029][264]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:039][265]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:048][266]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:058][267]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:069][268]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:077][269]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:088][270]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:096][271]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:108][272]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:119][273]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:128][274]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:140][275]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:150][276]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:160][277]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:171][278]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:180][279]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:192][280]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:202][281]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:211][282]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:221][283]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:230][284]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:240][285]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:250][286]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:259][287]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:269][288]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:278][289]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:288][290]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:297][291]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:309][292]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:320][293]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:328][294]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:338][295]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:347][296]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:359][297]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:369][298]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:378][299]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:389][300]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:398][301]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:408][302]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:419][303]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:428][304]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:438][305]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:446][306]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:457][307]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:468][308]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:477][309]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:488][310]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:498][311]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:508][312]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:519][313]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:528][314]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:539][315]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:548][316]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:559][317]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:570][318]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:579][319]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:590][320]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:602][321]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:611][322]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:622][323]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:633][324]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:643][325]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:653][326]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:662][327]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:673][328]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:684][329]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:693][330]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:703][331]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:713][332]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:724][333]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:734][334]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:743][335]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:756][336]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:765][337]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:775][338]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:785][339]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:794][340]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:805][341]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:813][342]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:827][343]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:837][344]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:847][345]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:857][346]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:868][347]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:877][348]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:888][349]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:898][350]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:908][351]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:920][352]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:929][353]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:940][354]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:952][355]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:961][356]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:971][357]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:980][358]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.16:991][359]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:002][360]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:010][361]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:021][362]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:030][363]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:041][364]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:052][365]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:061][366]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:090][367]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:099][368]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:108][369]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:118][370]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:127][371]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:137][372]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:146][373]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:158][374]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:168][375]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:176][376]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:189][377]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:200][378]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:208][379]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:219][380]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:228][381]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:239][382]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:251][383]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:260][384]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:271][385]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:279][386]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:291][387]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:305][388]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:318][389]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:328][390]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:339][391]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:353][392]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:363][393]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:373][394]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:385][395]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:396][396]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:408][397]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:420][398]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:430][399]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:441][400]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:454][401]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:465][402]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:476][403]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:486][404]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:496][405]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:507][406]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:519][407]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:529][408]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:540][409]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:552][410]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:564][411]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:575][412]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:586][413]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:598][414]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:609][415]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:620][416]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:629][417]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:641][418]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:653][419]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:662][420]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:674][421]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:689][422]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:701][423]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:712][424]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:725][425]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:736][426]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:745][427]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:758][428]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:770][429]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:780][430]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:792][431]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:804][432]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:814][433]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:826][434]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:837][435]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:847][436]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:858][437]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:869][438]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:878][439]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:889][440]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:898][441]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:909][442]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:923][443]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:934][444]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:945][445]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:958][446]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:970][447]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:980][448]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.17:992][449]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:004][450]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:015][451]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:026][452]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:037][453]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:048][454]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:098][455]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:109][456]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:120][457]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:134][458]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:145][459]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:156][460]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:168][461]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:181][462]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:193][463]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:208][464]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:221][465]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:232][466]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:243][467]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:257][468]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:270][469]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:289][470]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:300][471]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:310][472]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:321][473]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:330][474]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:340][475]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:353][476]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:362][477]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:373][478]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:385][479]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:394][480]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:405][481]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:415][482]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.18:754][483]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.19:092][484]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.19:419][485]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.19:754][486]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.20:086][487]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.20:419][488]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.20:752][489]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.21:086][490]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.21:419][491]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.21:753][492]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.22:086][493]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.22:419][494]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.22:752][495]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.23:086][496]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.23:419][497]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.23:752][498]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.24:085][499]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.24:419][500]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.24:752][501]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.25:085][502]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.25:419][503]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.25:752][504]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.26:086][505]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.26:419][506]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.26:752][507]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.27:085][508]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.27:419][509]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.30:863][510]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.31:207][511]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.31:530][512]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.31:924][513]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.32:196][514]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.32:529][515]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.32:862][516]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.33:196][517]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.33:529][518]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.33:863][519]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.34:196][520]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.39:862][537]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.40:196][538]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.40:529][539]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.40:862][540]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.46:792][541]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.46:869][542]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.46:903][543]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.46:913][544]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.46:924][545]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.46:935][546]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.46:945][547]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.46:955][548]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.46:965][549]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.46:975][550]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.46:985][551]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.46:995][552]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.12.47:006][553]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.13.01:386][554]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.13.01:417][555]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.13.01:427][556]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.13.01:436][557]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.13.01:445][558]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.13.01:455][559]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.13.01:465][560]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.03.22-07.13.03:138][561]LogVSAccessor:Warning: Couldn't get Visual Studio COM object
+[2017.03.22-07.13.03:138][561]LogVSAccessor:Warning: Couldn't access Visual Studio
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:142][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:143][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:144][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:144][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:144][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:144][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:144][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:144][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:144][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:144][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:144][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:283][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:384][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:384][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.03:384][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.04:151][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.06:030][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.07:312][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-07.13.08:271][561]LogVSAccessor:Warning: Couldn't access module table
+[2017.03.22-08.19.09:562][438]Recompiling BatteryCollector...
+[2017.03.22-08.19.09:563][438]Launching UnrealBuildTool... [E:/Epic Games/4.14/Engine/Binaries/DotNET/UnrealBuildTool.exe BatteryCollector -ModuleWithSuffix BatteryCollector 4332 Win64 Development -editorrecompile -canskiplink "E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/BatteryCollector.uproject" ]
+[2017.03.22-08.19.09:755][438]Warning: Starting HotReload took  0.3s.
+[2017.03.22-08.20.03:483][566]CompilerResultsLog: New page: Compilation - Mar 22, 2017, 7:20:03 PM
+[2017.03.22-08.20.03:508][566]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.03.22-08.20.03:508][566]CompilerResultsLog: Info Parsing headers for BatteryCollectorEditor
+[2017.03.22-08.20.03:508][566]CompilerResultsLog: Info   Running UnrealHeaderTool "E:\Lokesh Basu\GitHub\Unreal\BatteryCollector\BatteryCollector.uproject" "E:\Lokesh Basu\GitHub\Unreal\BatteryCollector\Intermediate\Build\Win64\BatteryCollectorEditor\Development\BatteryCollectorEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2017.03.22-08.20.03:508][566]CompilerResultsLog: Info Reflection code generated for BatteryCollectorEditor in 11.5231901 seconds
+[2017.03.22-08.20.03:508][566]CompilerResultsLog: Info Performing 3 actions (4 in parallel)
+[2017.03.22-08.20.03:508][566]CompilerResultsLog: Info Pickup.cpp
+[2017.03.22-08.20.03:508][566]CompilerResultsLog: Info BatteryCollector.generated.cpp
+[2017.03.22-08.20.03:508][566]CompilerResultsLog: Info [3/3] Link UE4Editor-BatteryCollector-4332.dll
+[2017.03.22-08.20.03:508][566]CompilerResultsLog: Info    Creating library E:\Lokesh Basu\GitHub\Unreal\BatteryCollector\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BatteryCollector-4332.lib and object E:\Lokesh Basu\GitHub\Unreal\BatteryCollector\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BatteryCollector-4332.exp
+[2017.03.22-08.20.03:508][566]CompilerResultsLog: Info Total build time: 52.02 seconds
+[2017.03.22-08.20.03:508][566]LogMainFrame: MainFrame: Module compiling took 53.974 seconds
+[2017.03.22-08.20.05:216][566]LogClass: Could not find existing class Pickup in package /Script/BatteryCollector for HotReload, assuming new class
+[2017.03.22-08.20.05:276][566]LogHotReload: Re-instancing Pickup after hot-reload.
+[2017.03.22-08.20.05:450][566]LogContentBrowser: Native class hierarchy updated for 'BatteryCollector' in 0.0168 seconds. Added 3 classes and 2 folders.
+[2017.03.22-08.20.05:453][566]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2017.03.22-08.20.05:509][566]LogContentBrowser: Native class hierarchy populated in 0.0178 seconds. Added 2210 classes and 440 folders.
+[2017.03.22-08.20.05:532][566]Display: HotReload took 56.1s.
+[2017.03.22-08.20.13:943][802]LogWindowsTextInputMethodSystem:Display: IME system now deactivated.
+[2017.03.22-08.20.15:713][803]Cmd: QUIT_EDITOR
+[2017.03.22-08.20.17:691][803]LogExit: Preparing to exit.
+[2017.03.22-08.20.26:428][803]LogDirectoryWatcher: A directory notification for 'E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/' was aborted.
+[2017.03.22-08.20.41:889][803]LogExit: Editor shut down
+[2017.03.22-08.20.41:974][803]LogExit: Transaction tracking system shut down
+[2017.03.22-08.21.07:524][803]LogObj: Freed 0b from 0 cluster array pools.
+[2017.03.22-08.21.07:557][803]LogExit: Object subsystem successfully closed.
+[2017.03.22-08.21.11:613][803]LogD3D11RHI: Shutdown
+[2017.03.22-08.21.11:634][803]LogD3D11RHI: CleanupD3DDevice
+[2017.03.22-08.21.15:602][803]LogD3D11RHI: ~FD3D11DynamicRHI
+[2017.03.22-08.21.18:019][803]LogHttp:Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
+[2017.03.22-08.21.18:019][803]LogHttp:Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BA4A5898E-4C1A-3994-D79E-F8ACC636C4A8%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.14.3-3249277%2B%2B%2BUE4%2BRelease-4.14&UserID=44c69ea74a6608d08d189a89ef56ecfc%7C49553386f03546af9035a11bdf92df49%7C7c8bed81-d5ef-48e7-b159-5c54f0ab91b3&AppEnvironment=datacollector-binary&UploadType=eteventstream] status=Processing
+[2017.03.22-08.21.18:251][803]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (247)
+[2017.03.22-08.21.18:262][803]LogModuleManager: Shutting down and abandoning module ExternalImagePicker (246)
+[2017.03.22-08.21.18:286][803]LogModuleManager: Shutting down and abandoning module NewLevelDialog (245)
+[2017.03.22-08.21.18:287][803]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (244)
+[2017.03.22-08.21.18:302][803]LogModuleManager: Shutting down and abandoning module CrashTracker (243)
+[2017.03.22-08.21.18:319][803]LogModuleManager: Shutting down and abandoning module SceneOutliner (242)
+[2017.03.22-08.21.18:319][803]LogModuleManager: Shutting down and abandoning module WidgetCarousel (241)
+[2017.03.22-08.21.18:319][803]LogModuleManager: Shutting down and abandoning module AddContentDialog (240)
+[2017.03.22-08.21.18:422][803]LogDirectoryWatcher: A directory notification for 'E:/Epic Games/4.14/FeaturePacks/' was aborted.
+[2017.03.22-08.21.21:170][803]LogModuleManager: Shutting down and abandoning module GameplayTags (239)
+[2017.03.22-08.21.21:170][803]LogModuleManager: Shutting down and abandoning module EditorWidgets (238)
+[2017.03.22-08.21.21:170][803]LogModuleManager: Shutting down and abandoning module CollectionManager (237)
+[2017.03.22-08.21.21:220][803]LogDirectoryWatcher: A directory notification for 'E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Collections/' was aborted.
+[2017.03.22-08.21.21:220][803]LogDirectoryWatcher: A directory notification for 'E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Developers/Admin/Collections/' was aborted.
+[2017.03.22-08.21.21:220][803]LogDirectoryWatcher: A directory notification for 'E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/Saved/Collections/' was aborted.
+[2017.03.22-08.21.21:220][803]LogModuleManager: Shutting down and abandoning module StatsViewer (236)
+[2017.03.22-08.21.21:253][803]LogModuleManager: Shutting down and abandoning module FoliageEdit (235)
+[2017.03.22-08.21.21:256][803]LogModuleManager: Shutting down and abandoning module LandscapeEditor (234)
+[2017.03.22-08.21.21:324][803]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (233)
+[2017.03.22-08.21.21:324][803]LogModuleManager: Shutting down and abandoning module ActorPickerMode (232)
+[2017.03.22-08.21.21:324][803]LogModuleManager: Shutting down and abandoning module GeometryMode (231)
+[2017.03.22-08.21.21:324][803]LogModuleManager: Shutting down and abandoning module TextureAlignMode (230)
+[2017.03.22-08.21.21:324][803]LogModuleManager: Shutting down and abandoning module BspMode (229)
+[2017.03.22-08.21.21:335][803]LogModuleManager: Shutting down and abandoning module HardwareSurvey (228)
+[2017.03.22-08.21.21:335][803]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (227)
+[2017.03.22-08.21.21:335][803]LogModuleManager: Shutting down and abandoning module AutomationWorker (226)
+[2017.03.22-08.21.21:385][803]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (225)
+[2017.03.22-08.21.21:393][803]LogModuleManager: Shutting down and abandoning module PlacementMode (224)
+[2017.03.22-08.21.21:432][803]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (223)
+[2017.03.22-08.21.21:541][803]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (222)
+[2017.03.22-08.21.21:542][803]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (221)
+[2017.03.22-08.21.21:542][803]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (220)
+[2017.03.22-08.21.21:542][803]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (219)
+[2017.03.22-08.21.21:542][803]LogModuleManager: Shutting down and abandoning module Media (218)
+[2017.03.22-08.21.21:542][803]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (217)
+[2017.03.22-08.21.21:542][803]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (216)
+[2017.03.22-08.21.21:542][803]LogModuleManager: Shutting down and abandoning module CharacterAI (215)
+[2017.03.22-08.21.21:542][803]LogModuleManager: Shutting down and abandoning module SequenceRecorder (214)
+[2017.03.22-08.21.21:652][803]LogModuleManager: Shutting down and abandoning module AudioCapture (213)
+[2017.03.22-08.21.21:652][803]LogModuleManager: Shutting down and abandoning module SmartSnapping (212)
+[2017.03.22-08.21.21:652][803]LogModuleManager: Shutting down and abandoning module SessionServices (211)
+[2017.03.22-08.21.21:652][803]LogModuleManager: Shutting down and abandoning module ViewportSnapping (210)
+[2017.03.22-08.21.21:652][803]LogModuleManager: Shutting down and abandoning module ViewportInteraction (209)
+[2017.03.22-08.21.21:652][803]LogModuleManager: Shutting down and abandoning module LogVisualizer (208)
+[2017.03.22-08.21.21:705][803]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (207)
+[2017.03.22-08.21.21:705][803]LogModuleManager: Shutting down and abandoning module IntroTutorials (206)
+[2017.03.22-08.21.21:736][803]LogModuleManager: Shutting down and abandoning module EditorLiveStreaming (205)
+[2017.03.22-08.21.21:736][803]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (204)
+[2017.03.22-08.21.21:736][803]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (203)
+[2017.03.22-08.21.21:736][803]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (202)
+[2017.03.22-08.21.21:986][803]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (201)
+[2017.03.22-08.21.21:987][803]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (200)
+[2017.03.22-08.21.21:987][803]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (199)
+[2017.03.22-08.21.21:987][803]LogModuleManager: Shutting down and abandoning module InputBindingEditor (198)
+[2017.03.22-08.21.21:987][803]LogModuleManager: Shutting down and abandoning module NiagaraEditor (197)
+[2017.03.22-08.21.22:075][803]LogModuleManager: Shutting down and abandoning module MergeActors (196)
+[2017.03.22-08.21.22:103][803]LogModuleManager: Shutting down and abandoning module SizeMap (195)
+[2017.03.22-08.21.22:103][803]LogModuleManager: Shutting down and abandoning module TreeMap (194)
+[2017.03.22-08.21.22:135][803]LogModuleManager: Shutting down and abandoning module ReferenceViewer (193)
+[2017.03.22-08.21.22:135][803]LogModuleManager: Shutting down and abandoning module LocalizationService (192)
+[2017.03.22-08.21.22:161][803]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (191)
+[2017.03.22-08.21.22:203][803]LogModuleManager: Shutting down and abandoning module HardwareTargeting (190)
+[2017.03.22-08.21.22:203][803]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (189)
+[2017.03.22-08.21.22:243][803]LogModuleManager: Shutting down and abandoning module UndoHistory (188)
+[2017.03.22-08.21.22:245][803]LogModuleManager: Shutting down and abandoning module UserFeedback (187)
+[2017.03.22-08.21.22:245][803]LogModuleManager: Shutting down and abandoning module XmlParser (186)
+[2017.03.22-08.21.22:256][803]LogModuleManager: Shutting down and abandoning module Blutility (185)
+[2017.03.22-08.21.22:271][803]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (184)
+[2017.03.22-08.21.22:319][803]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (183)
+[2017.03.22-08.21.22:401][803]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (182)
+[2017.03.22-08.21.22:402][803]LogModuleManager: Shutting down and abandoning module SettingsEditor (181)
+[2017.03.22-08.21.22:489][803]LogModuleManager: Shutting down and abandoning module ProjectLauncher (180)
+[2017.03.22-08.21.22:529][803]LogModuleManager: Shutting down and abandoning module SessionFrontend (179)
+[2017.03.22-08.21.22:564][803]LogModuleManager: Shutting down and abandoning module ProfilerClient (178)
+[2017.03.22-08.21.22:623][803]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (177)
+[2017.03.22-08.21.22:623][803]LogModuleManager: Shutting down and abandoning module DeviceManager (176)
+[2017.03.22-08.21.22:730][803]LogModuleManager: Shutting down and abandoning module AutomationController (175)
+[2017.03.22-08.21.22:808][803]LogModuleManager: Shutting down and abandoning module AutomationWindow (174)
+[2017.03.22-08.21.22:869][803]LogModuleManager: Shutting down and abandoning module Layers (173)
+[2017.03.22-08.21.22:906][803]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (172)
+[2017.03.22-08.21.22:906][803]LogModuleManager: Shutting down and abandoning module DetailCustomizations (171)
+[2017.03.22-08.21.22:931][803]LogModuleManager: Shutting down and abandoning module PackagesDialog (170)
+[2017.03.22-08.21.22:931][803]LogModuleManager: Shutting down and abandoning module AnimGraph (169)
+[2017.03.22-08.21.22:952][803]LogModuleManager: Shutting down and abandoning module Persona (168)
+[2017.03.22-08.21.22:992][803]LogModuleManager: Shutting down and abandoning module Kismet (167)
+[2017.03.22-08.21.23:038][803]LogModuleManager: Shutting down and abandoning module GraphEditor (166)
+[2017.03.22-08.21.23:163][803]LogModuleManager: Shutting down and abandoning module ClassViewer (165)
+[2017.03.22-08.21.23:203][803]LogModuleManager: Shutting down and abandoning module Toolbox (164)
+[2017.03.22-08.21.23:203][803]LogModuleManager: Shutting down and abandoning module ModuleUI (163)
+[2017.03.22-08.21.23:231][803]LogModuleManager: Shutting down and abandoning module MovieSceneTools (162)
+[2017.03.22-08.21.23:265][803]LogModuleManager: Shutting down and abandoning module OutputLog (161)
+[2017.03.22-08.21.23:285][803]LogModuleManager: Shutting down and abandoning module GammaUI (160)
+[2017.03.22-08.21.23:314][803]LogModuleManager: Shutting down and abandoning module Documentation (159)
+[2017.03.22-08.21.23:330][803]LogModuleManager: Shutting down and abandoning module Niagara (158)
+[2017.03.22-08.21.23:330][803]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (157)
+[2017.03.22-08.21.23:330][803]LogModuleManager: Shutting down and abandoning module AnalyticsET (156)
+[2017.03.22-08.21.23:330][803]LogModuleManager: Shutting down and abandoning module PortalServices (155)
+[2017.03.22-08.21.23:330][803]LogModuleManager: Shutting down and abandoning module PortalRpc (154)
+[2017.03.22-08.21.23:330][803]LogModuleManager: Shutting down and abandoning module MessagingRpc (153)
+[2017.03.22-08.21.23:330][803]LogModuleManager: Shutting down and abandoning module GameplayDebugger (152)
+[2017.03.22-08.21.23:355][803]LogModuleManager: Shutting down and abandoning module AITestSuite (151)
+[2017.03.22-08.21.23:405][803]LogModuleManager: Shutting down and abandoning module AIModule (150)
+[2017.03.22-08.21.23:405][803]LogModuleManager: Shutting down and abandoning module ProfilerService (149)
+[2017.03.22-08.21.23:462][803]LogModuleManager: Shutting down and abandoning module TaskGraph (148)
+[2017.03.22-08.21.23:473][803]LogModuleManager: Shutting down and abandoning module SubstanceEditor (147)
+[2017.03.22-08.21.23:494][803]LogModuleManager: Shutting down and abandoning module SlateRemote (146)
+[2017.03.22-08.21.23:494][803]LogModuleManager: Shutting down and abandoning module SteamVRController (145)
+[2017.03.22-08.21.23:494][803]LogModuleManager: Shutting down and abandoning module SteamVR (144)
+[2017.03.22-08.21.23:494][803]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (143)
+[2017.03.22-08.21.23:505][803]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (142)
+[2017.03.22-08.21.23:528][803]LogModuleManager: Shutting down and abandoning module OculusLibrary (141)
+[2017.03.22-08.21.23:528][803]LogModuleManager: Shutting down and abandoning module OculusInput (140)
+[2017.03.22-08.21.23:528][803]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (139)
+[2017.03.22-08.21.23:528][803]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (138)
+[2017.03.22-08.21.23:529][803]LogModuleManager: Shutting down and abandoning module CableComponent (137)
+[2017.03.22-08.21.23:543][803]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (136)
+[2017.03.22-08.21.23:544][803]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (134)
+[2017.03.22-08.21.23:581][803]LogModuleManager: Shutting down and abandoning module HTML5Networking (133)
+[2017.03.22-08.21.23:587][803]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (132)
+[2017.03.22-08.21.23:587][803]LogModuleManager: Shutting down and abandoning module GeometryCache (131)
+[2017.03.22-08.21.23:587][803]LogModuleManager: Shutting down and abandoning module AlembicLibrary (130)
+[2017.03.22-08.21.23:599][803]LogModuleManager: Shutting down and abandoning module AlembicImporter (129)
+[2017.03.22-08.21.23:617][803]LogModuleManager: Shutting down and abandoning module SuperSearch (128)
+[2017.03.22-08.21.23:618][803]LogModuleManager: Shutting down and abandoning module SuperSearchEditor (127)
+[2017.03.22-08.21.23:618][803]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (126)
+[2017.03.22-08.21.23:618][803]LogModuleManager: Shutting down and abandoning module PluginBrowser (125)
+[2017.03.22-08.21.23:639][803]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (124)
+[2017.03.22-08.21.23:697][803]LogModuleManager: Shutting down and abandoning module EpicSurvey (123)
+[2017.03.22-08.21.23:706][803]LogModuleManager: Shutting down and abandoning module DesktopPlatform (122)
+[2017.03.22-08.21.23:706][803]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (121)
+[2017.03.22-08.21.23:706][803]LogModuleManager: Shutting down and abandoning module UObjectPlugin (120)
+[2017.03.22-08.21.23:706][803]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (119)
+[2017.03.22-08.21.23:720][803]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (118)
+[2017.03.22-08.21.23:754][803]LogModuleManager: Shutting down and abandoning module SourceControl (117)
+[2017.03.22-08.21.23:795][803]LogModuleManager: Shutting down and abandoning module GitSourceControl (116)
+[2017.03.22-08.21.23:813][803]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (115)
+[2017.03.22-08.21.23:813][803]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (114)
+[2017.03.22-08.21.23:824][803]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (113)
+[2017.03.22-08.21.23:824][803]LogModuleManager: Shutting down and abandoning module MeshPaint (112)
+[2017.03.22-08.21.23:839][803]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (111)
+[2017.03.22-08.21.23:852][803]LogModuleManager: Shutting down and abandoning module HotReload (110)
+[2017.03.22-08.21.23:852][803]LogDirectoryWatcher: A directory notification for 'E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/Binaries/Win64' was aborted.
+[2017.03.22-08.21.23:872][803]LogModuleManager: Shutting down and abandoning module MainFrame (109)
+[2017.03.22-08.21.23:872][803]LogModuleManager: Shutting down and abandoning module LevelEditor (108)
+[2017.03.22-08.21.24:064][803]LogModuleManager: Shutting down and abandoning module ContentBrowser (107)
+[2017.03.22-08.21.24:065][803]LogModuleManager: Shutting down and abandoning module Paper2DEditor (106)
+[2017.03.22-08.21.24:103][803]LogModuleManager: Shutting down and abandoning module BatteryCollector (105)
+[2017.03.22-08.21.24:103][803]LogModuleManager: Shutting down and abandoning module UdpMessaging (104)
+[2017.03.22-08.21.24:204][803]LogModuleManager: Shutting down and abandoning module TcpMessaging (103)
+[2017.03.22-08.21.24:317][803]LogModuleManager: Shutting down and abandoning module SubstanceCore (102)
+[2017.03.22-08.21.24:426][803]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (101)
+[2017.03.22-08.21.24:426][803]LogModuleManager: Shutting down and abandoning module Paper2D (100)
+[2017.03.22-08.21.24:438][803]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (99)
+[2017.03.22-08.21.24:451][803]LogModuleManager: Shutting down and abandoning module WmfMedia (98)
+[2017.03.22-08.21.24:486][803]LogModuleManager: Shutting down and abandoning module MediaAssets (97)
+[2017.03.22-08.21.24:537][803]LogModuleManager: Shutting down and abandoning module GameLiveStreaming (96)
+[2017.03.22-08.21.24:537][803]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (95)
+[2017.03.22-08.21.24:537][803]LogModuleManager: Shutting down and abandoning module VREditor (94)
+[2017.03.22-08.21.24:537][803]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (93)
+[2017.03.22-08.21.24:537][803]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (92)
+[2017.03.22-08.21.24:559][803]LogModuleManager: Shutting down and abandoning module FunctionalTesting (91)
+[2017.03.22-08.21.24:570][803]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (90)
+[2017.03.22-08.21.24:676][803]LogModuleManager: Shutting down and abandoning module Sequencer (89)
+[2017.03.22-08.21.24:769][803]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (88)
+[2017.03.22-08.21.24:770][803]LogModuleManager: Shutting down and abandoning module MessageLog (87)
+[2017.03.22-08.21.24:770][803]LogModuleManager: Shutting down and abandoning module AssetTools (86)
+[2017.03.22-08.21.24:796][803]LogModuleManager: Shutting down and abandoning module UMGEditor (85)
+[2017.03.22-08.21.24:890][803]LogModuleManager: Shutting down and abandoning module UMG (84)
+[2017.03.22-08.21.24:981][803]LogModuleManager: Shutting down and abandoning module SlateReflector (83)
+[2017.03.22-08.21.25:073][803]LogModuleManager: Shutting down and abandoning module Slate (82)
+[2017.03.22-08.21.25:073][803]LogModuleManager: Shutting down and abandoning module EditorStyle (81)
+[2017.03.22-08.21.25:277][803]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (80)
+[2017.03.22-08.21.25:277][803]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (79)
+[2017.03.22-08.21.25:277][803]LogModuleManager: Shutting down and abandoning module XAudio2 (78)
+[2017.03.22-08.21.25:277][803]LogModuleManager: Shutting down and abandoning module Networking (76)
+[2017.03.22-08.21.25:277][803]LogModuleManager: Shutting down and abandoning module Core (75)
+[2017.03.22-08.21.25:277][803]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (74)
+[2017.03.22-08.21.25:277][803]LogDirectoryWatcher: A directory notification for '../../../Engine/Content/' was aborted.
+[2017.03.22-08.21.25:278][803]LogDirectoryWatcher: A directory notification for '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/' was aborted.
+[2017.03.22-08.21.25:293][803]LogDirectoryWatcher: A directory notification for '../../../Engine/Plugins/2D/Paper2D/Content/' was aborted.
+[2017.03.22-08.21.25:338][803]LogModuleManager: Shutting down and abandoning module AssetRegistry (73)
+[2017.03.22-08.21.27:022][803]LogModuleManager: Shutting down and abandoning module KismetCompiler (72)
+[2017.03.22-08.21.27:022][803]LogModuleManager: Shutting down and abandoning module PhysXFormats (71)
+[2017.03.22-08.21.27:022][803]LogModuleManager: Shutting down and abandoning module SimplygonSwarm (70)
+[2017.03.22-08.21.27:053][803]LogModuleManager: Shutting down and abandoning module SimplygonMeshReduction (69)
+[2017.03.22-08.21.27:076][803]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (68)
+[2017.03.22-08.21.27:076][803]LogModuleManager: Shutting down and abandoning module PropertyEditor (67)
+[2017.03.22-08.21.27:076][803]LogModuleManager: Shutting down and abandoning module MeshUtilities (66)
+[2017.03.22-08.21.27:099][803]LogModuleManager: Shutting down and abandoning module DerivedDataCache (65)
+[2017.03.22-08.21.27:236][803]LogDerivedDataCache: Shutdown
+[2017.03.22-08.21.27:236][803]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (64)
+[2017.03.22-08.21.27:245][803]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (63)
+[2017.03.22-08.21.27:280][803]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (62)
+[2017.03.22-08.21.27:280][803]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (61)
+[2017.03.22-08.21.27:308][803]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (60)
+[2017.03.22-08.21.27:335][803]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (59)
+[2017.03.22-08.21.27:336][803]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (58)
+[2017.03.22-08.21.27:336][803]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (57)
+[2017.03.22-08.21.27:388][803]LogModuleManager: Shutting down and abandoning module ImageWrapper (56)
+[2017.03.22-08.21.27:388][803]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (55)
+[2017.03.22-08.21.27:388][803]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (54)
+[2017.03.22-08.21.27:388][803]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (53)
+[2017.03.22-08.21.27:436][803]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (52)
+[2017.03.22-08.21.27:436][803]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (51)
+[2017.03.22-08.21.27:436][803]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (50)
+[2017.03.22-08.21.27:436][803]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (49)
+[2017.03.22-08.21.27:461][803]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (48)
+[2017.03.22-08.21.27:497][803]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (47)
+[2017.03.22-08.21.27:505][803]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (46)
+[2017.03.22-08.21.27:542][803]LogModuleManager: Shutting down and abandoning module Messaging (45)
+[2017.03.22-08.21.27:542][803]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (44)
+[2017.03.22-08.21.27:569][803]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (43)
+[2017.03.22-08.21.27:569][803]LogModuleManager: Shutting down and abandoning module Android_PVRTCTargetPlatform (42)
+[2017.03.22-08.21.27:569][803]LogModuleManager: Shutting down and abandoning module Android_MultiTargetPlatform (41)
+[2017.03.22-08.21.27:569][803]LogModuleManager: Shutting down and abandoning module Android_ETC2TargetPlatform (40)
+[2017.03.22-08.21.27:569][803]LogModuleManager: Shutting down and abandoning module Android_ETC1TargetPlatform (39)
+[2017.03.22-08.21.27:569][803]LogModuleManager: Shutting down and abandoning module Android_DXTTargetPlatform (38)
+[2017.03.22-08.21.27:569][803]LogModuleManager: Shutting down and abandoning module Android_ATCTargetPlatform (37)
+[2017.03.22-08.21.27:569][803]LogModuleManager: Shutting down and abandoning module Android_ASTCTargetPlatform (36)
+[2017.03.22-08.21.27:569][803]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (35)
+[2017.03.22-08.21.27:569][803]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (34)
+[2017.03.22-08.21.27:569][803]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (33)
+[2017.03.22-08.21.27:593][803]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (32)
+[2017.03.22-08.21.27:622][803]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (31)
+[2017.03.22-08.21.27:630][803]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (30)
+[2017.03.22-08.21.27:630][803]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (29)
+[2017.03.22-08.21.27:660][803]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (28)
+[2017.03.22-08.21.27:660][803]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (27)
+[2017.03.22-08.21.27:688][803]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (26)
+[2017.03.22-08.21.27:688][803]LogModuleManager: Shutting down and abandoning module TargetPlatform (25)
+[2017.03.22-08.21.27:723][803]LogModuleManager: Shutting down and abandoning module InputCore (24)
+[2017.03.22-08.21.27:723][803]LogModuleManager: Shutting down and abandoning module Settings (23)
+[2017.03.22-08.21.27:737][803]LogModuleManager: Shutting down and abandoning module OculusRift (22)
+[2017.03.22-08.21.27:758][803]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (21)
+[2017.03.22-08.21.27:759][803]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (20)
+[2017.03.22-08.21.27:759][803]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (18)
+[2017.03.22-08.21.27:759][803]LogOnline:Display: Unloading online subsystem: NULL
+[2017.03.22-08.21.27:803][803]LogModuleManager: Shutting down and abandoning module SSL (17)
+[2017.03.22-08.21.27:903][803]LogModuleManager: Shutting down and abandoning module HTTP (16)
+[2017.03.22-08.21.27:903][803]LogModuleManager: Shutting down and abandoning module XMPP (15)
+[2017.03.22-08.21.27:970][803]LogModuleManager: Shutting down and abandoning module TextureCompressor (14)
+[2017.03.22-08.21.27:971][803]LogModuleManager: Shutting down and abandoning module ShaderCore (13)
+[2017.03.22-08.21.27:971][803]LogModuleManager: Shutting down and abandoning module Landscape (12)
+[2017.03.22-08.21.27:971][803]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (11)
+[2017.03.22-08.21.28:488][803]LogModuleManager: Shutting down and abandoning module OpenGLDrv (10)
+[2017.03.22-08.21.28:502][803]LogModuleManager: Shutting down and abandoning module D3D11RHI (9)
+[2017.03.22-08.21.28:502][803]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (8)
+[2017.03.22-08.21.28:520][803]LogModuleManager: Shutting down and abandoning module Renderer (7)
+[2017.03.22-08.21.28:535][803]LogModuleManager: Shutting down and abandoning module Engine (6)
+[2017.03.22-08.21.28:536][803]LogModuleManager: Shutting down and abandoning module CoreUObject (5)
+[2017.03.22-08.21.28:536][803]LogModuleManager: Shutting down and abandoning module NetworkFile (4)
+[2017.03.22-08.21.28:554][803]LogModuleManager: Shutting down and abandoning module StreamingFile (3)
+[2017.03.22-08.21.28:554][803]LogModuleManager: Shutting down and abandoning module SandboxFile (2)
+[2017.03.22-08.21.28:555][803]LogModuleManager: Shutting down and abandoning module PakFile (1)
+[2017.03.22-08.21.28:651][803]LogExit: Exiting.
+[2017.03.22-08.21.29:097][803]Log file closed, 03/22/17 13:51:29
