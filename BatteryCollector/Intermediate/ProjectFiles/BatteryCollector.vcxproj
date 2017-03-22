@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="DebugGame_Game|Win32">
+			<Configuration>DebugGame_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="DebugGame_Game|x64">
+			<Configuration>DebugGame_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="DebugGame_Editor|Win32">
+			<Configuration>DebugGame_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="DebugGame_Editor|x64">
+			<Configuration>DebugGame_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Game|Win32">
+			<Configuration>Development_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Game|x64">
+			<Configuration>Development_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Editor|Win32">
+			<Configuration>Development_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Editor|x64">
+			<Configuration>Development_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Shipping_Game|Win32">
+			<Configuration>Shipping_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Shipping_Game|x64">
+			<Configuration>Shipping_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{51422FAC-C320-4BEB-A1DD-75677FC3B4DE}</ProjectGuid>
+		<Keyword>MakeFileProj</Keyword>
+		<RootNamespace>BatteryCollector</RootNamespace>
+       <PlatformToolset>v140</PlatformToolset>
+       <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+       <TargetRuntime>Native</TargetRuntime>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings" />
+	<PropertyGroup Label="UserMacros" />
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Build.bat" BatteryCollector Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Rebuild.bat" BatteryCollector Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Clean.bat" BatteryCollector Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win32\BatteryCollector-Win32-DebugGame.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'">
+		<OutDir>E:\Epic Games\4.14\Engine\Intermediate\Build\Unused\</OutDir>
+		<IntDir>E:\Epic Games\4.14\Engine\Intermediate\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>@echo Win32 is not a supported platform for BatteryCollectorEditor. Valid platforms are Win64, Mac, Linux.</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>@echo Win32 is not a supported platform for BatteryCollectorEditor. Valid platforms are Win64, Mac, Linux.</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>@echo Win32 is not a supported platform for BatteryCollectorEditor. Valid platforms are Win64, Mac, Linux.</NMakeCleanCommandLine>
+		<NMakeOutput/>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Build.bat" BatteryCollector Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Rebuild.bat" BatteryCollector Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Clean.bat" BatteryCollector Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win64\BatteryCollector-Win64-DebugGame.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Build.bat" BatteryCollectorEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Rebuild.bat" BatteryCollectorEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Clean.bat" BatteryCollectorEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>E:\Epic Games\4.14\Engine\Binaries\Win64\UE4Editor.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Build.bat" BatteryCollector Win32 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Rebuild.bat" BatteryCollector Win32 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Clean.bat" BatteryCollector Win32 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win32\BatteryCollector.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'">
+		<OutDir>E:\Epic Games\4.14\Engine\Intermediate\Build\Unused\</OutDir>
+		<IntDir>E:\Epic Games\4.14\Engine\Intermediate\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>@echo Win32 is not a supported platform for BatteryCollectorEditor. Valid platforms are Win64, Mac, Linux.</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>@echo Win32 is not a supported platform for BatteryCollectorEditor. Valid platforms are Win64, Mac, Linux.</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>@echo Win32 is not a supported platform for BatteryCollectorEditor. Valid platforms are Win64, Mac, Linux.</NMakeCleanCommandLine>
+		<NMakeOutput/>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Build.bat" BatteryCollector Win64 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Rebuild.bat" BatteryCollector Win64 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Clean.bat" BatteryCollector Win64 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win64\BatteryCollector.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Build.bat" BatteryCollectorEditor Win64 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Rebuild.bat" BatteryCollectorEditor Win64 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Clean.bat" BatteryCollectorEditor Win64 Development "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>E:\Epic Games\4.14\Engine\Binaries\Win64\UE4Editor.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Build.bat" BatteryCollector Win32 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Rebuild.bat" BatteryCollector Win32 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Clean.bat" BatteryCollector Win32 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win32\BatteryCollector-Win32-Shipping.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Build.bat" BatteryCollector Win64 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Rebuild.bat" BatteryCollector Win64 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>"E:\Epic Games\4.14\Engine\Build\BatchFiles\Clean.bat" BatteryCollector Win64 Shipping "$(SolutionDir)$(ProjectName).uproject" -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win64\BatteryCollector-Win64-Shipping.exe</NMakeOutput>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\..\BatteryCollector.uproject" />
+		<None Include="..\..\Source\BatteryCollector.Target.cs" />
+		<None Include="..\..\Source\BatteryCollectorEditor.Target.cs" />
+		<None Include="..\..\Config\DefaultEditor.ini" />
+		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini" />
+		<None Include="..\..\Config\DefaultEngine.ini" />
+		<None Include="..\..\Config\DefaultGame.ini" />
+		<None Include="..\..\Config\DefaultInput.ini" />
+		<None Include="..\..\Source\BatteryCollector\BatteryCollector.Build.cs" />
+		<ClCompile Include="..\..\Source\BatteryCollector\BatteryCollector.cpp" />
+		<ClInclude Include="..\..\Source\BatteryCollector\BatteryCollector.h" />
+		<ClCompile Include="..\..\Source\BatteryCollector\BatteryCollectorCharacter.cpp" />
+		<ClInclude Include="..\..\Source\BatteryCollector\BatteryCollectorCharacter.h" />
+		<ClCompile Include="..\..\Source\BatteryCollector\BatteryCollectorGameMode.cpp" />
+		<ClInclude Include="..\..\Source\BatteryCollector\BatteryCollectorGameMode.h" />
+	</ItemGroup>
+	<PropertyGroup>
+		<SourcePath></SourcePath>
+	</PropertyGroup>
+	<PropertyGroup>
+		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);UE_EDITOR=1;IS_PROGRAM=0;WITH_DEV_AUTOMATION_TESTS=1;WITH_PERF_AUTOMATION_TESTS=1;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=0;WITH_ENGINE=1;WITH_UNREAL_DEVELOPER_TOOLS=1;WITH_COREUOBJECT=1;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;WITH_PERFCOUNTERS=1;USE_LOGGING_IN_SHIPPING=0;WITH_LOGGING_TO_MEMORY=0;USE_CHECKS_IN_SHIPPING=0;UE_BUILD_MINIMAL=0;WITH_EDITOR=1;WITH_SERVER_CODE=1;UBT_COMPILED_PLATFORM=Win64;UBT_COMPILED_TARGET=Editor;WIN32=1;_WIN32_WINNT=0x0601;WINVER=0x0601;PLATFORM_WINDOWS=1;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;USE_NEW_ASYNC_IO=0;ORIGINAL_FILE_NAME="UE4Editor-BatteryCollector.dll";DEPRECATED_FORGAME=DEPRECATED;BATTERYCOLLECTOR_API=;UE_ENABLE_ICU=1;WITH_DIRECTXMATH=0;CORE_API=;COREUOBJECT_API=;WITH_PHYSX=1;WITH_APEX=1;WITH_RUNTIME_PHYSICS_COOKING;WITH_BOX2D=1;WITH_RECAST=1;ENGINE_API=;JSON_API=;WITH_FREETYPE=1;SLATECORE_API=;INPUTCORE_API=;SLATE_API=;MESSAGING_API=;RENDERCORE_API=;RHI_API=;SHADERCORE_API=;ASSETREGISTRY_API=;ENGINEMESSAGES_API=;ENGINESETTINGS_API=;SYNTHBENCHMARK_API=;RENDERER_API=;WITH_GAMEPLAY_DEBUGGER=1;AIMODULE_API=;GAMEPLAYTAGS_API=;GAMEPLAYTASKS_API=;DATABASESUPPORT_API=;PACKETHANDLER_API=;RELIABILITYHANDLERCOMPONENT_API=;HARDWARESURVEY_API=;UNREALED_API=;BSPMODE_API=;DIRECTORYWATCHER_API=;DOCUMENTATION_API=;PROJECTS_API=;SANDBOXFILE_API=;EDITORSTYLE_API=;SOURCECONTROL_API=;UNREALEDMESSAGES_API=;ENABLE_OLD_GAMEPLAY_DEBUGGER=0;GAMEPLAYDEBUGGER_API=;BLUEPRINTGRAPH_API=;HTTP_PACKAGE=1;HTTP_API=;UNREALAUDIO_API=;FUNCTIONALTESTING_API=;AUTOMATIONCONTROLLER_API=;INTERNATIONALIZATION_API=;WITH_OGGVORBIS=1;XAUDIO2_API=;AUDIOMIXERXAUDIO2_API=;UNREALAUDIOXAUDIO2_API=;USERFEEDBACK_API=;COLLECTIONMANAGER_API=;ADDCONTENTDIALOG_API=;MESHUTILITIES_API=;KISMET_API=;HEADMOUNTEDDISPLAY_API=</NMakePreprocessorDefinitions>
+		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);E:\Epic Games\4.14\Engine\Source;..\..\Source;..\Build\Win64\UE4Editor\Inc\BatteryCollector;..\..\Source\BatteryCollector;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Internationalization;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Async;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Concurrency;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Containers;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Delegates;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\GenericPlatform;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\HAL;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Logging;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Math;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Misc;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Modules;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\ProfilingDebugging;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Serialization;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Serialization\Csv;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Stats;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Templates;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\UObject;E:\Epic Games\4.14\Engine\Source\Runtime\Core\Public\Windows;E:\Epic Games\4.14\Engine\Source\Runtime\Core;E:\Epic Games\4.14\Engine\Source\Runtime\CoreUObject\Public;E:\Epic Games\4.14\Engine\Source\Runtime\CoreUObject\Public\Blueprint;E:\Epic Games\4.14\Engine\Source\Runtime\CoreUObject\Public\Internationalization;E:\Epic Games\4.14\Engine\Source\Runtime\CoreUObject\Public\Misc;E:\Epic Games\4.14\Engine\Source\Runtime\CoreUObject\Public\Serialization;E:\Epic Games\4.14\Engine\Source\Runtime\CoreUObject\Public\Templates;E:\Epic Games\4.14\Engine\Source\Runtime\CoreUObject\Public\UObject;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject;E:\Epic Games\4.14\Engine\Source\Runtime\CoreUObject;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Classes;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public\AI;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public\AI\Navigation;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public\Animation;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public\EdGraph;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public\Features;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public\Internationalization;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public\Net;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public\PacketHandlers;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public\Performance;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public\Slate;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public\Tests;E:\Epic Games\4.14\Engine\Source\Runtime\Engine\Public\VisualLogger;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine;E:\Epic Games\4.14\Engine\Source\Runtime\Engine;E:\Epic Games\4.14\Engine\Source\Runtime\Json\Public;E:\Epic Games\4.14\Engine\Source\Runtime\Json\Public\Dom;E:\Epic Games\4.14\Engine\Source\Runtime\Json\Public\Policies;E:\Epic Games\4.14\Engine\Source\Runtime\Json\Public\Serialization;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Json;E:\Epic Games\4.14\Engine\Source\Runtime\Json;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Animation;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Application;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Brushes;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Fonts;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Input;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Layout;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Logging;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Rendering;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Sound;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Stats;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Styling;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Textures;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Types;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore\Public\Widgets;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\SlateCore;E:\Epic Games\4.14\Engine\Source\Runtime\SlateCore;E:\Epic Games\4.14\Engine\Source\Runtime\InputCore\Classes;E:\Epic Games\4.14\Engine\Source\Runtime\InputCore\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\InputCore;E:\Epic Games\4.14\Engine\Source\Runtime\InputCore;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Framework;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Framework\Application;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Framework\Commands;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Framework\Docking;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Framework\Layout;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Framework\MultiBox;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Framework\Notifications;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Framework\Styling;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Framework\Text;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Framework\Text\Android;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Framework\Text\IOS;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Framework\Views;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Widgets;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Widgets\Colors;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Widgets\Docking;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Widgets\Images;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Widgets\Input;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Widgets\LayerManager;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Widgets\Layout;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Widgets\Navigation;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Widgets\Notifications;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Widgets\Text;E:\Epic Games\4.14\Engine\Source\Runtime\Slate\Public\Widgets\Views;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Slate;E:\Epic Games\4.14\Engine\Source\Runtime\Slate;E:\Epic Games\4.14\Engine\Source\Runtime\Messaging\Public;E:\Epic Games\4.14\Engine\Source\Runtime\Messaging\Public\Deprecated;E:\Epic Games\4.14\Engine\Source\Runtime\Messaging\Public\Helpers;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Messaging;E:\Epic Games\4.14\Engine\Source\Runtime\Messaging;E:\Epic Games\4.14\Engine\Source\Runtime\RenderCore\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\RenderCore;E:\Epic Games\4.14\Engine\Source\Runtime\RenderCore;E:\Epic Games\4.14\Engine\Source\Runtime\RHI\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\RHI;E:\Epic Games\4.14\Engine\Source\Runtime\RHI;E:\Epic Games\4.14\Engine\Source\Runtime\ShaderCore\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\ShaderCore;E:\Epic Games\4.14\Engine\Source\Runtime\ShaderCore;E:\Epic Games\4.14\Engine\Source\Runtime\AssetRegistry\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AssetRegistry;E:\Epic Games\4.14\Engine\Source\Runtime\AssetRegistry;E:\Epic Games\4.14\Engine\Source\Runtime\EngineMessages\Classes;E:\Epic Games\4.14\Engine\Source\Runtime\EngineMessages\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EngineMessages;E:\Epic Games\4.14\Engine\Source\Runtime\EngineMessages;E:\Epic Games\4.14\Engine\Source\Runtime\EngineSettings\Classes;E:\Epic Games\4.14\Engine\Source\Runtime\EngineSettings\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EngineSettings;E:\Epic Games\4.14\Engine\Source\Runtime\EngineSettings;E:\Epic Games\4.14\Engine\Source\Runtime\SynthBenchmark\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\SynthBenchmark;E:\Epic Games\4.14\Engine\Source\Runtime\SynthBenchmark;E:\Epic Games\4.14\Engine\Source\Runtime\Renderer\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Renderer;E:\Epic Games\4.14\Engine\Source\Runtime\Renderer;E:\Epic Games\4.14\Engine\Source\Runtime\AIModule\Public;E:\Epic Games\4.14\Engine\Source\Runtime\AIModule\Classes;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule;E:\Epic Games\4.14\Engine\Source\Runtime\AIModule;E:\Epic Games\4.14\Engine\Source\Runtime\GameplayTags\Classes;E:\Epic Games\4.14\Engine\Source\Runtime\GameplayTags\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTags;E:\Epic Games\4.14\Engine\Source\Runtime\GameplayTags;E:\Epic Games\4.14\Engine\Source\Runtime\GameplayTasks\Classes;E:\Epic Games\4.14\Engine\Source\Runtime\GameplayTasks\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTasks;E:\Epic Games\4.14\Engine\Source\Runtime\GameplayTasks;E:\Epic Games\4.14\Engine\Source\Runtime\DatabaseSupport\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\DatabaseSupport;E:\Epic Games\4.14\Engine\Source\Runtime\DatabaseSupport;E:\Epic Games\4.14\Engine\Source\Runtime\PacketHandlers\PacketHandler\Classes;E:\Epic Games\4.14\Engine\Source\Runtime\PacketHandlers\PacketHandler\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\PacketHandler;E:\Epic Games\4.14\Engine\Source\Runtime\PacketHandlers\PacketHandler;E:\Epic Games\4.14\Engine\Source\Runtime\PacketHandlers\ReliabilityHandlerComponent\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\ReliabilityHandlerComponent;E:\Epic Games\4.14\Engine\Source\Runtime\PacketHandlers\ReliabilityHandlerComponent;E:\Epic Games\4.14\Engine\Source\Runtime\HardwareSurvey\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HardwareSurvey;E:\Epic Games\4.14\Engine\Source\Runtime\HardwareSurvey;E:\Epic Games\4.14\Engine\Source\Programs\UnrealLightmass\Public;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Classes;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Public;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Public\AutoReimport;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Public\Commandlets;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Public\Dialogs;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Public\DragAndDrop;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Public\Features;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Public\Kismet2;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Public\Layers;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Public\Localization;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Public\Settings;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Public\Tests;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd\Public\Toolkits;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEd;E:\Epic Games\4.14\Engine\Source\Editor\BspMode\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\BspMode;E:\Epic Games\4.14\Engine\Source\Editor\BspMode;E:\Epic Games\4.14\Engine\Source\Developer\DirectoryWatcher\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\DirectoryWatcher;E:\Epic Games\4.14\Engine\Source\Developer\DirectoryWatcher;E:\Epic Games\4.14\Engine\Source\Editor\Documentation\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Documentation;E:\Epic Games\4.14\Engine\Source\Editor\Documentation;E:\Epic Games\4.14\Engine\Source\Runtime\Projects\Public;E:\Epic Games\4.14\Engine\Source\Runtime\Projects\Public\Interfaces;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Projects;E:\Epic Games\4.14\Engine\Source\Runtime\Projects;E:\Epic Games\4.14\Engine\Source\Runtime\SandboxFile\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\SandboxFile;E:\Epic Games\4.14\Engine\Source\Runtime\SandboxFile;E:\Epic Games\4.14\Engine\Source\Editor\EditorStyle\Public;E:\Epic Games\4.14\Engine\Source\Editor\EditorStyle\Public\Classes;E:\Epic Games\4.14\Engine\Source\Editor\EditorStyle\Public\Interfaces;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EditorStyle;E:\Epic Games\4.14\Engine\Source\Editor\EditorStyle;E:\Epic Games\4.14\Engine\Source\Developer\SourceControl\Public;E:\Epic Games\4.14\Engine\Source\Developer\SourceControl\Public\Tests;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\SourceControl;E:\Epic Games\4.14\Engine\Source\Developer\SourceControl;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEdMessages\Classes;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEdMessages\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEdMessages;E:\Epic Games\4.14\Engine\Source\Editor\UnrealEdMessages;E:\Epic Games\4.14\Engine\Source\Developer\GameplayDebugger\Public;E:\Epic Games\4.14\Engine\Source\Developer\AIModule\Public;E:\Epic Games\4.14\Engine\Source\Developer\Settings\Public;E:\Epic Games\4.14\Engine\Source\Runtime\GameplayAbilities\Public;E:\Epic Games\4.14\Engine\Source\Developer\GameplayDebugger\Classes;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayDebugger;E:\Epic Games\4.14\Engine\Source\Developer\GameplayDebugger;E:\Epic Games\4.14\Engine\Source\Editor\BlueprintGraph\Classes;E:\Epic Games\4.14\Engine\Source\Editor\BlueprintGraph\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\BlueprintGraph;E:\Epic Games\4.14\Engine\Source\Editor\BlueprintGraph;E:\Epic Games\4.14\Engine\Source\Runtime\Online\HTTP\Public;E:\Epic Games\4.14\Engine\Source\Runtime\Online\HTTP\Public\Android;E:\Epic Games\4.14\Engine\Source\Runtime\Online\HTTP\Public\Apple;E:\Epic Games\4.14\Engine\Source\Runtime\Online\HTTP\Public\GenericPlatform;E:\Epic Games\4.14\Engine\Source\Runtime\Online\HTTP\Public\HTML5;E:\Epic Games\4.14\Engine\Source\Runtime\Online\HTTP\Public\Interfaces;E:\Epic Games\4.14\Engine\Source\Runtime\Online\HTTP\Public\Linux;E:\Epic Games\4.14\Engine\Source\Runtime\Online\HTTP\Public\Windows;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HTTP;E:\Epic Games\4.14\Engine\Source\Runtime\Online\HTTP;E:\Epic Games\4.14\Engine\Source\Runtime\UnrealAudio\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealAudio;E:\Epic Games\4.14\Engine\Source\Runtime\UnrealAudio;E:\Epic Games\4.14\Engine\Source\Developer\FunctionalTesting\Classes;E:\Epic Games\4.14\Engine\Source\Developer\FunctionalTesting\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\FunctionalTesting;E:\Epic Games\4.14\Engine\Source\Developer\FunctionalTesting;E:\Epic Games\4.14\Engine\Source\Developer\AutomationController\Public;E:\Epic Games\4.14\Engine\Source\Developer\AutomationController\Public\Interfaces;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AutomationController;E:\Epic Games\4.14\Engine\Source\Developer\AutomationController;E:\Epic Games\4.14\Engine\Source\Runtime\Internationalization\Public;E:\Epic Games\4.14\Engine\Source\Runtime\Internationalization\Public\Serialization;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Internationalization;E:\Epic Games\4.14\Engine\Source\Runtime\Internationalization;E:\Epic Games\4.14\Engine\Source\Runtime\Windows\XAudio2\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\XAudio2;E:\Epic Games\4.14\Engine\Source\Runtime\Windows\XAudio2;E:\Epic Games\4.14\Engine\Source\Runtime\AudioMixer\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AudioMixerXAudio2;E:\Epic Games\4.14\Engine\Source\Runtime\Windows\AudioMixerXAudio2;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealAudioXAudio2;E:\Epic Games\4.14\Engine\Source\Runtime\Windows\UnrealAudioXAudio2;E:\Epic Games\4.14\Engine\Source\Editor\UserFeedback\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UserFeedback;E:\Epic Games\4.14\Engine\Source\Editor\UserFeedback;E:\Epic Games\4.14\Engine\Source\Developer\CollectionManager\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\CollectionManager;E:\Epic Games\4.14\Engine\Source\Developer\CollectionManager;E:\Epic Games\4.14\Engine\Source\Editor\AddContentDialog\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AddContentDialog;E:\Epic Games\4.14\Engine\Source\Editor\AddContentDialog;E:\Epic Games\4.14\Engine\Source\Developer\MeshUtilities\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MeshUtilities;E:\Epic Games\4.14\Engine\Source\Developer\MeshUtilities;E:\Epic Games\4.14\Engine\Source\Editor\Kismet\Classes;E:\Epic Games\4.14\Engine\Source\Editor\Kismet\Public;E:\Epic Games\4.14\Engine\Source\Editor\Kismet\Public\Nodes;E:\Epic Games\4.14\Engine\Source\Editor\Kismet\Public\Profiler;E:\Epic Games\4.14\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Kismet;E:\Epic Games\4.14\Engine\Source\Editor\Kismet;E:\Epic Games\4.14\Engine\Source\Runtime\HeadMountedDisplay\Public;E:\Epic Games\4.14\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay;E:\Epic Games\4.14\Engine\Source\Runtime\HeadMountedDisplay;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
+		<NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
+		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+		<NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+	</PropertyGroup>
+	<ItemDefinitionGroup>
+	</ItemDefinitionGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>
