@@ -14,3 +14,6 @@
 #ifndef BATTERYCOLLECTOR_Pickup_generated_h
 	#include "Pickup.h"
 #endif
+#ifndef BATTERYCOLLECTOR_BatteryPickup_generated_h
+	#include "BatteryPickup.h"
+#endif
