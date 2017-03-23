@@ -64,9 +64,15 @@
     <ClInclude Include="..\..\Source\BatteryCollector\BatteryPickup.h">
       <Filter>Source\BatteryCollector</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\BatteryCollector\SpawnVolume.h">
+      <Filter>Source\BatteryCollector</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\BatteryCollector\BatteryPickup.cpp">
+      <Filter>Source\BatteryCollector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BatteryCollector\SpawnVolume.cpp">
       <Filter>Source\BatteryCollector</Filter>
     </ClCompile>
   </ItemGroup>

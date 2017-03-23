@@ -253,6 +253,8 @@
     <NMakeOutput>..\..\Binaries\Win64\BatteryCollector-Win64-Shipping.exe</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\BatteryCollector\SpawnVolume.cpp" />
+    <ClInclude Include="..\..\Source\BatteryCollector\SpawnVolume.h" />
     <None Include="..\..\BatteryCollector.uproject" />
     <None Include="..\..\Source\BatteryCollector.Target.cs" />
     <None Include="..\..\Source\BatteryCollectorEditor.Target.cs" />

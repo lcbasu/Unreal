@@ -17,3 +17,6 @@
 #ifndef BATTERYCOLLECTOR_BatteryPickup_generated_h
 	#include "BatteryPickup.h"
 #endif
+#ifndef BATTERYCOLLECTOR_SpawnVolume_generated_h
+	#include "SpawnVolume.h"
+#endif
