@@ -6,13 +6,34 @@
 ===========================================================================*/
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FVector;
 #ifdef BATTERYCOLLECTOR_SpawnVolume_generated_h
 #error "SpawnVolume.generated.h already included, missing '#pragma once' in SpawnVolume.h"
 #endif
 #define BATTERYCOLLECTOR_SpawnVolume_generated_h
 
-#define BatteryCollector_Source_BatteryCollector_SpawnVolume_h_11_RPC_WRAPPERS
-#define BatteryCollector_Source_BatteryCollector_SpawnVolume_h_11_RPC_WRAPPERS_NO_PURE_DECLS
+#define BatteryCollector_Source_BatteryCollector_SpawnVolume_h_11_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetRandomPointInVolume) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(FVector*)Z_Param__Result=this->GetRandomPointInVolume(); \
+		P_NATIVE_END; \
+	}
+
+
+#define BatteryCollector_Source_BatteryCollector_SpawnVolume_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetRandomPointInVolume) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(FVector*)Z_Param__Result=this->GetRandomPointInVolume(); \
+		P_NATIVE_END; \
+	}
+
+
 #define BatteryCollector_Source_BatteryCollector_SpawnVolume_h_11_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesASpawnVolume(); \
@@ -59,7 +80,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASpawnVolume); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASpawnVolume)
 
 
-#define BatteryCollector_Source_BatteryCollector_SpawnVolume_h_11_PRIVATE_PROPERTY_OFFSET
+#define BatteryCollector_Source_BatteryCollector_SpawnVolume_h_11_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__WhereToSpawn() { return STRUCT_OFFSET(ASpawnVolume, WhereToSpawn); }
+
+
 #define BatteryCollector_Source_BatteryCollector_SpawnVolume_h_8_PROLOG
 #define BatteryCollector_Source_BatteryCollector_SpawnVolume_h_11_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

@@ -23,6 +23,10 @@ public:
 	/** Returns the WhereToSpawn subobject */
 	FORCEINLINE class UBoxComponent* GetWhereToSpawn() const { return WhereToSpawn; }
 
+	/** Find a random point within the BoxComponent */
+	UFUNCTION(BlueprintPure, Category = "Spawning")
+	FVector GetRandomPointInVolume();
+
 private:
 
 	/** Box component to specify where pickups should be spawned */

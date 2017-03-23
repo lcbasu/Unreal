@@ -2,13 +2,14 @@
 
 #include "BatteryCollector.h"
 #include "SpawnVolume.h"
+#include "Kismet/KismetMathLibrary.h"
 
 
 // Sets default values
 ASpawnVolume::ASpawnVolume()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 	// Create the Box Component to represent the spawn volume
 	WhereToSpawn = CreateDefaultSubobject<UBoxComponent>(TEXT("WhereToSpawn"));
@@ -29,3 +30,10 @@ void ASpawnVolume::Tick( float DeltaTime )
 
 }
 
+FVector ASpawnVolume::GetRandomPointInVolume()
+{
+	FVector SpawnOrigin = WhereToSpawn->Bounds.Origin;
+	FVector SpawnExtent = WhereToSpawn->Bounds.BoxExtent;
+
+	return UKismetMathLibrary::RandomPointInBoundingBox(SpawnOrigin, SpawnExtent);
+}

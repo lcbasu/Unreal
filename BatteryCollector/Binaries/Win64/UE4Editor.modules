@@ -1,9 +1,9 @@
 {
 	"Changelist" : 3249277,
 	"CompatibleChangelist" : 3195953,
-	"BuildId" : "",
+	"BuildId" : "f34c8c49-44ec-4221-a04c-e6f111c2435a",
 	"Modules" : 
 	{
-		"BatteryCollector" : "UE4Editor-BatteryCollector-5504.dll"
+		"BatteryCollector" : "UE4Editor-BatteryCollector-8750.dll"
 	}
 }

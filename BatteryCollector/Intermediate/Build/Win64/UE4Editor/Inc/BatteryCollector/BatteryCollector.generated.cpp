@@ -30,8 +30,9 @@ void EmptyLinkFunctionForGeneratedCode1BatteryCollector() {}
 	IMPLEMENT_CLASS(ABatteryPickup, 3456584762);
 	void ASpawnVolume::StaticRegisterNativesASpawnVolume()
 	{
+		FNativeFunctionRegistrar::RegisterFunction(ASpawnVolume::StaticClass(), "GetRandomPointInVolume",(Native)&ASpawnVolume::execGetRandomPointInVolume);
 	}
-	IMPLEMENT_CLASS(ASpawnVolume, 3116732387);
+	IMPLEMENT_CLASS(ASpawnVolume, 2378427093);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
@@ -40,6 +41,8 @@ void EmptyLinkFunctionForGeneratedCode1BatteryCollector() {}
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
 	ENGINE_API class UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	COREUOBJECT_API class UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	ENGINE_API class UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 
 	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ABatteryCollectorCharacter_NoRegister();
 	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ABatteryCollectorCharacter();
@@ -51,6 +54,7 @@ void EmptyLinkFunctionForGeneratedCode1BatteryCollector() {}
 	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_APickup();
 	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ABatteryPickup_NoRegister();
 	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ABatteryPickup();
+	BATTERYCOLLECTOR_API class UFunction* Z_Construct_UFunction_ASpawnVolume_GetRandomPointInVolume();
 	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ASpawnVolume_NoRegister();
 	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ASpawnVolume();
 	BATTERYCOLLECTOR_API class UPackage* Z_Construct_UPackage__Script_BatteryCollector();
@@ -264,6 +268,29 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ABatteryPickup(Z_Construct_UClass_ABatteryPickup, &ABatteryPickup::StaticClass, TEXT("ABatteryPickup"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABatteryPickup);
+	UFunction* Z_Construct_UFunction_ASpawnVolume_GetRandomPointInVolume()
+	{
+		struct SpawnVolume_eventGetRandomPointInVolume_Parms
+		{
+			FVector ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_ASpawnVolume();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetRandomPointInVolume"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x14820401, 65535, sizeof(SpawnVolume_eventGetRandomPointInVolume_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(ReturnValue, SpawnVolume_eventGetRandomPointInVolume_Parms), 0x0010000000000580, Z_Construct_UScriptStruct_FVector());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Spawning"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("SpawnVolume.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Find a random point within the BoxComponent"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ASpawnVolume_NoRegister()
 	{
 		return ASpawnVolume::StaticClass();
@@ -281,12 +308,22 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20900080;
 
+				OuterClass->LinkChild(Z_Construct_UFunction_ASpawnVolume_GetRandomPointInVolume());
 
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_WhereToSpawn = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("WhereToSpawn"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(WhereToSpawn, ASpawnVolume), 0x00400000000a001d, Z_Construct_UClass_UBoxComponent_NoRegister());
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ASpawnVolume_GetRandomPointInVolume(), "GetRandomPointInVolume"); // 1821704945
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("SpawnVolume.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("SpawnVolume.h"));
+				MetaData->SetValue(NewProp_WhereToSpawn, TEXT("AllowPrivateAccess"), TEXT("true"));
+				MetaData->SetValue(NewProp_WhereToSpawn, TEXT("Category"), TEXT("Spawning"));
+				MetaData->SetValue(NewProp_WhereToSpawn, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_WhereToSpawn, TEXT("ModuleRelativePath"), TEXT("SpawnVolume.h"));
+				MetaData->SetValue(NewProp_WhereToSpawn, TEXT("ToolTip"), TEXT("Box component to specify where pickups should be spawned"));
 #endif
 			}
 		}
@@ -303,8 +340,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/BatteryCollector")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x207F6E49;
-			Guid.B = 0x26FA1C35;
+			Guid.A = 0x52FA9BD4;
+			Guid.B = 0x0213496D;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
