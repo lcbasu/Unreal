@@ -12,6 +12,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define BATTERYCOLLECTOR_Pickup_generated_h
 
 #define BatteryCollector_Source_BatteryCollector_Pickup_h_11_RPC_WRAPPERS \
+	virtual void WasCollected_Implementation(); \
+ \
+	DECLARE_FUNCTION(execWasCollected) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->WasCollected_Implementation(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execSetActive) \
 	{ \
@@ -33,6 +42,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define BatteryCollector_Source_BatteryCollector_Pickup_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execWasCollected) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->WasCollected_Implementation(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execSetActive) \
 	{ \
 		P_GET_UBOOL(Z_Param_NewPickupState); \
@@ -51,6 +68,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
+#define BatteryCollector_Source_BatteryCollector_Pickup_h_11_EVENT_PARMS
+extern BATTERYCOLLECTOR_API  FName BATTERYCOLLECTOR_WasCollected;
+#define BatteryCollector_Source_BatteryCollector_Pickup_h_11_CALLBACK_WRAPPERS
 #define BatteryCollector_Source_BatteryCollector_Pickup_h_11_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesAPickup(); \
@@ -101,12 +121,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APickup); \
 	FORCEINLINE static uint32 __PPO__PickupMesh() { return STRUCT_OFFSET(APickup, PickupMesh); }
 
 
-#define BatteryCollector_Source_BatteryCollector_Pickup_h_8_PROLOG
+#define BatteryCollector_Source_BatteryCollector_Pickup_h_8_PROLOG \
+	BatteryCollector_Source_BatteryCollector_Pickup_h_11_EVENT_PARMS
+
+
 #define BatteryCollector_Source_BatteryCollector_Pickup_h_11_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	BatteryCollector_Source_BatteryCollector_Pickup_h_11_PRIVATE_PROPERTY_OFFSET \
 	BatteryCollector_Source_BatteryCollector_Pickup_h_11_RPC_WRAPPERS \
+	BatteryCollector_Source_BatteryCollector_Pickup_h_11_CALLBACK_WRAPPERS \
 	BatteryCollector_Source_BatteryCollector_Pickup_h_11_INCLASS \
 	BatteryCollector_Source_BatteryCollector_Pickup_h_11_STANDARD_CONSTRUCTORS \
 public: \
@@ -118,6 +142,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	BatteryCollector_Source_BatteryCollector_Pickup_h_11_PRIVATE_PROPERTY_OFFSET \
 	BatteryCollector_Source_BatteryCollector_Pickup_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
+	BatteryCollector_Source_BatteryCollector_Pickup_h_11_CALLBACK_WRAPPERS \
 	BatteryCollector_Source_BatteryCollector_Pickup_h_11_INCLASS_NO_PURE_DECLS \
 	BatteryCollector_Source_BatteryCollector_Pickup_h_11_ENHANCED_CONSTRUCTORS \
 private: \
