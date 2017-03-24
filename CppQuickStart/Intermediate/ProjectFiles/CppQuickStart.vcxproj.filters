@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\CppQuickStart.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{DF7A19B4-9A00-4550-A40F-435ACC163B4F}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CppQuickStart.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\CppQuickStartEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{B1E87833-2FC6-4DDD-8729-85E1469CF554}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\CppQuickStart">
+      <UniqueIdentifier>{54DE2CFC-DA82-44D9-8DFC-B50380F3D87F}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CppQuickStart\CppQuickStart.Build.cs">
+      <Filter>Source\CppQuickStart</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\CppQuickStart\CppQuickStart.cpp">
+      <Filter>Source\CppQuickStart</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CppQuickStart\CppQuickStart.h">
+      <Filter>Source\CppQuickStart</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CppQuickStart\CppQuickStartGameModeBase.cpp">
+      <Filter>Source\CppQuickStart</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CppQuickStart\CppQuickStartGameModeBase.h">
+      <Filter>Source\CppQuickStart</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\CppQuickStart\FloatingActor.h">
+      <Filter>Source\CppQuickStart</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\CppQuickStart\FloatingActor.cpp">
+      <Filter>Source\CppQuickStart</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

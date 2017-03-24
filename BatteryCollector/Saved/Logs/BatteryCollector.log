@@ -355,3 +355,379 @@ LogInit: Object subsystem initialized
 [2017.03.24-03.10.04:540][221]LogClass: You have collected Battery_BP_C_8
 [2017.03.24-03.10.04:540][221]LogClass: You have collected Battery_BP_C_15
 [2017.03.24-03.10.04:540][221]LogClass: You have collected Battery_BP_C_24
+[2017.03.24-03.14.05:913][363]LogTemp: Repeting last play command: Selected Viewport
+[2017.03.24-03.14.05:929][363]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.03.24-03.14.05:929][363]PIE: New page: PIE session: CollectionLevel (Mar 24, 2017, 2:14:05 PM)
+[2017.03.24-03.14.05:929][363]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_CollectionLevel
+[2017.03.24-03.14.05:933][363]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003482s)
+[2017.03.24-03.14.05:934][363]LogAIModule: Creating AISystem for world CollectionLevel
+[2017.03.24-03.14.05:934][363]LogPlayLevel: PIE: World Init took: (0.001340s)
+[2017.03.24-03.14.05:934][363]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/CollectionLevel.CollectionLevel to /Game/Maps/UEDPIE_0_CollectionLevel.CollectionLevel (0.005035s)
+[2017.03.24-03.14.05:957][363]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 44.1 kHz using 16 bits per sample (channel mask 0x3)
+[2017.03.24-03.14.05:965][363]LogInit: FAudioDevice initialized.
+[2017.03.24-03.14.06:014][363]LogLoad: Game class is 'BatteryCollectorGameMode'
+[2017.03.24-03.14.06:017][363]LogWorld: Bringing World /Game/Maps/UEDPIE_0_CollectionLevel.CollectionLevel up for play (max tick rate 0) at 2017.03.24-08.44.06
+[2017.03.24-03.14.06:017][363]LogWorld: Bringing up level for play took: 0.002083
+[2017.03.24-03.14.06:019][363]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_CollectionLevel 0.801
+[2017.03.24-03.21.39:432][306]Recompiling BatteryCollector...
+[2017.03.24-03.21.39:432][306]Launching UnrealBuildTool... [E:/Epic Games/4.14/Engine/Binaries/DotNET/UnrealBuildTool.exe BatteryCollector -ModuleWithSuffix BatteryCollector 3531 Win64 Development -editorrecompile -canskiplink "E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/BatteryCollector.uproject" ]
+[2017.03.24-03.21.39:433][306]Warning: Starting HotReload took  0.0s.
+[2017.03.24-03.21.56:002][118]CompilerResultsLog: New page: Compilation - Mar 24, 2017, 2:21:56 PM
+[2017.03.24-03.21.56:002][118]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.03.24-03.21.56:002][118]CompilerResultsLog: Info Parsing headers for BatteryCollectorEditor
+[2017.03.24-03.21.56:002][118]CompilerResultsLog: Info   Running UnrealHeaderTool "E:\Lokesh Basu\GitHub\Unreal\BatteryCollector\BatteryCollector.uproject" "E:\Lokesh Basu\GitHub\Unreal\BatteryCollector\Intermediate\Build\Win64\BatteryCollectorEditor\Development\BatteryCollectorEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2017.03.24-03.21.56:002][118]CompilerResultsLog: Info Reflection code generated for BatteryCollectorEditor in 7.0119747 seconds
+[2017.03.24-03.21.56:002][118]CompilerResultsLog: Info Performing 4 actions (4 in parallel)
+[2017.03.24-03.21.56:002][118]CompilerResultsLog: Info BatteryCollectorGameMode.cpp
+[2017.03.24-03.21.56:002][118]CompilerResultsLog: Info BatteryCollector.generated.cpp
+[2017.03.24-03.21.56:002][118]CompilerResultsLog: Info BatteryCollectorCharacter.cpp
+[2017.03.24-03.21.56:002][118]CompilerResultsLog: Info [4/4] Link UE4Editor-BatteryCollector-3531.dll
+[2017.03.24-03.21.56:002][118]CompilerResultsLog: Info    Creating library E:\Lokesh Basu\GitHub\Unreal\BatteryCollector\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BatteryCollector-3531.lib and object E:\Lokesh Basu\GitHub\Unreal\BatteryCollector\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BatteryCollector-3531.exp
+[2017.03.24-03.21.56:002][118]CompilerResultsLog: Info Total build time: 15.99 seconds
+[2017.03.24-03.21.56:002][118]LogMainFrame: MainFrame: Module compiling took 16.578 seconds
+[2017.03.24-03.21.56:060][118]LogClass: Could not find existing class BatteryCollectorCharacter in package /Script/BatteryCollector for HotReload, assuming new class
+[2017.03.24-03.21.56:061][118]LogClass: Function CollectPickups is new.
+[2017.03.24-03.21.56:061][118]LogClass: Function GetCurrentPower is new.
+[2017.03.24-03.21.56:061][118]LogClass: Function GetInitialPower is new.
+[2017.03.24-03.21.56:061][118]LogClass: Function UpdatePower is new.
+[2017.03.24-03.21.56:076][118]LogHotReload: Re-instancing BatteryCollectorCharacter after hot-reload.
+[2017.03.24-03.21.56:475][118]LogHotReload: Re-instancing SpawnVolume after hot-reload.
+[2017.03.24-03.21.56:655][118]LogContentBrowser: Native class hierarchy updated for 'BatteryCollector' in 0.0013 seconds. Added 5 classes and 2 folders.
+[2017.03.24-03.21.56:659][118]Display: HotReload successful (4 functions remapped  0 scriptstructs remapped)
+[2017.03.24-03.21.57:006][118]LogContentBrowser: Native class hierarchy populated in 0.0117 seconds. Added 2212 classes and 440 folders.
+[2017.03.24-03.21.57:006][118]Display: HotReload took 17.6s.
+[2017.03.24-03.22.17:264][938]LogMaterial: Missing cached shader map for material M_UE4Man_Body, compiling. 
+[2017.03.24-03.22.17:724][938]LogMaterial: Missing cached shader map for material M_UE4Man_Body, compiling. 
+[2017.03.24-03.22.17:803][938]LogMaterial: 0.02 seconds spent updating 1 materials, 1 interfaces, 0 instances, 0 with static permutations.
+[2017.03.24-03.22.17:862][938]LogMaterial: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_4, compiling. 
+[2017.03.24-03.22.17:866][938]LogMaterial: Missing cached shader map for material FMatExpressionPreview MaterialExpressionVectorParameter_3, compiling. 
+[2017.03.24-03.22.17:870][938]LogMaterial: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSampleParameter2D_0, compiling. 
+[2017.03.24-03.22.33:515][ 19]MaterialEditorStats: Info Base pass shader with only dynamic lighting: 63 instructions
+[2017.03.24-03.22.33:515][ 19]MaterialEditorStats: Info Vertex shader: 31 instructions
+[2017.03.24-03.22.33:515][ 19]MaterialEditorStats: Info Texture samplers: 3/16
+[2017.03.24-03.23.15:130][667]LogRenderer: Reallocating scene render targets to support 1176x900 NumSamples 1 (Frame:34852).
+[2017.03.24-03.27.48:571][ 98]LogSavePackage: Save=131.41ms
+[2017.03.24-03.27.48:571][ 98]LogSavePackage: Moving '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Saved/ThirdPersonCharacterF7538C104F0C606524BF398791744C67.tmp' to '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset'
+[2017.03.24-03.27.48:620][ 98]LogSavePackage:Display: Finished SavePackage ../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset
+[2017.03.24-03.27.49:534][204]BlueprintLog: New page: Compile ThirdPersonCharacter
+[2017.03.24-03.33.34:323][234]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Maps/CollectionLevel' took 0.023
+[2017.03.24-03.33.34:329][234]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacter] ([1] browsable assets)...
+[2017.03.24-03.33.34:350][234]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.ThirdPersonCharacter]
+[2017.03.24-03.33.34:350][234]OBJ SavePackage: Finished generating thumbnails for package [/Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacter]
+[2017.03.24-03.33.34:407][234]LogSavePackage: Save=33.08ms
+[2017.03.24-03.33.34:407][234]LogSavePackage: Moving '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Saved/ThirdPersonCharacter_Auto1F3806470445A45744BAFF0BC61B17002.tmp' to '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Saved/Autosaves/Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacter_Auto1.uasset'
+[2017.03.24-03.33.34:407][234]LogSavePackage:Display: Finished SavePackage ../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Saved/Autosaves/Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacter_Auto1.uasset
+[2017.03.24-03.33.34:407][234]LogFileHelpers: Auto-saving content packages took 0.084
+[2017.03.24-03.33.54:223][501]BlueprintLog: New page: Compile ThirdPersonCharacter
+[2017.03.24-03.33.55:462][592]LogSavePackage: Save=34.07ms
+[2017.03.24-03.33.55:463][592]LogSavePackage: Moving '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Saved/ThirdPersonCharacterDDEBDDF143D3DA1B00F459A2C78928D6.tmp' to '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset'
+[2017.03.24-03.33.55:465][592]LogSavePackage:Display: Finished SavePackage ../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset
+[2017.03.24-03.36.28:143][849]LogSavePackage: Save=35.04ms
+[2017.03.24-03.36.28:143][849]LogSavePackage: Moving '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Saved/ThirdPersonCharacterC6ED617D473F3D2D36C19189324E49F4.tmp' to '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset'
+[2017.03.24-03.36.28:144][849]LogSavePackage:Display: Finished SavePackage ../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset
+[2017.03.24-03.36.29:575][ 19]BlueprintLog: New page: Compile ThirdPersonCharacter
+[2017.03.24-03.36.31:185][185]LogSavePackage: Save=33.35ms
+[2017.03.24-03.36.31:185][185]LogSavePackage: Moving '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Saved/ThirdPersonCharacterFDFC189C471D88D0965B5DA40CCAEF4F.tmp' to '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset'
+[2017.03.24-03.36.31:186][185]LogSavePackage:Display: Finished SavePackage ../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset
+[2017.03.24-03.36.52:715][718]LogTemp: Repeting last play command: Selected Viewport
+[2017.03.24-03.36.52:736][718]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.03.24-03.36.52:736][718]PIE: New page: PIE session: CollectionLevel (Mar 24, 2017, 2:36:52 PM)
+[2017.03.24-03.36.52:736][718]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_CollectionLevel
+[2017.03.24-03.36.52:741][718]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004714s)
+[2017.03.24-03.36.52:742][718]LogAIModule: Creating AISystem for world CollectionLevel
+[2017.03.24-03.36.52:742][718]LogPlayLevel: PIE: World Init took: (0.001506s)
+[2017.03.24-03.36.52:742][718]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/CollectionLevel.CollectionLevel to /Game/Maps/UEDPIE_0_CollectionLevel.CollectionLevel (0.006500s)
+[2017.03.24-03.36.52:799][718]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 44.1 kHz using 16 bits per sample (channel mask 0x3)
+[2017.03.24-03.36.52:808][718]LogInit: FAudioDevice initialized.
+[2017.03.24-03.36.52:840][718]LogLoad: Game class is 'BatteryCollectorGameMode'
+[2017.03.24-03.36.52:843][718]LogWorld: Bringing World /Game/Maps/UEDPIE_0_CollectionLevel.CollectionLevel up for play (max tick rate 0) at 2017.03.24-09.06.52
+[2017.03.24-03.36.52:843][718]LogWorld: Bringing up level for play took: 0.002074
+[2017.03.24-03.36.52:846][718]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_CollectionLevel -0.372
+[2017.03.24-03.36.56:388][109]LogTemp: Repeting last play command: Selected Viewport
+[2017.03.24-03.36.56:404][109]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.03.24-03.36.56:404][109]PIE: New page: PIE session: CollectionLevel (Mar 24, 2017, 2:36:56 PM)
+[2017.03.24-03.36.56:404][109]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_CollectionLevel
+[2017.03.24-03.36.56:410][109]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005669s)
+[2017.03.24-03.36.56:411][109]LogAIModule: Creating AISystem for world CollectionLevel
+[2017.03.24-03.36.56:411][109]LogPlayLevel: PIE: World Init took: (0.000925s)
+[2017.03.24-03.36.56:411][109]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/CollectionLevel.CollectionLevel to /Game/Maps/UEDPIE_0_CollectionLevel.CollectionLevel (0.006853s)
+[2017.03.24-03.36.56:443][109]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 44.1 kHz using 16 bits per sample (channel mask 0x3)
+[2017.03.24-03.36.56:449][109]LogInit: FAudioDevice initialized.
+[2017.03.24-03.36.56:483][109]LogLoad: Game class is 'BatteryCollectorGameMode'
+[2017.03.24-03.36.56:485][109]LogWorld: Bringing World /Game/Maps/UEDPIE_0_CollectionLevel.CollectionLevel up for play (max tick rate 0) at 2017.03.24-09.06.56
+[2017.03.24-03.36.56:485][109]LogWorld: Bringing up level for play took: 0.001524
+[2017.03.24-03.36.56:487][109]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_CollectionLevel -0.732
+[2017.03.24-03.37.08:439][978]Cmd: SELECT NONE
+[2017.03.24-03.37.09:146][ 39]Cmd: SELECT NONE
+[2017.03.24-03.37.09:607][ 91]Cmd: SELECT NONE
+[2017.03.24-03.37.09:800][112]Cmd: SELECT NONE
+[2017.03.24-03.38.51:355][975]Cmd: QUIT_EDITOR
+[2017.03.24-03.38.52:083][975]LogWindowsTextInputMethodSystem:Display: IME system now deactivated.
+[2017.03.24-03.38.52:216][975]LogExit: Preparing to exit.
+[2017.03.24-03.38.53:139][975]LogDirectoryWatcher: A directory notification for 'E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/' was aborted.
+[2017.03.24-03.38.53:314][975]LogExit: Editor shut down
+[2017.03.24-03.38.53:316][975]LogExit: Transaction tracking system shut down
+[2017.03.24-03.38.55:167][975]LogObj: Freed 0b from 0 cluster array pools.
+[2017.03.24-03.38.55:167][975]LogExit: Object subsystem successfully closed.
+[2017.03.24-03.38.55:428][975]LogD3D11RHI: Shutdown
+[2017.03.24-03.38.55:449][975]LogD3D11RHI: CleanupD3DDevice
+[2017.03.24-03.38.55:676][975]LogD3D11RHI: ~FD3D11DynamicRHI
+[2017.03.24-03.38.57:376][975]LogHttp:Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
+[2017.03.24-03.38.57:376][975]LogHttp:Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BE4616CC7-42E7-337F-9EE3-0088208C37E6%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.14.3-3249277%2B%2B%2BUE4%2BRelease-4.14&UserID=44c69ea74a6608d08d189a89ef56ecfc%7C49553386f03546af9035a11bdf92df49%7C7c8bed81-d5ef-48e7-b159-5c54f0ab91b3&AppEnvironment=datacollector-binary&UploadType=eteventstream] status=Processing
+[2017.03.24-03.38.57:458][975]LogModuleManager: Shutting down and abandoning module MaterialEditor (248)
+[2017.03.24-03.38.57:458][975]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (247)
+[2017.03.24-03.38.57:458][975]LogModuleManager: Shutting down and abandoning module BlueprintGraph (246)
+[2017.03.24-03.38.57:458][975]LogModuleManager: Shutting down and abandoning module BlueprintProfiler (245)
+[2017.03.24-03.38.57:524][975]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (244)
+[2017.03.24-03.38.57:531][975]LogModuleManager: Shutting down and abandoning module CrashTracker (243)
+[2017.03.24-03.38.57:542][975]LogModuleManager: Shutting down and abandoning module SceneOutliner (242)
+[2017.03.24-03.38.57:542][975]LogModuleManager: Shutting down and abandoning module WidgetCarousel (241)
+[2017.03.24-03.38.57:542][975]LogModuleManager: Shutting down and abandoning module AddContentDialog (240)
+[2017.03.24-03.38.57:573][975]LogDirectoryWatcher: A directory notification for 'E:/Epic Games/4.14/FeaturePacks/' was aborted.
+[2017.03.24-03.38.57:578][975]LogModuleManager: Shutting down and abandoning module GameplayTags (239)
+[2017.03.24-03.38.57:578][975]LogModuleManager: Shutting down and abandoning module EditorWidgets (238)
+[2017.03.24-03.38.57:578][975]LogModuleManager: Shutting down and abandoning module CollectionManager (237)
+[2017.03.24-03.38.57:624][975]LogDirectoryWatcher: A directory notification for 'E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Collections/' was aborted.
+[2017.03.24-03.38.57:624][975]LogDirectoryWatcher: A directory notification for 'E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/Developers/Admin/Collections/' was aborted.
+[2017.03.24-03.38.57:624][975]LogDirectoryWatcher: A directory notification for 'E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/Saved/Collections/' was aborted.
+[2017.03.24-03.38.57:624][975]LogModuleManager: Shutting down and abandoning module StatsViewer (236)
+[2017.03.24-03.38.57:645][975]LogModuleManager: Shutting down and abandoning module FoliageEdit (235)
+[2017.03.24-03.38.57:648][975]LogModuleManager: Shutting down and abandoning module LandscapeEditor (234)
+[2017.03.24-03.38.57:658][975]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (233)
+[2017.03.24-03.38.57:658][975]LogModuleManager: Shutting down and abandoning module ActorPickerMode (232)
+[2017.03.24-03.38.57:658][975]LogModuleManager: Shutting down and abandoning module GeometryMode (231)
+[2017.03.24-03.38.57:658][975]LogModuleManager: Shutting down and abandoning module TextureAlignMode (230)
+[2017.03.24-03.38.57:658][975]LogModuleManager: Shutting down and abandoning module BspMode (229)
+[2017.03.24-03.38.57:669][975]LogModuleManager: Shutting down and abandoning module HardwareSurvey (228)
+[2017.03.24-03.38.57:675][975]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (227)
+[2017.03.24-03.38.57:686][975]LogModuleManager: Shutting down and abandoning module AutomationWorker (226)
+[2017.03.24-03.38.57:691][975]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (225)
+[2017.03.24-03.38.57:702][975]LogModuleManager: Shutting down and abandoning module PlacementMode (224)
+[2017.03.24-03.38.57:706][975]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (223)
+[2017.03.24-03.38.57:767][975]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (222)
+[2017.03.24-03.38.57:767][975]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (221)
+[2017.03.24-03.38.57:767][975]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (220)
+[2017.03.24-03.38.57:767][975]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (219)
+[2017.03.24-03.38.57:767][975]LogModuleManager: Shutting down and abandoning module Media (218)
+[2017.03.24-03.38.57:767][975]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (217)
+[2017.03.24-03.38.57:767][975]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (216)
+[2017.03.24-03.38.57:767][975]LogModuleManager: Shutting down and abandoning module CharacterAI (215)
+[2017.03.24-03.38.57:767][975]LogModuleManager: Shutting down and abandoning module SequenceRecorder (214)
+[2017.03.24-03.38.57:870][975]LogModuleManager: Shutting down and abandoning module AudioCapture (213)
+[2017.03.24-03.38.57:870][975]LogModuleManager: Shutting down and abandoning module SmartSnapping (212)
+[2017.03.24-03.38.57:870][975]LogModuleManager: Shutting down and abandoning module SessionServices (211)
+[2017.03.24-03.38.57:870][975]LogModuleManager: Shutting down and abandoning module ViewportSnapping (210)
+[2017.03.24-03.38.57:870][975]LogModuleManager: Shutting down and abandoning module ViewportInteraction (209)
+[2017.03.24-03.38.57:870][975]LogModuleManager: Shutting down and abandoning module LogVisualizer (208)
+[2017.03.24-03.38.57:886][975]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (207)
+[2017.03.24-03.38.57:912][975]LogModuleManager: Shutting down and abandoning module IntroTutorials (206)
+[2017.03.24-03.38.57:925][975]LogModuleManager: Shutting down and abandoning module EditorLiveStreaming (205)
+[2017.03.24-03.38.57:926][975]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (204)
+[2017.03.24-03.38.57:939][975]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (203)
+[2017.03.24-03.38.57:939][975]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (202)
+[2017.03.24-03.38.58:032][975]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (201)
+[2017.03.24-03.38.58:059][975]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (200)
+[2017.03.24-03.38.58:059][975]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (199)
+[2017.03.24-03.38.58:059][975]LogModuleManager: Shutting down and abandoning module InputBindingEditor (198)
+[2017.03.24-03.38.58:066][975]LogModuleManager: Shutting down and abandoning module NiagaraEditor (197)
+[2017.03.24-03.38.58:089][975]LogModuleManager: Shutting down and abandoning module MergeActors (196)
+[2017.03.24-03.38.58:101][975]LogModuleManager: Shutting down and abandoning module SizeMap (195)
+[2017.03.24-03.38.58:112][975]LogModuleManager: Shutting down and abandoning module TreeMap (194)
+[2017.03.24-03.38.58:116][975]LogModuleManager: Shutting down and abandoning module ReferenceViewer (193)
+[2017.03.24-03.38.58:116][975]LogModuleManager: Shutting down and abandoning module LocalizationService (192)
+[2017.03.24-03.38.58:128][975]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (191)
+[2017.03.24-03.38.58:145][975]LogModuleManager: Shutting down and abandoning module HardwareTargeting (190)
+[2017.03.24-03.38.58:149][975]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (189)
+[2017.03.24-03.38.58:161][975]LogModuleManager: Shutting down and abandoning module UndoHistory (188)
+[2017.03.24-03.38.58:171][975]LogModuleManager: Shutting down and abandoning module UserFeedback (187)
+[2017.03.24-03.38.58:171][975]LogModuleManager: Shutting down and abandoning module XmlParser (186)
+[2017.03.24-03.38.58:182][975]LogModuleManager: Shutting down and abandoning module Blutility (185)
+[2017.03.24-03.38.58:188][975]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (184)
+[2017.03.24-03.38.58:188][975]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (183)
+[2017.03.24-03.38.58:188][975]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (182)
+[2017.03.24-03.38.58:188][975]LogModuleManager: Shutting down and abandoning module SettingsEditor (181)
+[2017.03.24-03.38.58:198][975]LogModuleManager: Shutting down and abandoning module ProjectLauncher (180)
+[2017.03.24-03.38.58:216][975]LogModuleManager: Shutting down and abandoning module SessionFrontend (179)
+[2017.03.24-03.38.58:232][975]LogModuleManager: Shutting down and abandoning module ProfilerClient (178)
+[2017.03.24-03.38.58:241][975]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (177)
+[2017.03.24-03.38.58:241][975]LogModuleManager: Shutting down and abandoning module DeviceManager (176)
+[2017.03.24-03.38.58:323][975]LogModuleManager: Shutting down and abandoning module AutomationController (175)
+[2017.03.24-03.38.58:342][975]LogModuleManager: Shutting down and abandoning module AutomationWindow (174)
+[2017.03.24-03.38.58:355][975]LogModuleManager: Shutting down and abandoning module Layers (173)
+[2017.03.24-03.38.58:379][975]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (172)
+[2017.03.24-03.38.58:379][975]LogModuleManager: Shutting down and abandoning module DetailCustomizations (171)
+[2017.03.24-03.38.58:399][975]LogModuleManager: Shutting down and abandoning module PackagesDialog (170)
+[2017.03.24-03.38.58:399][975]LogModuleManager: Shutting down and abandoning module AnimGraph (169)
+[2017.03.24-03.38.58:399][975]LogModuleManager: Shutting down and abandoning module Persona (168)
+[2017.03.24-03.38.58:418][975]LogModuleManager: Shutting down and abandoning module Kismet (167)
+[2017.03.24-03.38.58:435][975]LogModuleManager: Shutting down and abandoning module GraphEditor (166)
+[2017.03.24-03.38.58:435][975]LogModuleManager: Shutting down and abandoning module ClassViewer (165)
+[2017.03.24-03.38.58:456][975]LogModuleManager: Shutting down and abandoning module Toolbox (164)
+[2017.03.24-03.38.58:462][975]LogModuleManager: Shutting down and abandoning module ModuleUI (163)
+[2017.03.24-03.38.58:474][975]LogModuleManager: Shutting down and abandoning module MovieSceneTools (162)
+[2017.03.24-03.38.58:503][975]LogModuleManager: Shutting down and abandoning module OutputLog (161)
+[2017.03.24-03.38.58:519][975]LogModuleManager: Shutting down and abandoning module GammaUI (160)
+[2017.03.24-03.38.58:548][975]LogModuleManager: Shutting down and abandoning module Documentation (159)
+[2017.03.24-03.38.58:548][975]LogModuleManager: Shutting down and abandoning module Niagara (158)
+[2017.03.24-03.38.58:548][975]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (157)
+[2017.03.24-03.38.58:548][975]LogModuleManager: Shutting down and abandoning module AnalyticsET (156)
+[2017.03.24-03.38.58:548][975]LogModuleManager: Shutting down and abandoning module PortalServices (155)
+[2017.03.24-03.38.58:548][975]LogModuleManager: Shutting down and abandoning module PortalRpc (154)
+[2017.03.24-03.38.58:548][975]LogModuleManager: Shutting down and abandoning module MessagingRpc (153)
+[2017.03.24-03.38.58:548][975]LogModuleManager: Shutting down and abandoning module GameplayDebugger (152)
+[2017.03.24-03.38.58:555][975]LogModuleManager: Shutting down and abandoning module AITestSuite (151)
+[2017.03.24-03.38.58:563][975]LogModuleManager: Shutting down and abandoning module AIModule (150)
+[2017.03.24-03.38.58:563][975]LogModuleManager: Shutting down and abandoning module ProfilerService (149)
+[2017.03.24-03.38.58:693][975]LogModuleManager: Shutting down and abandoning module TaskGraph (148)
+[2017.03.24-03.38.58:704][975]LogModuleManager: Shutting down and abandoning module SubstanceEditor (147)
+[2017.03.24-03.38.58:723][975]LogModuleManager: Shutting down and abandoning module SlateRemote (146)
+[2017.03.24-03.38.58:723][975]LogModuleManager: Shutting down and abandoning module SteamVRController (145)
+[2017.03.24-03.38.58:723][975]LogModuleManager: Shutting down and abandoning module SteamVR (144)
+[2017.03.24-03.38.58:723][975]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (143)
+[2017.03.24-03.38.58:731][975]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (142)
+[2017.03.24-03.38.58:738][975]LogModuleManager: Shutting down and abandoning module OculusLibrary (141)
+[2017.03.24-03.38.58:738][975]LogModuleManager: Shutting down and abandoning module OculusInput (140)
+[2017.03.24-03.38.58:738][975]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (139)
+[2017.03.24-03.38.58:738][975]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (138)
+[2017.03.24-03.38.58:738][975]LogModuleManager: Shutting down and abandoning module CableComponent (137)
+[2017.03.24-03.38.58:744][975]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (136)
+[2017.03.24-03.38.58:744][975]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (134)
+[2017.03.24-03.38.58:765][975]LogModuleManager: Shutting down and abandoning module HTML5Networking (133)
+[2017.03.24-03.38.58:765][975]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (132)
+[2017.03.24-03.38.58:765][975]LogModuleManager: Shutting down and abandoning module GeometryCache (131)
+[2017.03.24-03.38.58:765][975]LogModuleManager: Shutting down and abandoning module AlembicLibrary (130)
+[2017.03.24-03.38.58:775][975]LogModuleManager: Shutting down and abandoning module AlembicImporter (129)
+[2017.03.24-03.38.58:792][975]LogModuleManager: Shutting down and abandoning module SuperSearch (128)
+[2017.03.24-03.38.58:792][975]LogModuleManager: Shutting down and abandoning module SuperSearchEditor (127)
+[2017.03.24-03.38.58:792][975]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (126)
+[2017.03.24-03.38.58:792][975]LogModuleManager: Shutting down and abandoning module PluginBrowser (125)
+[2017.03.24-03.38.58:805][975]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (124)
+[2017.03.24-03.38.58:824][975]LogModuleManager: Shutting down and abandoning module EpicSurvey (123)
+[2017.03.24-03.38.58:849][975]LogModuleManager: Shutting down and abandoning module DesktopPlatform (122)
+[2017.03.24-03.38.58:857][975]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (121)
+[2017.03.24-03.38.58:869][975]LogModuleManager: Shutting down and abandoning module UObjectPlugin (120)
+[2017.03.24-03.38.58:869][975]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (119)
+[2017.03.24-03.38.58:891][975]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (118)
+[2017.03.24-03.38.58:913][975]LogModuleManager: Shutting down and abandoning module SourceControl (117)
+[2017.03.24-03.38.58:921][975]LogModuleManager: Shutting down and abandoning module GitSourceControl (116)
+[2017.03.24-03.38.58:931][975]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (115)
+[2017.03.24-03.38.58:931][975]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (114)
+[2017.03.24-03.38.58:941][975]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (113)
+[2017.03.24-03.38.58:941][975]LogModuleManager: Shutting down and abandoning module MeshPaint (112)
+[2017.03.24-03.38.58:941][975]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (111)
+[2017.03.24-03.38.58:952][975]LogModuleManager: Shutting down and abandoning module HotReload (110)
+[2017.03.24-03.38.58:952][975]LogDirectoryWatcher: A directory notification for 'E:/Lokesh Basu/GitHub/Unreal/BatteryCollector/Binaries/Win64' was aborted.
+[2017.03.24-03.38.58:964][975]LogModuleManager: Shutting down and abandoning module MainFrame (109)
+[2017.03.24-03.38.58:964][975]LogModuleManager: Shutting down and abandoning module LevelEditor (108)
+[2017.03.24-03.38.58:977][975]LogModuleManager: Shutting down and abandoning module ContentBrowser (107)
+[2017.03.24-03.38.58:979][975]LogModuleManager: Shutting down and abandoning module Paper2DEditor (106)
+[2017.03.24-03.38.58:994][975]LogModuleManager: Shutting down and abandoning module BatteryCollector (105)
+[2017.03.24-03.38.58:994][975]LogModuleManager: Shutting down and abandoning module UdpMessaging (104)
+[2017.03.24-03.38.59:095][975]LogModuleManager: Shutting down and abandoning module TcpMessaging (103)
+[2017.03.24-03.38.59:227][975]LogModuleManager: Shutting down and abandoning module SubstanceCore (102)
+[2017.03.24-03.38.59:252][975]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (101)
+[2017.03.24-03.38.59:252][975]LogModuleManager: Shutting down and abandoning module Paper2D (100)
+[2017.03.24-03.38.59:257][975]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (99)
+[2017.03.24-03.38.59:267][975]LogModuleManager: Shutting down and abandoning module WmfMedia (98)
+[2017.03.24-03.38.59:295][975]LogModuleManager: Shutting down and abandoning module MediaAssets (97)
+[2017.03.24-03.38.59:301][975]LogModuleManager: Shutting down and abandoning module GameLiveStreaming (96)
+[2017.03.24-03.38.59:306][975]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (95)
+[2017.03.24-03.38.59:306][975]LogModuleManager: Shutting down and abandoning module VREditor (94)
+[2017.03.24-03.38.59:306][975]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (93)
+[2017.03.24-03.38.59:306][975]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (92)
+[2017.03.24-03.38.59:326][975]LogModuleManager: Shutting down and abandoning module FunctionalTesting (91)
+[2017.03.24-03.38.59:337][975]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (90)
+[2017.03.24-03.38.59:343][975]LogModuleManager: Shutting down and abandoning module Sequencer (89)
+[2017.03.24-03.38.59:359][975]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (88)
+[2017.03.24-03.38.59:359][975]LogModuleManager: Shutting down and abandoning module MessageLog (87)
+[2017.03.24-03.38.59:359][975]LogModuleManager: Shutting down and abandoning module AssetTools (86)
+[2017.03.24-03.38.59:386][975]LogModuleManager: Shutting down and abandoning module UMGEditor (85)
+[2017.03.24-03.38.59:413][975]LogModuleManager: Shutting down and abandoning module UMG (84)
+[2017.03.24-03.38.59:442][975]LogModuleManager: Shutting down and abandoning module SlateReflector (83)
+[2017.03.24-03.38.59:499][975]LogModuleManager: Shutting down and abandoning module Slate (82)
+[2017.03.24-03.38.59:499][975]LogModuleManager: Shutting down and abandoning module EditorStyle (81)
+[2017.03.24-03.38.59:502][975]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (80)
+[2017.03.24-03.38.59:502][975]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (79)
+[2017.03.24-03.38.59:502][975]LogModuleManager: Shutting down and abandoning module XAudio2 (78)
+[2017.03.24-03.38.59:502][975]LogModuleManager: Shutting down and abandoning module Networking (76)
+[2017.03.24-03.38.59:502][975]LogModuleManager: Shutting down and abandoning module Core (75)
+[2017.03.24-03.38.59:502][975]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (74)
+[2017.03.24-03.38.59:502][975]LogDirectoryWatcher: A directory notification for '../../../Engine/Content/' was aborted.
+[2017.03.24-03.38.59:503][975]LogDirectoryWatcher: A directory notification for '../../../../../Lokesh Basu/GitHub/Unreal/BatteryCollector/Content/' was aborted.
+[2017.03.24-03.38.59:503][975]LogDirectoryWatcher: A directory notification for '../../../Engine/Plugins/2D/Paper2D/Content/' was aborted.
+[2017.03.24-03.38.59:507][975]LogModuleManager: Shutting down and abandoning module AssetRegistry (73)
+[2017.03.24-03.38.59:764][975]LogModuleManager: Shutting down and abandoning module KismetCompiler (72)
+[2017.03.24-03.38.59:764][975]LogModuleManager: Shutting down and abandoning module PhysXFormats (71)
+[2017.03.24-03.38.59:777][975]LogModuleManager: Shutting down and abandoning module SimplygonSwarm (70)
+[2017.03.24-03.38.59:785][975]LogModuleManager: Shutting down and abandoning module SimplygonMeshReduction (69)
+[2017.03.24-03.38.59:793][975]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (68)
+[2017.03.24-03.38.59:824][975]LogModuleManager: Shutting down and abandoning module PropertyEditor (67)
+[2017.03.24-03.38.59:824][975]LogModuleManager: Shutting down and abandoning module MeshUtilities (66)
+[2017.03.24-03.38.59:852][975]LogModuleManager: Shutting down and abandoning module DerivedDataCache (65)
+[2017.03.24-03.38.59:910][975]LogDerivedDataCache: Shutdown
+[2017.03.24-03.38.59:911][975]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (64)
+[2017.03.24-03.38.59:921][975]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (63)
+[2017.03.24-03.38.59:931][975]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (62)
+[2017.03.24-03.38.59:940][975]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (61)
+[2017.03.24-03.38.59:950][975]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (60)
+[2017.03.24-03.38.59:950][975]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (59)
+[2017.03.24-03.38.59:962][975]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (58)
+[2017.03.24-03.38.59:969][975]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (57)
+[2017.03.24-03.39.00:012][975]LogModuleManager: Shutting down and abandoning module ImageWrapper (56)
+[2017.03.24-03.39.00:012][975]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (55)
+[2017.03.24-03.39.00:012][975]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (54)
+[2017.03.24-03.39.00:012][975]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (53)
+[2017.03.24-03.39.00:032][975]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (52)
+[2017.03.24-03.39.00:045][975]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (51)
+[2017.03.24-03.39.00:045][975]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (50)
+[2017.03.24-03.39.00:045][975]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (49)
+[2017.03.24-03.39.00:051][975]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (48)
+[2017.03.24-03.39.00:056][975]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (47)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (46)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module Messaging (45)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (44)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (43)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module Android_PVRTCTargetPlatform (42)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module Android_MultiTargetPlatform (41)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module Android_ETC2TargetPlatform (40)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module Android_ETC1TargetPlatform (39)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module Android_DXTTargetPlatform (38)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module Android_ATCTargetPlatform (37)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module Android_ASTCTargetPlatform (36)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (35)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (34)
+[2017.03.24-03.39.00:063][975]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (33)
+[2017.03.24-03.39.00:079][975]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (32)
+[2017.03.24-03.39.00:083][975]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (31)
+[2017.03.24-03.39.00:086][975]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (30)
+[2017.03.24-03.39.00:086][975]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (29)
+[2017.03.24-03.39.00:086][975]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (28)
+[2017.03.24-03.39.00:086][975]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (27)
+[2017.03.24-03.39.00:087][975]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (26)
+[2017.03.24-03.39.00:087][975]LogModuleManager: Shutting down and abandoning module TargetPlatform (25)
+[2017.03.24-03.39.00:087][975]LogModuleManager: Shutting down and abandoning module InputCore (24)
+[2017.03.24-03.39.00:087][975]LogModuleManager: Shutting down and abandoning module Settings (23)
+[2017.03.24-03.39.00:087][975]LogModuleManager: Shutting down and abandoning module OculusRift (22)
+[2017.03.24-03.39.00:093][975]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (21)
+[2017.03.24-03.39.00:093][975]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (20)
+[2017.03.24-03.39.00:093][975]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (18)
+[2017.03.24-03.39.00:093][975]LogOnline:Display: Unloading online subsystem: NULL
+[2017.03.24-03.39.00:110][975]LogModuleManager: Shutting down and abandoning module SSL (17)
+[2017.03.24-03.39.00:122][975]LogModuleManager: Shutting down and abandoning module HTTP (16)
+[2017.03.24-03.39.00:122][975]LogModuleManager: Shutting down and abandoning module XMPP (15)
+[2017.03.24-03.39.00:140][975]LogModuleManager: Shutting down and abandoning module TextureCompressor (14)
+[2017.03.24-03.39.00:204][975]LogModuleManager: Shutting down and abandoning module ShaderCore (13)
+[2017.03.24-03.39.00:204][975]LogModuleManager: Shutting down and abandoning module Landscape (12)
+[2017.03.24-03.39.00:204][975]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (11)
+[2017.03.24-03.39.00:240][975]LogModuleManager: Shutting down and abandoning module OpenGLDrv (10)
+[2017.03.24-03.39.00:250][975]LogModuleManager: Shutting down and abandoning module D3D11RHI (9)
+[2017.03.24-03.39.00:250][975]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (8)
+[2017.03.24-03.39.00:265][975]LogModuleManager: Shutting down and abandoning module Renderer (7)
+[2017.03.24-03.39.00:275][975]LogModuleManager: Shutting down and abandoning module Engine (6)
+[2017.03.24-03.39.00:275][975]LogModuleManager: Shutting down and abandoning module CoreUObject (5)
+[2017.03.24-03.39.00:275][975]LogModuleManager: Shutting down and abandoning module NetworkFile (4)
+[2017.03.24-03.39.00:281][975]LogModuleManager: Shutting down and abandoning module StreamingFile (3)
+[2017.03.24-03.39.00:290][975]LogModuleManager: Shutting down and abandoning module SandboxFile (2)
+[2017.03.24-03.39.00:298][975]LogModuleManager: Shutting down and abandoning module PakFile (1)
+[2017.03.24-03.39.00:319][975]LogExit: Exiting.
+[2017.03.24-03.39.00:333][975]Log file closed, 03/24/17 09:09:00
