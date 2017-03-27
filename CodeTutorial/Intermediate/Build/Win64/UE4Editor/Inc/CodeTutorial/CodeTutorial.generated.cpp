@@ -28,6 +28,10 @@ void EmptyLinkFunctionForGeneratedCode1CodeTutorial() {}
 		FNativeFunctionRegistrar::RegisterFunction(ACodeTutorialProjectile::StaticClass(), "OnHit",(Native)&ACodeTutorialProjectile::execOnHit);
 	}
 	IMPLEMENT_CLASS(ACodeTutorialProjectile, 895090129);
+	void APickup::StaticRegisterNativesAPickup()
+	{
+	}
+	IMPLEMENT_CLASS(APickup, 298120514);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
@@ -46,6 +50,7 @@ void EmptyLinkFunctionForGeneratedCode1CodeTutorial() {}
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
 	ENGINE_API class UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_UStaticMesh_NoRegister();
 
 	CODETUTORIAL_API class UClass* Z_Construct_UClass_ACodeTutorialCharacter_NoRegister();
 	CODETUTORIAL_API class UClass* Z_Construct_UClass_ACodeTutorialCharacter();
@@ -56,6 +61,8 @@ void EmptyLinkFunctionForGeneratedCode1CodeTutorial() {}
 	CODETUTORIAL_API class UFunction* Z_Construct_UFunction_ACodeTutorialProjectile_OnHit();
 	CODETUTORIAL_API class UClass* Z_Construct_UClass_ACodeTutorialProjectile_NoRegister();
 	CODETUTORIAL_API class UClass* Z_Construct_UClass_ACodeTutorialProjectile();
+	CODETUTORIAL_API class UClass* Z_Construct_UClass_APickup_NoRegister();
+	CODETUTORIAL_API class UClass* Z_Construct_UClass_APickup();
 	CODETUTORIAL_API class UPackage* Z_Construct_UPackage__Script_CodeTutorial();
 	UClass* Z_Construct_UClass_ACodeTutorialCharacter_NoRegister()
 	{
@@ -311,6 +318,43 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ACodeTutorialProjectile(Z_Construct_UClass_ACodeTutorialProjectile, &ACodeTutorialProjectile::StaticClass, TEXT("ACodeTutorialProjectile"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ACodeTutorialProjectile);
+	UClass* Z_Construct_UClass_APickup_NoRegister()
+	{
+		return APickup::StaticClass();
+	}
+	UClass* Z_Construct_UClass_APickup()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AActor();
+			Z_Construct_UPackage__Script_CodeTutorial();
+			OuterClass = APickup::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_MeshForPickup = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("MeshForPickup"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(MeshForPickup, APickup), 0x0010000000000001, Z_Construct_UClass_UStaticMesh_NoRegister());
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("Pickup.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
+				MetaData->SetValue(NewProp_MeshForPickup, TEXT("Category"), TEXT("Pickup"));
+				MetaData->SetValue(NewProp_MeshForPickup, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
+				MetaData->SetValue(NewProp_MeshForPickup, TEXT("ToolTip"), TEXT("The static mesh for the pickup"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_APickup(Z_Construct_UClass_APickup, &APickup::StaticClass, TEXT("APickup"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(APickup);
 	UPackage* Z_Construct_UPackage__Script_CodeTutorial()
 	{
 		static UPackage* ReturnPackage = NULL;
@@ -319,8 +363,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/CodeTutorial")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x30D90B49;
-			Guid.B = 0x7A712BE2;
+			Guid.A = 0x3AFF60DE;
+			Guid.B = 0x968FD4FD;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

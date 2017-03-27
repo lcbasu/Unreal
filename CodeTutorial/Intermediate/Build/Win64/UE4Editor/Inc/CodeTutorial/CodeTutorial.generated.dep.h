@@ -18,3 +18,6 @@
 #ifndef CODETUTORIAL_CodeTutorialProjectile_generated_h
 	#include "CodeTutorialProjectile.h"
 #endif
+#ifndef CODETUTORIAL_Pickup_generated_h
+	#include "Pickup.h"
+#endif

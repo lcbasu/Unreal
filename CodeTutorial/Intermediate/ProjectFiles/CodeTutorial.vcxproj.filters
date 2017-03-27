@@ -1,70 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\CodeTutorial.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{6CCAB0CB-72FF-4B2C-A7D0-9D2B39DC0909}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\CodeTutorial.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\CodeTutorialEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{7274BF40-2D71-4436-BE92-933E9D56EF98}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultInput.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\CodeTutorial">
-			<UniqueIdentifier>{5DE11619-CF8E-427D-88DE-A5F25BA56680}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\CodeTutorial\CodeTutorial.Build.cs">
-			<Filter>Source\CodeTutorial</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\CodeTutorial\CodeTutorial.cpp">
-			<Filter>Source\CodeTutorial</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\CodeTutorial\CodeTutorial.h">
-			<Filter>Source\CodeTutorial</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\CodeTutorial\CodeTutorialCharacter.cpp">
-			<Filter>Source\CodeTutorial</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\CodeTutorial\CodeTutorialCharacter.h">
-			<Filter>Source\CodeTutorial</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\CodeTutorial\CodeTutorialGameMode.cpp">
-			<Filter>Source\CodeTutorial</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\CodeTutorial\CodeTutorialGameMode.h">
-			<Filter>Source\CodeTutorial</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\CodeTutorial\CodeTutorialHUD.cpp">
-			<Filter>Source\CodeTutorial</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\CodeTutorial\CodeTutorialHUD.h">
-			<Filter>Source\CodeTutorial</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\CodeTutorial\CodeTutorialProjectile.cpp">
-			<Filter>Source\CodeTutorial</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\CodeTutorial\CodeTutorialProjectile.h">
-			<Filter>Source\CodeTutorial</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\CodeTutorial.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{6CCAB0CB-72FF-4B2C-A7D0-9D2B39DC0909}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CodeTutorial.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\CodeTutorialEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{7274BF40-2D71-4436-BE92-933E9D56EF98}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\CodeTutorial">
+      <UniqueIdentifier>{5DE11619-CF8E-427D-88DE-A5F25BA56680}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CodeTutorial\CodeTutorial.Build.cs">
+      <Filter>Source\CodeTutorial</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\CodeTutorial\CodeTutorial.cpp">
+      <Filter>Source\CodeTutorial</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CodeTutorial\CodeTutorial.h">
+      <Filter>Source\CodeTutorial</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CodeTutorial\CodeTutorialCharacter.cpp">
+      <Filter>Source\CodeTutorial</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CodeTutorial\CodeTutorialCharacter.h">
+      <Filter>Source\CodeTutorial</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CodeTutorial\CodeTutorialGameMode.cpp">
+      <Filter>Source\CodeTutorial</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CodeTutorial\CodeTutorialGameMode.h">
+      <Filter>Source\CodeTutorial</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CodeTutorial\CodeTutorialHUD.cpp">
+      <Filter>Source\CodeTutorial</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CodeTutorial\CodeTutorialHUD.h">
+      <Filter>Source\CodeTutorial</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CodeTutorial\CodeTutorialProjectile.cpp">
+      <Filter>Source\CodeTutorial</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CodeTutorial\CodeTutorialProjectile.h">
+      <Filter>Source\CodeTutorial</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\CodeTutorial\Pickup.h">
+      <Filter>Source\CodeTutorial</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\CodeTutorial\Pickup.cpp">
+      <Filter>Source\CodeTutorial</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
