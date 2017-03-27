@@ -3,6 +3,7 @@
 #include "NetworkingTutorial_1.h"
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
 #include "NetworkingTutorial_1Character.h"
+#include "Engine.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ANetworkingTutorial_1Character
@@ -103,6 +104,10 @@ void ANetworkingTutorial_1Character::MoveForward(float Value)
 {
 	if ((Controller != NULL) && (Value != 0.0f))
 	{
+		if (Role == ROLE_Authority)
+		{
+			MyServerFunc();
+		}
 		// find out which way is forward
 		const FRotator Rotation = Controller->GetControlRotation();
 		const FRotator YawRotation(0, Rotation.Yaw, 0);
@@ -126,4 +131,14 @@ void ANetworkingTutorial_1Character::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
+}
+
+void ANetworkingTutorial_1Character::MyServerFunc_Implementation()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Called on Client and executed on Server!."));
+}
+
+bool ANetworkingTutorial_1Character::MyServerFunc_Validate()
+{
+	return true;
 }

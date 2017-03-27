@@ -26,6 +26,11 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	UFUNCTION(Reliable, Server, WithValidation)
+	void MyServerFunc();
+	void MyServerFunc_Implementation();
+	bool MyServerFunc_Validate();
+
 protected:
 
 	/** Resets HMD orientation in VR. */

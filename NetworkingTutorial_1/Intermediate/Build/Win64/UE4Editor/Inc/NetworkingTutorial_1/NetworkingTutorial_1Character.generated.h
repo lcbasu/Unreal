@@ -11,8 +11,43 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NETWORKINGTUTORIAL_1_NetworkingTutorial_1Character_generated_h
 
-#define NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_RPC_WRAPPERS
-#define NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_RPC_WRAPPERS_NO_PURE_DECLS
+#define NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_RPC_WRAPPERS \
+	virtual bool MyServerFunc_Validate(); \
+	virtual void MyServerFunc_Implementation(); \
+ \
+	DECLARE_FUNCTION(execMyServerFunc) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		if (!this->MyServerFunc_Validate()) \
+		{ \
+			RPC_ValidateFailed(TEXT("MyServerFunc_Validate")); \
+			return; \
+		} \
+		this->MyServerFunc_Implementation(); \
+		P_NATIVE_END; \
+	}
+
+
+#define NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execMyServerFunc) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		if (!this->MyServerFunc_Validate()) \
+		{ \
+			RPC_ValidateFailed(TEXT("MyServerFunc_Validate")); \
+			return; \
+		} \
+		this->MyServerFunc_Implementation(); \
+		P_NATIVE_END; \
+	}
+
+
+#define NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_EVENT_PARMS
+extern NETWORKINGTUTORIAL_1_API  FName NETWORKINGTUTORIAL_1_MyServerFunc;
+#define NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_CALLBACK_WRAPPERS
 #define NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesANetworkingTutorial_1Character(); \
@@ -64,12 +99,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANetworkingTutorial_1Character); \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ANetworkingTutorial_1Character, FollowCamera); }
 
 
-#define NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_6_PROLOG
+#define NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_6_PROLOG \
+	NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_EVENT_PARMS
+
+
 #define NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_PRIVATE_PROPERTY_OFFSET \
 	NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_RPC_WRAPPERS \
+	NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_CALLBACK_WRAPPERS \
 	NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_INCLASS \
 	NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_STANDARD_CONSTRUCTORS \
 public: \
@@ -81,6 +120,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_PRIVATE_PROPERTY_OFFSET \
 	NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_RPC_WRAPPERS_NO_PURE_DECLS \
+	NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_CALLBACK_WRAPPERS \
 	NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_INCLASS_NO_PURE_DECLS \
 	NetworkingTutorial_1_Source_NetworkingTutorial_1_NetworkingTutorial_1Character_h_9_ENHANCED_CONSTRUCTORS \
 private: \
