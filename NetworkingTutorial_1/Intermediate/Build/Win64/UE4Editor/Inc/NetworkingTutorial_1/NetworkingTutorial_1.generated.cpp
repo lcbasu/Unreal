@@ -12,6 +12,23 @@ PRAGMA_DISABLE_OPTIMIZATION
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCode1NetworkingTutorial_1() {}
 FName NETWORKINGTUTORIAL_1_MyServerFunc = FName(TEXT("MyServerFunc"));
+FName NETWORKINGTUTORIAL_1_UpdateScore = FName(TEXT("UpdateScore"));
+	void ACollectableActor::UpdateScore(int32 Amount)
+	{
+		CollectableActor_eventUpdateScore_Parms Parms;
+		Parms.Amount=Amount;
+		ProcessEvent(FindFunctionChecked(NETWORKINGTUTORIAL_1_UpdateScore),&Parms);
+	}
+	void ACollectableActor::StaticRegisterNativesACollectableActor()
+	{
+		FNativeFunctionRegistrar::RegisterFunction(ACollectableActor::StaticClass(), "OnOverlapBegin",(Native)&ACollectableActor::execOnOverlapBegin);
+		FNativeFunctionRegistrar::RegisterFunction(ACollectableActor::StaticClass(), "UpdateScore",(Native)&ACollectableActor::execUpdateScore);
+	}
+	IMPLEMENT_CLASS(ACollectableActor, 2108512102);
+	void AMyGameState::StaticRegisterNativesAMyGameState()
+	{
+	}
+	IMPLEMENT_CLASS(AMyGameState, 2127922632);
 	void ANetworkingTutorial_1Character::MyServerFunc()
 	{
 		ProcessEvent(FindFunctionChecked(NETWORKINGTUTORIAL_1_MyServerFunc),NULL);
@@ -27,17 +44,153 @@ FName NETWORKINGTUTORIAL_1_MyServerFunc = FName(TEXT("MyServerFunc"));
 	IMPLEMENT_CLASS(ANetworkingTutorial_1GameMode, 2574264592);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
+	ENGINE_API class UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
+	ENGINE_API class UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_AActor_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_AActor();
+	ENGINE_API class UClass* Z_Construct_UClass_AGameState();
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
 	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
 
+	NETWORKINGTUTORIAL_1_API class UFunction* Z_Construct_UFunction_ACollectableActor_OnOverlapBegin();
+	NETWORKINGTUTORIAL_1_API class UFunction* Z_Construct_UFunction_ACollectableActor_UpdateScore();
+	NETWORKINGTUTORIAL_1_API class UClass* Z_Construct_UClass_ACollectableActor_NoRegister();
+	NETWORKINGTUTORIAL_1_API class UClass* Z_Construct_UClass_ACollectableActor();
+	NETWORKINGTUTORIAL_1_API class UClass* Z_Construct_UClass_AMyGameState_NoRegister();
+	NETWORKINGTUTORIAL_1_API class UClass* Z_Construct_UClass_AMyGameState();
 	NETWORKINGTUTORIAL_1_API class UFunction* Z_Construct_UFunction_ANetworkingTutorial_1Character_MyServerFunc();
 	NETWORKINGTUTORIAL_1_API class UClass* Z_Construct_UClass_ANetworkingTutorial_1Character_NoRegister();
 	NETWORKINGTUTORIAL_1_API class UClass* Z_Construct_UClass_ANetworkingTutorial_1Character();
 	NETWORKINGTUTORIAL_1_API class UClass* Z_Construct_UClass_ANetworkingTutorial_1GameMode_NoRegister();
 	NETWORKINGTUTORIAL_1_API class UClass* Z_Construct_UClass_ANetworkingTutorial_1GameMode();
 	NETWORKINGTUTORIAL_1_API class UPackage* Z_Construct_UPackage__Script_NetworkingTutorial_1();
+	UFunction* Z_Construct_UFunction_ACollectableActor_OnOverlapBegin()
+	{
+		struct CollectableActor_eventOnOverlapBegin_Parms
+		{
+			UPrimitiveComponent* OverlappedComp;
+			AActor* OtherActor;
+			UPrimitiveComponent* OtherComp;
+			int32 OtherBodyIndex;
+			bool bFromSweep;
+			FHitResult SweepResult;
+		};
+		UObject* Outer=Z_Construct_UClass_ACollectableActor();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnOverlapBegin"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00420401, 65535, sizeof(CollectableActor_eventOnOverlapBegin_Parms));
+			UProperty* NewProp_SweepResult = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("SweepResult"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(SweepResult, CollectableActor_eventOnOverlapBegin_Parms), 0x0010008008000182, Z_Construct_UScriptStruct_FHitResult());
+			CPP_BOOL_PROPERTY_BITMASK_STRUCT(bFromSweep, CollectableActor_eventOnOverlapBegin_Parms, bool);
+			UProperty* NewProp_bFromSweep = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("bFromSweep"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bFromSweep, CollectableActor_eventOnOverlapBegin_Parms), 0x0010000000000080, CPP_BOOL_PROPERTY_BITMASK(bFromSweep, CollectableActor_eventOnOverlapBegin_Parms), sizeof(bool), true);
+			UProperty* NewProp_OtherBodyIndex = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherBodyIndex"), RF_Public|RF_Transient|RF_MarkAsNative) UIntProperty(CPP_PROPERTY_BASE(OtherBodyIndex, CollectableActor_eventOnOverlapBegin_Parms), 0x0010000000000080);
+			UProperty* NewProp_OtherComp = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherComp, CollectableActor_eventOnOverlapBegin_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
+			UProperty* NewProp_OtherActor = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherActor"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherActor, CollectableActor_eventOnOverlapBegin_Parms), 0x0010000000000080, Z_Construct_UClass_AActor_NoRegister());
+			UProperty* NewProp_OverlappedComp = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OverlappedComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OverlappedComp, CollectableActor_eventOnOverlapBegin_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("CollectableActor.h"));
+			MetaData->SetValue(NewProp_SweepResult, TEXT("NativeConst"), TEXT(""));
+			MetaData->SetValue(NewProp_OtherComp, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_OverlappedComp, TEXT("EditInline"), TEXT("true"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ACollectableActor_UpdateScore()
+	{
+		UObject* Outer=Z_Construct_UClass_ACollectableActor();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("UpdateScore"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x80220CC0, 65535, sizeof(CollectableActor_eventUpdateScore_Parms));
+			UProperty* NewProp_Amount = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("Amount"), RF_Public|RF_Transient|RF_MarkAsNative) UIntProperty(CPP_PROPERTY_BASE(Amount, CollectableActor_eventUpdateScore_Parms), 0x0010000000000080);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("CollectableActor.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UClass* Z_Construct_UClass_ACollectableActor_NoRegister()
+	{
+		return ACollectableActor::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ACollectableActor()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AActor();
+			Z_Construct_UPackage__Script_NetworkingTutorial_1();
+			OuterClass = ACollectableActor::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+				OuterClass->LinkChild(Z_Construct_UFunction_ACollectableActor_OnOverlapBegin());
+				OuterClass->LinkChild(Z_Construct_UFunction_ACollectableActor_UpdateScore());
+
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ACollectableActor_OnOverlapBegin(), "OnOverlapBegin"); // 1534431245
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ACollectableActor_UpdateScore(), "UpdateScore"); // 1240704510
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("CollectableActor.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("CollectableActor.h"));
+				MetaData->SetValue(OuterClass, TEXT("ObjectInitializerConstructorDeclared"), TEXT(""));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ACollectableActor(Z_Construct_UClass_ACollectableActor, &ACollectableActor::StaticClass, TEXT("ACollectableActor"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ACollectableActor);
+	UClass* Z_Construct_UClass_AMyGameState_NoRegister()
+	{
+		return AMyGameState::StaticClass();
+	}
+	UClass* Z_Construct_UClass_AMyGameState()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AGameState();
+			Z_Construct_UPackage__Script_NetworkingTutorial_1();
+			OuterClass = AMyGameState::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900280;
+
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_Score = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Score"), RF_Public|RF_Transient|RF_MarkAsNative) UIntProperty(CPP_PROPERTY_BASE(Score, AMyGameState), 0x0010000000000020);
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Input Movement Collision Rendering Utilities|Transformation"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("MyGameState.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("MyGameState.h"));
+				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+				MetaData->SetValue(NewProp_Score, TEXT("ModuleRelativePath"), TEXT("MyGameState.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_AMyGameState(Z_Construct_UClass_AMyGameState, &AMyGameState::StaticClass, TEXT("AMyGameState"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(AMyGameState);
 	UFunction* Z_Construct_UFunction_ANetworkingTutorial_1Character_MyServerFunc()
 	{
 		UObject* Outer=Z_Construct_UClass_ANetworkingTutorial_1Character();
@@ -152,8 +305,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NetworkingTutorial_1")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x8287DE68;
-			Guid.B = 0x802FE072;
+			Guid.A = 0x4BE73B42;
+			Guid.B = 0xC07D8A32;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

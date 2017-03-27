@@ -6,6 +6,12 @@
 ===========================================================================*/
 
 #include "GeneratedCppIncludes.h"
+#ifndef NETWORKINGTUTORIAL_1_CollectableActor_generated_h
+	#include "CollectableActor.h"
+#endif
+#ifndef NETWORKINGTUTORIAL_1_MyGameState_generated_h
+	#include "MyGameState.h"
+#endif
 #ifndef NETWORKINGTUTORIAL_1_NetworkingTutorial_1Character_generated_h
 	#include "NetworkingTutorial_1Character.h"
 #endif

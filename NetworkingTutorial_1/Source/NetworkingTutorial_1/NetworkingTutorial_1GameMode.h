@@ -10,6 +10,7 @@ class ANetworkingTutorial_1GameMode : public AGameModeBase
 
 public:
 	ANetworkingTutorial_1GameMode();
+	void AddScore(int32 Amount);
 };
 
 

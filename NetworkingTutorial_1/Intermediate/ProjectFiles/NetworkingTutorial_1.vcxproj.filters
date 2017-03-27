@@ -1,58 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\NetworkingTutorial_1.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{38F555AF-D006-470A-88A1-4239425DE446}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\NetworkingTutorial_1.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\NetworkingTutorial_1Editor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{C732B4CD-BC5B-4C35-B8C9-8D0C367FBFC0}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultInput.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\NetworkingTutorial_1">
-			<UniqueIdentifier>{C2F196E0-C803-47F0-807E-D1A576599D29}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1.Build.cs">
-			<Filter>Source\NetworkingTutorial_1</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1.cpp">
-			<Filter>Source\NetworkingTutorial_1</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1.h">
-			<Filter>Source\NetworkingTutorial_1</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1Character.cpp">
-			<Filter>Source\NetworkingTutorial_1</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1Character.h">
-			<Filter>Source\NetworkingTutorial_1</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1GameMode.cpp">
-			<Filter>Source\NetworkingTutorial_1</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1GameMode.h">
-			<Filter>Source\NetworkingTutorial_1</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\NetworkingTutorial_1.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{38F555AF-D006-470A-88A1-4239425DE446}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\NetworkingTutorial_1.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\NetworkingTutorial_1Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{C732B4CD-BC5B-4C35-B8C9-8D0C367FBFC0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\NetworkingTutorial_1">
+      <UniqueIdentifier>{C2F196E0-C803-47F0-807E-D1A576599D29}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1.Build.cs">
+      <Filter>Source\NetworkingTutorial_1</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1.cpp">
+      <Filter>Source\NetworkingTutorial_1</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1.h">
+      <Filter>Source\NetworkingTutorial_1</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1Character.cpp">
+      <Filter>Source\NetworkingTutorial_1</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1Character.h">
+      <Filter>Source\NetworkingTutorial_1</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1GameMode.cpp">
+      <Filter>Source\NetworkingTutorial_1</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NetworkingTutorial_1\NetworkingTutorial_1GameMode.h">
+      <Filter>Source\NetworkingTutorial_1</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\NetworkingTutorial_1\CollectableActor.h">
+      <Filter>Source\NetworkingTutorial_1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\NetworkingTutorial_1\MyGameState.h">
+      <Filter>Source\NetworkingTutorial_1</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\NetworkingTutorial_1\CollectableActor.cpp">
+      <Filter>Source\NetworkingTutorial_1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NetworkingTutorial_1\MyGameState.cpp">
+      <Filter>Source\NetworkingTutorial_1</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
