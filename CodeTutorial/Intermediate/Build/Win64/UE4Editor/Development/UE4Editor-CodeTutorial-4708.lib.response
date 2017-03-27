@@ -1,0 +1,28 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-CodeTutorial-4708.dll"
+/IGNORE:4221
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"E:\Lokesh Basu\GitHub\Unreal\CodeTutorial\Intermediate\Build\Win64\UE4Editor\Development\CodeTutorial\PCH.CodeTutorial.h.obj"
+"E:\Lokesh Basu\GitHub\Unreal\CodeTutorial\Intermediate\Build\Win64\UE4Editor\Development\CodeTutorial\CodeTutorial.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\CodeTutorial\Intermediate\Build\Win64\UE4Editor\Development\CodeTutorial\CodeTutorialCharacter.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\CodeTutorial\Intermediate\Build\Win64\UE4Editor\Development\CodeTutorial\CodeTutorialGameMode.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\CodeTutorial\Intermediate\Build\Win64\UE4Editor\Development\CodeTutorial\CodeTutorialHUD.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\CodeTutorial\Intermediate\Build\Win64\UE4Editor\Development\CodeTutorial\CodeTutorialProjectile.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\CodeTutorial\Intermediate\Build\Win64\UE4Editor\Development\CodeTutorial\Pickup.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\CodeTutorial\Intermediate\Build\Win64\UE4Editor\Development\CodeTutorial\CodeTutorial.generated.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\CodeTutorial\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"E:\Lokesh Basu\GitHub\Unreal\CodeTutorial\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CodeTutorial-4708.lib"

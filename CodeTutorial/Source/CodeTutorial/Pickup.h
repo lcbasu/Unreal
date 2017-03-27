@@ -21,8 +21,23 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	
+	UPROPERTY(EditAnywhere)
+	USceneComponent* PickupRoot;
 
 	// The static mesh for the pickup
 	UPROPERTY(EditAnywhere)
-	UStaticMesh* MeshForPickup;
+	UStaticMeshComponent* PickupMesh;
+
+	/* 
+		Box to represent collider around the pickup 
+		Using UShapeComponent in place of UBoxComponent
+		because if in future we decide to use some other collider,
+		we can use this variable without any type change
+	*/
+	UPROPERTY(EditAnywhere)
+	UShapeComponent* PickupBox;
+
+	UFUNCTION()
+	void OnPlayerEnterPickupBox(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 };
