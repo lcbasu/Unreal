@@ -16,8 +16,9 @@ class NMPGAME_API ABatteryPickup : public APickup
 public:
 	// Set the default values for the instances of this class
 	ABatteryPickup();
-	
-	// Override the base class version to handle being picked up
-	void WasCollected_Implementation() override;
+
+	// Server side handling of being picked up the child class
+	UFUNCTION(BlueprintAuthorityOnly, Category = "Pickup")
+	void PickedUpBy(APawn* Pawn) override;
 	
 };

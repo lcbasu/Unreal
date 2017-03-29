@@ -14,11 +14,13 @@ ABatteryPickup::ABatteryPickup()
 	GetStaticMeshComponent()->SetSimulatePhysics(true);
 }
 
-void ABatteryPickup::WasCollected_Implementation()
+void ABatteryPickup::PickedUpBy(APawn * Pawn)
 {
-	// Allow the parent class to handle this first
-	Super::WasCollected_Implementation();
+	Super::PickedUpBy(Pawn);
 
-	// Destroy the battery for now
-	Destroy();
+	if (Role == ROLE_Authority)
+	{
+		// To give clients time to play vfx, etc.... before destroying the battery
+		SetLifeSpan(2.0f);
+	}
 }

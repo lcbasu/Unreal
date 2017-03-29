@@ -14,6 +14,9 @@ APickup::APickup()
 	// Pickups do not need to tick every cycle
 	PrimaryActorTick.bCanEverTick = false;
 
+	// StaticMeshActor disables overlap events by default which we need to re-enable
+	GetStaticMeshComponent()->bGenerateOverlapEvents = true;
+
 	if (Role == ROLE_Authority)
 	{
 		bIsActive = true;
@@ -50,7 +53,27 @@ void APickup::WasCollected_Implementation()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Pickup was collected"));
 }
 
+void APickup::PickedUpBy(APawn * Pawn)
+{
+	if (Role == ROLE_Authority)
+	{
+		PickupInstigator = Pawn;
+
+		// Notify clients of the picked up action
+		ClientOnPickedBy(Pawn);
+	}
+}
+
 void APickup::OnRep_IsActive()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("bIsActive property is replicated"));
+}
+
+void APickup::ClientOnPickedBy_Implementation(APawn * Pawn)
+{
+	// Store the pawn who picked up the pickup (Client)
+	PickupInstigator = Pawn;
+
+	// Fire the Blueprint Native Event, which itself cannot be replicated
+	WasCollected();
 }

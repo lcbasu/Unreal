@@ -6,13 +6,36 @@
 ===========================================================================*/
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class APawn;
 #ifdef NMPGAME_BatteryPickup_generated_h
 #error "BatteryPickup.generated.h already included, missing '#pragma once' in BatteryPickup.h"
 #endif
 #define NMPGAME_BatteryPickup_generated_h
 
-#define NMPGame_Source_NMPGame_BatteryPickup_h_14_RPC_WRAPPERS
-#define NMPGame_Source_NMPGame_BatteryPickup_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define NMPGame_Source_NMPGame_BatteryPickup_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execPickedUpBy) \
+	{ \
+		P_GET_OBJECT(APawn,Z_Param_Pawn); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->PickedUpBy(Z_Param_Pawn); \
+		P_NATIVE_END; \
+	}
+
+
+#define NMPGame_Source_NMPGame_BatteryPickup_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execPickedUpBy) \
+	{ \
+		P_GET_OBJECT(APawn,Z_Param_Pawn); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->PickedUpBy(Z_Param_Pawn); \
+		P_NATIVE_END; \
+	}
+
+
 #define NMPGame_Source_NMPGame_BatteryPickup_h_14_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesABatteryPickup(); \

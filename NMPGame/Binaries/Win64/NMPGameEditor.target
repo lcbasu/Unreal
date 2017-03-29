@@ -2,7 +2,7 @@
 	"TargetName" : "NMPGameEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "b7e7b644-dcb5-4354-a8a8-6475c4801615",
+	"BuildId" : "1a7f81c8-162f-4bc1-8afd-8ff9228b0359",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -17,15 +17,15 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-NMPGame-796.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-NMPGame-147.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-NMPGame-796.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-NMPGame-147.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-NMPGame-796.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-NMPGame-147.lib",
 			"Type" : "ImportLibrary"
 		},
 		{

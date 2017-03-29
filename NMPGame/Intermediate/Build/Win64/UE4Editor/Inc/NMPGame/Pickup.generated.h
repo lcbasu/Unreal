@@ -6,19 +6,39 @@
 ===========================================================================*/
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class APawn;
 #ifdef NMPGAME_Pickup_generated_h
 #error "Pickup.generated.h already included, missing '#pragma once' in Pickup.h"
 #endif
 #define NMPGAME_Pickup_generated_h
 
 #define NMPGame_Source_NMPGame_Pickup_h_14_RPC_WRAPPERS \
+	virtual void ClientOnPickedBy_Implementation(APawn* Pawn); \
 	virtual void WasCollected_Implementation(); \
+ \
+	DECLARE_FUNCTION(execClientOnPickedBy) \
+	{ \
+		P_GET_OBJECT(APawn,Z_Param_Pawn); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->ClientOnPickedBy_Implementation(Z_Param_Pawn); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execOnRep_IsActive) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		this->OnRep_IsActive(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execPickedUpBy) \
+	{ \
+		P_GET_OBJECT(APawn,Z_Param_Pawn); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->PickedUpBy(Z_Param_Pawn); \
 		P_NATIVE_END; \
 	} \
  \
@@ -50,11 +70,29 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define NMPGame_Source_NMPGame_Pickup_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execClientOnPickedBy) \
+	{ \
+		P_GET_OBJECT(APawn,Z_Param_Pawn); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->ClientOnPickedBy_Implementation(Z_Param_Pawn); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execOnRep_IsActive) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		this->OnRep_IsActive(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execPickedUpBy) \
+	{ \
+		P_GET_OBJECT(APawn,Z_Param_Pawn); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->PickedUpBy(Z_Param_Pawn); \
 		P_NATIVE_END; \
 	} \
  \
@@ -84,7 +122,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define NMPGame_Source_NMPGame_Pickup_h_14_EVENT_PARMS
+#define NMPGame_Source_NMPGame_Pickup_h_14_EVENT_PARMS \
+	struct Pickup_eventClientOnPickedBy_Parms \
+	{ \
+		APawn* Pawn; \
+	};
+
+
+extern NMPGAME_API  FName NMPGAME_ClientOnPickedBy;
 extern NMPGAME_API  FName NMPGAME_WasCollected;
 #define NMPGame_Source_NMPGame_Pickup_h_14_CALLBACK_WRAPPERS
 #define NMPGame_Source_NMPGame_Pickup_h_14_INCLASS_NO_PURE_DECLS \
@@ -134,7 +179,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APickup); \
 
 
 #define NMPGame_Source_NMPGame_Pickup_h_14_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__bIsActive() { return STRUCT_OFFSET(APickup, bIsActive); }
+	FORCEINLINE static uint32 __PPO__bIsActive() { return STRUCT_OFFSET(APickup, bIsActive); } \
+	FORCEINLINE static uint32 __PPO__PickupInstigator() { return STRUCT_OFFSET(APickup, PickupInstigator); }
 
 
 #define NMPGame_Source_NMPGame_Pickup_h_11_PROLOG \

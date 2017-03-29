@@ -120,7 +120,7 @@ void ANMPGameCharacter::ServerCollectPickups_Implementation()
 			if (TestPickup != NULL && !TestPickup->IsPendingKill() && TestPickup->IsActive())
 			{
 				// Collect the pickup and deactivate
-				TestPickup->WasCollected();
+				TestPickup->PickedUpBy(this);
 				TestPickup->SetActive(false);
 			}
 		}

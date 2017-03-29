@@ -33,6 +33,10 @@ public:
 	void WasCollected();
 	virtual void WasCollected_Implementation();
 
+	// Server side handling of being picked up
+	UFUNCTION(BlueprintAuthorityOnly, Category = "Pickup")
+	virtual void PickedUpBy(APawn* Pawn);
+
 protected:
 
 	// Either the pickup is active or not
@@ -44,5 +48,15 @@ protected:
 	// This is called whenever bIsActive is updated
 	UFUNCTION()
 	virtual void OnRep_IsActive();
+
+	// This is the Pawn who picked up the pickup
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Pickup")
+	APawn* PickupInstigator;
 	
+
+private:
+	// Client side handling of being picked up
+	UFUNCTION(NetMulticast, Unreliable)
+	void ClientOnPickedBy(APawn* Pawn);
+	void ClientOnPickedBy_Implementation(APawn* Pawn);
 };

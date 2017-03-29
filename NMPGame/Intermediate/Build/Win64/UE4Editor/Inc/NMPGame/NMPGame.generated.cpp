@@ -11,6 +11,7 @@
 PRAGMA_DISABLE_OPTIMIZATION
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCode1NMPGame() {}
+FName NMPGAME_ClientOnPickedBy = FName(TEXT("ClientOnPickedBy"));
 FName NMPGAME_ServerCollectPickups = FName(TEXT("ServerCollectPickups"));
 FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	void ANMPGameCharacter::ServerCollectPickups()
@@ -27,22 +28,31 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	{
 	}
 	IMPLEMENT_CLASS(ANMPGameGameMode, 800014594);
+	void APickup::ClientOnPickedBy(APawn* Pawn)
+	{
+		Pickup_eventClientOnPickedBy_Parms Parms;
+		Parms.Pawn=Pawn;
+		ProcessEvent(FindFunctionChecked(NMPGAME_ClientOnPickedBy),&Parms);
+	}
 	void APickup::WasCollected()
 	{
 		ProcessEvent(FindFunctionChecked(NMPGAME_WasCollected),NULL);
 	}
 	void APickup::StaticRegisterNativesAPickup()
 	{
+		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "ClientOnPickedBy",(Native)&APickup::execClientOnPickedBy);
 		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "IsActive",(Native)&APickup::execIsActive);
 		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "OnRep_IsActive",(Native)&APickup::execOnRep_IsActive);
+		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "PickedUpBy",(Native)&APickup::execPickedUpBy);
 		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "SetActive",(Native)&APickup::execSetActive);
 		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "WasCollected",(Native)&APickup::execWasCollected);
 	}
-	IMPLEMENT_CLASS(APickup, 4053762013);
+	IMPLEMENT_CLASS(APickup, 1028040946);
 	void ABatteryPickup::StaticRegisterNativesABatteryPickup()
 	{
+		FNativeFunctionRegistrar::RegisterFunction(ABatteryPickup::StaticClass(), "PickedUpBy",(Native)&ABatteryPickup::execPickedUpBy);
 	}
-	IMPLEMENT_CLASS(ABatteryPickup, 3226496647);
+	IMPLEMENT_CLASS(ABatteryPickup, 2398910281);
 	void ASpawnVolume::StaticRegisterNativesASpawnVolume()
 	{
 		FNativeFunctionRegistrar::RegisterFunction(ASpawnVolume::StaticClass(), "GetRandomPointInVolume",(Native)&ASpawnVolume::execGetRandomPointInVolume);
@@ -55,6 +65,7 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
+	ENGINE_API class UClass* Z_Construct_UClass_APawn_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AStaticMeshActor();
 	COREUOBJECT_API class UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
@@ -66,12 +77,15 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_ClientOnPickedBy();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_IsActive();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_OnRep_IsActive();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_PickedUpBy();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_SetActive();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_WasCollected();
 	NMPGAME_API class UClass* Z_Construct_UClass_APickup_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_APickup();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ABatteryPickup_PickedUpBy();
 	NMPGAME_API class UClass* Z_Construct_UClass_ABatteryPickup_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ABatteryPickup();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_ASpawnVolume_GetRandomPointInVolume();
@@ -216,6 +230,24 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ANMPGameGameMode(Z_Construct_UClass_ANMPGameGameMode, &ANMPGameGameMode::StaticClass, TEXT("ANMPGameGameMode"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ANMPGameGameMode);
+	UFunction* Z_Construct_UFunction_APickup_ClientOnPickedBy()
+	{
+		UObject* Outer=Z_Construct_UClass_APickup();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("ClientOnPickedBy"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00044C41, 65535, sizeof(Pickup_eventClientOnPickedBy_Parms));
+			UProperty* NewProp_Pawn = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("Pawn"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(Pawn, Pickup_eventClientOnPickedBy_Parms), 0x0010000000000080, Z_Construct_UClass_APawn_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Client side handling of being picked up"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UFunction* Z_Construct_UFunction_APickup_IsActive()
 	{
 		struct Pickup_eventIsActive_Parms
@@ -253,6 +285,29 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
 			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
 			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("This is called whenever bIsActive is updated"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_APickup_PickedUpBy()
+	{
+		struct Pickup_eventPickedUpBy_Parms
+		{
+			APawn* Pawn;
+		};
+		UObject* Outer=Z_Construct_UClass_APickup();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("PickedUpBy"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00020404, 65535, sizeof(Pickup_eventPickedUpBy_Parms));
+			UProperty* NewProp_Pawn = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("Pawn"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(Pawn, Pickup_eventPickedUpBy_Parms), 0x0010000000000080, Z_Construct_UClass_APawn_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Pickup"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Server side handling of being picked up"));
 #endif
 		}
 		return ReturnFunction;
@@ -316,18 +371,23 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20900080;
 
+				OuterClass->LinkChild(Z_Construct_UFunction_APickup_ClientOnPickedBy());
 				OuterClass->LinkChild(Z_Construct_UFunction_APickup_IsActive());
 				OuterClass->LinkChild(Z_Construct_UFunction_APickup_OnRep_IsActive());
+				OuterClass->LinkChild(Z_Construct_UFunction_APickup_PickedUpBy());
 				OuterClass->LinkChild(Z_Construct_UFunction_APickup_SetActive());
 				OuterClass->LinkChild(Z_Construct_UFunction_APickup_WasCollected());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_PickupInstigator = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PickupInstigator"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(PickupInstigator, APickup), 0x0020080000020015, Z_Construct_UClass_APawn_NoRegister());
 				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bIsActive, APickup, bool);
 				UProperty* NewProp_bIsActive = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bIsActive"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bIsActive, APickup), 0x0020080100000020, CPP_BOOL_PROPERTY_BITMASK(bIsActive, APickup), sizeof(bool), true);
 				NewProp_bIsActive->RepNotifyFunc = FName(TEXT("OnRep_IsActive"));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_ClientOnPickedBy(), "ClientOnPickedBy"); // 2475584354
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_IsActive(), "IsActive"); // 1053688394
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_OnRep_IsActive(), "OnRep_IsActive"); // 943456141
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_PickedUpBy(), "PickedUpBy"); // 1223694796
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_SetActive(), "SetActive"); // 845200562
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_WasCollected(), "WasCollected"); // 2814062817
 				OuterClass->StaticLink();
@@ -337,6 +397,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("Pickup.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
 				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+				MetaData->SetValue(NewProp_PickupInstigator, TEXT("Category"), TEXT("Pickup"));
+				MetaData->SetValue(NewProp_PickupInstigator, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
+				MetaData->SetValue(NewProp_PickupInstigator, TEXT("ToolTip"), TEXT("This is the Pawn who picked up the pickup"));
 				MetaData->SetValue(NewProp_bIsActive, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
 				MetaData->SetValue(NewProp_bIsActive, TEXT("ToolTip"), TEXT("Either the pickup is active or not\nTrue when pickup can be used, false when pickup is deactivated\nReplicatedUsing = OnRep_FuntionName -> Called whenever the variable, bIsActive, is replicated"));
 #endif
@@ -347,6 +410,29 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APickup(Z_Construct_UClass_APickup, &APickup::StaticClass, TEXT("APickup"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APickup);
+	UFunction* Z_Construct_UFunction_ABatteryPickup_PickedUpBy()
+	{
+		struct BatteryPickup_eventPickedUpBy_Parms
+		{
+			APawn* Pawn;
+		};
+		UObject* Outer=Z_Construct_UClass_ABatteryPickup();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("PickedUpBy"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00020405, 65535, sizeof(BatteryPickup_eventPickedUpBy_Parms));
+			UProperty* NewProp_Pawn = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("Pawn"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(Pawn, BatteryPickup_eventPickedUpBy_Parms), 0x0010000000000080, Z_Construct_UClass_APawn_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Pickup"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("BatteryPickup.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Server side handling of being picked up the child class"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ABatteryPickup_NoRegister()
 	{
 		return ABatteryPickup::StaticClass();
@@ -364,7 +450,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20900080;
 
+				OuterClass->LinkChild(Z_Construct_UFunction_ABatteryPickup_PickedUpBy());
 
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ABatteryPickup_PickedUpBy(), "PickedUpBy"); // 684628949
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
@@ -464,8 +552,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NMPGame")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xC9C95BD1;
-			Guid.B = 0x5A1209E8;
+			Guid.A = 0xA56C20C0;
+			Guid.B = 0x9FA4CD00;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
