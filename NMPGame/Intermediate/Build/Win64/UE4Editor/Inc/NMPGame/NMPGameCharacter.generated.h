@@ -61,7 +61,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANMPGameCharacter); \
 
 #define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ANMPGameCharacter, CameraBoom); } \
-	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ANMPGameCharacter, FollowCamera); }
+	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ANMPGameCharacter, FollowCamera); } \
+	FORCEINLINE static uint32 __PPO__CollectionSphere() { return STRUCT_OFFSET(ANMPGameCharacter, CollectionSphere); } \
+	FORCEINLINE static uint32 __PPO__CollectionSphereRadius() { return STRUCT_OFFSET(ANMPGameCharacter, CollectionSphereRadius); }
 
 
 #define NMPGame_Source_NMPGame_NMPGameCharacter_h_6_PROLOG

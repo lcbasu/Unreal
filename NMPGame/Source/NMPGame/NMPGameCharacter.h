@@ -15,8 +15,15 @@ class ANMPGameCharacter : public ACharacter
 	/** Follow camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FollowCamera;
+
+	/** Collection Sphere */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Battery, meta = (AllowPrivateAccess = "true"))
+	class USphereComponent* CollectionSphere;
 public:
 	ANMPGameCharacter();
+
+	// require network scaffolding
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
@@ -65,5 +72,12 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	FORCEINLINE class USphereComponent* GetCollectionSphere() const { return CollectionSphere; }
+
+private:
+	// variable radius can be changed on server or client
+	UPROPERTY(Replicated, VisibleAnywhere, BlueprintReadOnly, Category= "Battery", Meta = (AllowPrivateAccess = "true"))
+	float CollectionSphereRadius;
 };
 

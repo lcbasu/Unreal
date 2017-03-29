@@ -14,3 +14,11 @@ ABatteryPickup::ABatteryPickup()
 	GetStaticMeshComponent()->SetSimulatePhysics(true);
 }
 
+void ABatteryPickup::WasCollected_Implementation()
+{
+	// Allow the parent class to handle this first
+	Super::WasCollected_Implementation();
+
+	// Destroy the battery for now
+	Destroy();
+}

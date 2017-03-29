@@ -1,6 +1,7 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
 #include "NMPGame.h"
+#include "Net/UnrealNetwork.h"
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
 #include "NMPGameCharacter.h"
 
@@ -40,6 +41,22 @@ ANMPGameCharacter::ANMPGameCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+
+	// Set a base value for the sphere radius
+	CollectionSphereRadius = 200.0f;
+
+	// Create the colection sphere
+	CollectionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollectionSphere"));
+	CollectionSphere->SetupAttachment(RootComponent);
+	CollectionSphere->SetSphereRadius(CollectionSphereRadius);
+
+}
+
+void ANMPGameCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(ANMPGameCharacter, CollectionSphereRadius);
 }
 
 //////////////////////////////////////////////////////////////////////////

@@ -12,12 +12,21 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define NMPGAME_Pickup_generated_h
 
 #define NMPGame_Source_NMPGame_Pickup_h_14_RPC_WRAPPERS \
+	virtual void WasCollected_Implementation(); \
  \
 	DECLARE_FUNCTION(execOnRep_IsActive) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		this->OnRep_IsActive(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execWasCollected) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->WasCollected_Implementation(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -49,6 +58,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execWasCollected) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->WasCollected_Implementation(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execSetActive) \
 	{ \
 		P_GET_UBOOL(Z_Param_NewPickupState); \
@@ -67,6 +84,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
+#define NMPGame_Source_NMPGame_Pickup_h_14_EVENT_PARMS
+extern NMPGAME_API  FName NMPGAME_WasCollected;
+#define NMPGame_Source_NMPGame_Pickup_h_14_CALLBACK_WRAPPERS
 #define NMPGame_Source_NMPGame_Pickup_h_14_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesAPickup(); \
@@ -117,12 +137,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APickup); \
 	FORCEINLINE static uint32 __PPO__bIsActive() { return STRUCT_OFFSET(APickup, bIsActive); }
 
 
-#define NMPGame_Source_NMPGame_Pickup_h_11_PROLOG
+#define NMPGame_Source_NMPGame_Pickup_h_11_PROLOG \
+	NMPGame_Source_NMPGame_Pickup_h_14_EVENT_PARMS
+
+
 #define NMPGame_Source_NMPGame_Pickup_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NMPGame_Source_NMPGame_Pickup_h_14_PRIVATE_PROPERTY_OFFSET \
 	NMPGame_Source_NMPGame_Pickup_h_14_RPC_WRAPPERS \
+	NMPGame_Source_NMPGame_Pickup_h_14_CALLBACK_WRAPPERS \
 	NMPGame_Source_NMPGame_Pickup_h_14_INCLASS \
 	NMPGame_Source_NMPGame_Pickup_h_14_STANDARD_CONSTRUCTORS \
 public: \
@@ -134,6 +158,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NMPGame_Source_NMPGame_Pickup_h_14_PRIVATE_PROPERTY_OFFSET \
 	NMPGame_Source_NMPGame_Pickup_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	NMPGame_Source_NMPGame_Pickup_h_14_CALLBACK_WRAPPERS \
 	NMPGame_Source_NMPGame_Pickup_h_14_INCLASS_NO_PURE_DECLS \
 	NMPGame_Source_NMPGame_Pickup_h_14_ENHANCED_CONSTRUCTORS \
 private: \

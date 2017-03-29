@@ -44,6 +44,11 @@ void APickup::SetActive(bool NewPickupState)
 	}
 }
 
+void APickup::WasCollected_Implementation()
+{
+	// Log a debug message
+}
+
 void APickup::OnRep_IsActive()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("bIsActive property is replicated"));

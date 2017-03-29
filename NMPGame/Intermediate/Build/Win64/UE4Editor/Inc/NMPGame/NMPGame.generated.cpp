@@ -11,25 +11,31 @@
 PRAGMA_DISABLE_OPTIMIZATION
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCode1NMPGame() {}
+FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	void ANMPGameCharacter::StaticRegisterNativesANMPGameCharacter()
 	{
 	}
-	IMPLEMENT_CLASS(ANMPGameCharacter, 2700488846);
+	IMPLEMENT_CLASS(ANMPGameCharacter, 2893247680);
 	void ANMPGameGameMode::StaticRegisterNativesANMPGameGameMode()
 	{
 	}
 	IMPLEMENT_CLASS(ANMPGameGameMode, 800014594);
+	void APickup::WasCollected()
+	{
+		ProcessEvent(FindFunctionChecked(NMPGAME_WasCollected),NULL);
+	}
 	void APickup::StaticRegisterNativesAPickup()
 	{
 		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "IsActive",(Native)&APickup::execIsActive);
 		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "OnRep_IsActive",(Native)&APickup::execOnRep_IsActive);
 		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "SetActive",(Native)&APickup::execSetActive);
+		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "WasCollected",(Native)&APickup::execWasCollected);
 	}
-	IMPLEMENT_CLASS(APickup, 779545274);
+	IMPLEMENT_CLASS(APickup, 4053762013);
 	void ABatteryPickup::StaticRegisterNativesABatteryPickup()
 	{
 	}
-	IMPLEMENT_CLASS(ABatteryPickup, 1853471020);
+	IMPLEMENT_CLASS(ABatteryPickup, 3226496647);
 	void ASpawnVolume::StaticRegisterNativesASpawnVolume()
 	{
 		FNativeFunctionRegistrar::RegisterFunction(ASpawnVolume::StaticClass(), "GetRandomPointInVolume",(Native)&ASpawnVolume::execGetRandomPointInVolume);
@@ -38,6 +44,7 @@ void EmptyLinkFunctionForGeneratedCode1NMPGame() {}
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
+	ENGINE_API class UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
@@ -53,6 +60,7 @@ void EmptyLinkFunctionForGeneratedCode1NMPGame() {}
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_IsActive();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_OnRep_IsActive();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_SetActive();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_WasCollected();
 	NMPGAME_API class UClass* Z_Construct_UClass_APickup_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_APickup();
 	NMPGAME_API class UClass* Z_Construct_UClass_ABatteryPickup_NoRegister();
@@ -80,8 +88,10 @@ void EmptyLinkFunctionForGeneratedCode1NMPGame() {}
 
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_CollectionSphereRadius = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CollectionSphereRadius"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(CollectionSphereRadius, ANMPGameCharacter), 0x0040000000020035);
 				UProperty* NewProp_BaseLookUpRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("BaseLookUpRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(BaseLookUpRate, ANMPGameCharacter), 0x0010000000020015);
 				UProperty* NewProp_BaseTurnRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("BaseTurnRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(BaseTurnRate, ANMPGameCharacter), 0x0010000000020015);
+				UProperty* NewProp_CollectionSphere = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CollectionSphere"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(CollectionSphere, ANMPGameCharacter), 0x00400000000a001d, Z_Construct_UClass_USphereComponent_NoRegister());
 				UProperty* NewProp_FollowCamera = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("FollowCamera"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(FollowCamera, ANMPGameCharacter), 0x00400000000a001d, Z_Construct_UClass_UCameraComponent_NoRegister());
 				UProperty* NewProp_CameraBoom = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CameraBoom"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(CameraBoom, ANMPGameCharacter), 0x00400000000a001d, Z_Construct_UClass_USpringArmComponent_NoRegister());
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
@@ -92,12 +102,21 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Navigation"));
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("NMPGameCharacter.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("AllowPrivateAccess"), TEXT("true"));
+				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("Category"), TEXT("Battery"));
+				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("ToolTip"), TEXT("variable radius can be changed on server or client"));
 				MetaData->SetValue(NewProp_BaseLookUpRate, TEXT("Category"), TEXT("Camera"));
 				MetaData->SetValue(NewProp_BaseLookUpRate, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
 				MetaData->SetValue(NewProp_BaseLookUpRate, TEXT("ToolTip"), TEXT("Base look up/down rate, in deg/sec. Other scaling may affect final rate."));
 				MetaData->SetValue(NewProp_BaseTurnRate, TEXT("Category"), TEXT("Camera"));
 				MetaData->SetValue(NewProp_BaseTurnRate, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
 				MetaData->SetValue(NewProp_BaseTurnRate, TEXT("ToolTip"), TEXT("Base turn rate, in deg/sec. Other scaling may affect final turn rate."));
+				MetaData->SetValue(NewProp_CollectionSphere, TEXT("AllowPrivateAccess"), TEXT("true"));
+				MetaData->SetValue(NewProp_CollectionSphere, TEXT("Category"), TEXT("Battery"));
+				MetaData->SetValue(NewProp_CollectionSphere, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_CollectionSphere, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+				MetaData->SetValue(NewProp_CollectionSphere, TEXT("ToolTip"), TEXT("Collection Sphere"));
 				MetaData->SetValue(NewProp_FollowCamera, TEXT("AllowPrivateAccess"), TEXT("true"));
 				MetaData->SetValue(NewProp_FollowCamera, TEXT("Category"), TEXT("Camera"));
 				MetaData->SetValue(NewProp_FollowCamera, TEXT("EditInline"), TEXT("true"));
@@ -214,6 +233,24 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		}
 		return ReturnFunction;
 	}
+	UFunction* Z_Construct_UFunction_APickup_WasCollected()
+	{
+		UObject* Outer=Z_Construct_UClass_APickup();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("WasCollected"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x08020C00, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Pickup"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Function to call when the pickup is collected"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_APickup_NoRegister()
 	{
 		return APickup::StaticClass();
@@ -234,6 +271,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->LinkChild(Z_Construct_UFunction_APickup_IsActive());
 				OuterClass->LinkChild(Z_Construct_UFunction_APickup_OnRep_IsActive());
 				OuterClass->LinkChild(Z_Construct_UFunction_APickup_SetActive());
+				OuterClass->LinkChild(Z_Construct_UFunction_APickup_WasCollected());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bIsActive, APickup, bool);
@@ -243,6 +281,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_IsActive(), "IsActive"); // 1053688394
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_OnRep_IsActive(), "OnRep_IsActive"); // 943456141
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_SetActive(), "SetActive"); // 845200562
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_WasCollected(), "WasCollected"); // 2814062817
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
@@ -377,8 +416,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NMPGame")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x0F2EC641;
-			Guid.B = 0x80419E15;
+			Guid.A = 0xCFBF407D;
+			Guid.B = 0x9C3C027D;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
