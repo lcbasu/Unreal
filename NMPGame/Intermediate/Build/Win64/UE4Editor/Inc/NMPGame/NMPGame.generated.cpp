@@ -19,17 +19,30 @@ void EmptyLinkFunctionForGeneratedCode1NMPGame() {}
 	{
 	}
 	IMPLEMENT_CLASS(ANMPGameGameMode, 800014594);
+	void APickup::StaticRegisterNativesAPickup()
+	{
+		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "IsActive",(Native)&APickup::execIsActive);
+		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "OnRep_IsActive",(Native)&APickup::execOnRep_IsActive);
+		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "SetActive",(Native)&APickup::execSetActive);
+	}
+	IMPLEMENT_CLASS(APickup, 779545274);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
 	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
+	ENGINE_API class UClass* Z_Construct_UClass_AStaticMeshActor();
 
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_IsActive();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_OnRep_IsActive();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_SetActive();
+	NMPGAME_API class UClass* Z_Construct_UClass_APickup_NoRegister();
+	NMPGAME_API class UClass* Z_Construct_UClass_APickup();
 	NMPGAME_API class UPackage* Z_Construct_UPackage__Script_NMPGame();
 	UClass* Z_Construct_UClass_ANMPGameCharacter_NoRegister()
 	{
@@ -119,6 +132,117 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ANMPGameGameMode(Z_Construct_UClass_ANMPGameGameMode, &ANMPGameGameMode::StaticClass, TEXT("ANMPGameGameMode"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ANMPGameGameMode);
+	UFunction* Z_Construct_UFunction_APickup_IsActive()
+	{
+		struct Pickup_eventIsActive_Parms
+		{
+			bool ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_APickup();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("IsActive"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x14020401, 65535, sizeof(Pickup_eventIsActive_Parms));
+			CPP_BOOL_PROPERTY_BITMASK_STRUCT(ReturnValue, Pickup_eventIsActive_Parms, bool);
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(ReturnValue, Pickup_eventIsActive_Parms), 0x0010000000000580, CPP_BOOL_PROPERTY_BITMASK(ReturnValue, Pickup_eventIsActive_Parms), sizeof(bool), true);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Pickup"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Returns whether or not Pickup is active"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_APickup_OnRep_IsActive()
+	{
+		UObject* Outer=Z_Construct_UClass_APickup();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnRep_IsActive"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00080400, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("This is called whenever bIsActive is updated"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_APickup_SetActive()
+	{
+		struct Pickup_eventSetActive_Parms
+		{
+			bool NewPickupState;
+		};
+		UObject* Outer=Z_Construct_UClass_APickup();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("SetActive"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(Pickup_eventSetActive_Parms));
+			CPP_BOOL_PROPERTY_BITMASK_STRUCT(NewPickupState, Pickup_eventSetActive_Parms, bool);
+			UProperty* NewProp_NewPickupState = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("NewPickupState"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(NewPickupState, Pickup_eventSetActive_Parms), 0x0010000000000080, CPP_BOOL_PROPERTY_BITMASK(NewPickupState, Pickup_eventSetActive_Parms), sizeof(bool), true);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Pickup"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Allows other classes to safely change the pickup activation state"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UClass* Z_Construct_UClass_APickup_NoRegister()
+	{
+		return APickup::StaticClass();
+	}
+	UClass* Z_Construct_UClass_APickup()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AStaticMeshActor();
+			Z_Construct_UPackage__Script_NMPGame();
+			OuterClass = APickup::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+				OuterClass->LinkChild(Z_Construct_UFunction_APickup_IsActive());
+				OuterClass->LinkChild(Z_Construct_UFunction_APickup_OnRep_IsActive());
+				OuterClass->LinkChild(Z_Construct_UFunction_APickup_SetActive());
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bIsActive, APickup, bool);
+				UProperty* NewProp_bIsActive = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bIsActive"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bIsActive, APickup), 0x0020080100000020, CPP_BOOL_PROPERTY_BITMASK(bIsActive, APickup), sizeof(bool), true);
+				NewProp_bIsActive->RepNotifyFunc = FName(TEXT("OnRep_IsActive"));
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_IsActive(), "IsActive"); // 1053688394
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_OnRep_IsActive(), "OnRep_IsActive"); // 943456141
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_APickup_SetActive(), "SetActive"); // 845200562
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Input"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("Pickup.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
+				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+				MetaData->SetValue(NewProp_bIsActive, TEXT("ModuleRelativePath"), TEXT("Pickup.h"));
+				MetaData->SetValue(NewProp_bIsActive, TEXT("ToolTip"), TEXT("Either the pickup is active or not\nTrue when pickup can be used, false when pickup is deactivated\nReplicatedUsing = OnRep_FuntionName -> Called whenever the variable, bIsActive, is replicated"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_APickup(Z_Construct_UClass_APickup, &APickup::StaticClass, TEXT("APickup"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(APickup);
 	UPackage* Z_Construct_UPackage__Script_NMPGame()
 	{
 		static UPackage* ReturnPackage = NULL;
@@ -127,8 +251,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NMPGame")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xD86629EA;
-			Guid.B = 0x1E8E2BE0;
+			Guid.A = 0xD1595A65;
+			Guid.B = 0x9EAAF71B;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
