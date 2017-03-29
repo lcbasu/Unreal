@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\NMPGame.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{97569B89-F358-44C2-80B4-409D277AC6CE}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\NMPGame.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\NMPGameEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{D890A35E-A63B-467C-B3C1-F017B6F956CA}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\NMPGame">
+			<UniqueIdentifier>{998E8497-2132-472F-B52D-E2D586C18923}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\NMPGame\NMPGame.Build.cs">
+			<Filter>Source\NMPGame</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\NMPGame\NMPGame.cpp">
+			<Filter>Source\NMPGame</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\NMPGame\NMPGame.h">
+			<Filter>Source\NMPGame</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\NMPGame\NMPGameCharacter.cpp">
+			<Filter>Source\NMPGame</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\NMPGame\NMPGameCharacter.h">
+			<Filter>Source\NMPGame</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\NMPGame\NMPGameGameMode.cpp">
+			<Filter>Source\NMPGame</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\NMPGame\NMPGameGameMode.h">
+			<Filter>Source\NMPGame</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
