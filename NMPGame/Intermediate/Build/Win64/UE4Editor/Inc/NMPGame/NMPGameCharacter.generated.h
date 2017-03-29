@@ -11,8 +11,59 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NMPGAME_NMPGameCharacter_generated_h
 
-#define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_RPC_WRAPPERS
-#define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_RPC_WRAPPERS_NO_PURE_DECLS
+#define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_RPC_WRAPPERS \
+	virtual bool ServerCollectPickups_Validate(); \
+	virtual void ServerCollectPickups_Implementation(); \
+ \
+	DECLARE_FUNCTION(execServerCollectPickups) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		if (!this->ServerCollectPickups_Validate()) \
+		{ \
+			RPC_ValidateFailed(TEXT("ServerCollectPickups_Validate")); \
+			return; \
+		} \
+		this->ServerCollectPickups_Implementation(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execCollectPickups) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->CollectPickups(); \
+		P_NATIVE_END; \
+	}
+
+
+#define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execServerCollectPickups) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		if (!this->ServerCollectPickups_Validate()) \
+		{ \
+			RPC_ValidateFailed(TEXT("ServerCollectPickups_Validate")); \
+			return; \
+		} \
+		this->ServerCollectPickups_Implementation(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execCollectPickups) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->CollectPickups(); \
+		P_NATIVE_END; \
+	}
+
+
+#define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_EVENT_PARMS
+extern NMPGAME_API  FName NMPGAME_ServerCollectPickups;
+#define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_CALLBACK_WRAPPERS
 #define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesANMPGameCharacter(); \
@@ -66,12 +117,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANMPGameCharacter); \
 	FORCEINLINE static uint32 __PPO__CollectionSphereRadius() { return STRUCT_OFFSET(ANMPGameCharacter, CollectionSphereRadius); }
 
 
-#define NMPGame_Source_NMPGame_NMPGameCharacter_h_6_PROLOG
+#define NMPGame_Source_NMPGame_NMPGameCharacter_h_6_PROLOG \
+	NMPGame_Source_NMPGame_NMPGameCharacter_h_9_EVENT_PARMS
+
+
 #define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NMPGame_Source_NMPGame_NMPGameCharacter_h_9_PRIVATE_PROPERTY_OFFSET \
 	NMPGame_Source_NMPGame_NMPGameCharacter_h_9_RPC_WRAPPERS \
+	NMPGame_Source_NMPGame_NMPGameCharacter_h_9_CALLBACK_WRAPPERS \
 	NMPGame_Source_NMPGame_NMPGameCharacter_h_9_INCLASS \
 	NMPGame_Source_NMPGame_NMPGameCharacter_h_9_STANDARD_CONSTRUCTORS \
 public: \
@@ -83,6 +138,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NMPGame_Source_NMPGame_NMPGameCharacter_h_9_PRIVATE_PROPERTY_OFFSET \
 	NMPGame_Source_NMPGame_NMPGameCharacter_h_9_RPC_WRAPPERS_NO_PURE_DECLS \
+	NMPGame_Source_NMPGame_NMPGameCharacter_h_9_CALLBACK_WRAPPERS \
 	NMPGame_Source_NMPGame_NMPGameCharacter_h_9_INCLASS_NO_PURE_DECLS \
 	NMPGame_Source_NMPGame_NMPGameCharacter_h_9_ENHANCED_CONSTRUCTORS \
 private: \

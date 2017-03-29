@@ -47,6 +47,7 @@ void APickup::SetActive(bool NewPickupState)
 void APickup::WasCollected_Implementation()
 {
 	// Log a debug message
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Pickup was collected"));
 }
 
 void APickup::OnRep_IsActive()

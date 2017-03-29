@@ -4,6 +4,7 @@
 #include "Net/UnrealNetwork.h"
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
 #include "NMPGameCharacter.h"
+#include "Pickup.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ANMPGameCharacter
@@ -86,8 +87,45 @@ void ANMPGameCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerI
 
 	// VR headset functionality
 	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &ANMPGameCharacter::OnResetVR);
+
+	// Handle collecting pickup
+	PlayerInputComponent->BindAction("CollectPickup", IE_Pressed, this, &ANMPGameCharacter::CollectPickups);
 }
 
+void ANMPGameCharacter::CollectPickups()
+{
+	// Ask the server to collect pickups
+	ServerCollectPickups();
+}
+
+bool ANMPGameCharacter::ServerCollectPickups_Validate()
+{
+	return true;
+}
+
+void ANMPGameCharacter::ServerCollectPickups_Implementation()
+{
+	if (Role == ROLE_Authority)
+	{
+		// Get all overlapping actors and store them in an array
+		TArray<AActor*> CollectedActors;
+		CollectionSphere->GetOverlappingActors(CollectedActors);
+
+		// Look at each Actor inside the CollectionSphere
+		for (int i = 0; i < CollectedActors.Num(); i++)
+		{
+			APickup* const TestPickup = Cast<APickup>(CollectedActors[i]);
+
+			// If it is a pickup and it is valid and active
+			if (TestPickup != NULL && !TestPickup->IsPendingKill() && TestPickup->IsActive())
+			{
+				// Collect the pickup and deactivate
+				TestPickup->WasCollected();
+				TestPickup->SetActive(false);
+			}
+		}
+	}
+}
 
 void ANMPGameCharacter::OnResetVR()
 {

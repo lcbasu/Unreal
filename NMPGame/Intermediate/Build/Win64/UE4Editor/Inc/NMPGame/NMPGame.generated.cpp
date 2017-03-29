@@ -11,11 +11,18 @@
 PRAGMA_DISABLE_OPTIMIZATION
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCode1NMPGame() {}
+FName NMPGAME_ServerCollectPickups = FName(TEXT("ServerCollectPickups"));
 FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
+	void ANMPGameCharacter::ServerCollectPickups()
+	{
+		ProcessEvent(FindFunctionChecked(NMPGAME_ServerCollectPickups),NULL);
+	}
 	void ANMPGameCharacter::StaticRegisterNativesANMPGameCharacter()
 	{
+		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "CollectPickups",(Native)&ANMPGameCharacter::execCollectPickups);
+		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "ServerCollectPickups",(Native)&ANMPGameCharacter::execServerCollectPickups);
 	}
-	IMPLEMENT_CLASS(ANMPGameCharacter, 2893247680);
+	IMPLEMENT_CLASS(ANMPGameCharacter, 1719530951);
 	void ANMPGameGameMode::StaticRegisterNativesANMPGameGameMode()
 	{
 	}
@@ -53,6 +60,8 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
 	ENGINE_API class UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_CollectPickups();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_ServerCollectPickups();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode_NoRegister();
@@ -69,6 +78,41 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	NMPGAME_API class UClass* Z_Construct_UClass_ASpawnVolume_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ASpawnVolume();
 	NMPGAME_API class UPackage* Z_Construct_UPackage__Script_NMPGame();
+	UFunction* Z_Construct_UFunction_ANMPGameCharacter_CollectPickups()
+	{
+		UObject* Outer=Z_Construct_UClass_ANMPGameCharacter();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("CollectPickups"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04080401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Pickups"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Entry point for collecting pickups\nCalled when player presses a key to collect pickups"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ANMPGameCharacter_ServerCollectPickups()
+	{
+		UObject* Outer=Z_Construct_UClass_ANMPGameCharacter();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("ServerCollectPickups"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x80280CC0, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Called on server to actually process the collection of pickups"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ANMPGameCharacter_NoRegister()
 	{
 		return ANMPGameCharacter::StaticClass();
@@ -86,6 +130,8 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20800080;
 
+				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_CollectPickups());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_ServerCollectPickups());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_CollectionSphereRadius = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CollectionSphereRadius"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(CollectionSphereRadius, ANMPGameCharacter), 0x0040000000020035);
@@ -95,6 +141,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_FollowCamera = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("FollowCamera"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(FollowCamera, ANMPGameCharacter), 0x00400000000a001d, Z_Construct_UClass_UCameraComponent_NoRegister());
 				UProperty* NewProp_CameraBoom = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CameraBoom"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(CameraBoom, ANMPGameCharacter), 0x00400000000a001d, Z_Construct_UClass_USpringArmComponent_NoRegister());
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_CollectPickups(), "CollectPickups"); // 2714781345
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_ServerCollectPickups(), "ServerCollectPickups"); // 4034027075
 				OuterClass->ClassConfigName = FName(TEXT("Game"));
 				OuterClass->StaticLink();
 #if WITH_METADATA
@@ -416,8 +464,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NMPGame")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xCFBF407D;
-			Guid.B = 0x9C3C027D;
+			Guid.A = 0xC9C95BD1;
+			Guid.B = 0x5A1209E8;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
