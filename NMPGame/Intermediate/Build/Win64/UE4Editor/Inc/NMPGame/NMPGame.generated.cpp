@@ -26,6 +26,10 @@ void EmptyLinkFunctionForGeneratedCode1NMPGame() {}
 		FNativeFunctionRegistrar::RegisterFunction(APickup::StaticClass(), "SetActive",(Native)&APickup::execSetActive);
 	}
 	IMPLEMENT_CLASS(APickup, 779545274);
+	void ABatteryPickup::StaticRegisterNativesABatteryPickup()
+	{
+	}
+	IMPLEMENT_CLASS(ABatteryPickup, 1853471020);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
@@ -43,6 +47,8 @@ void EmptyLinkFunctionForGeneratedCode1NMPGame() {}
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_SetActive();
 	NMPGAME_API class UClass* Z_Construct_UClass_APickup_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_APickup();
+	NMPGAME_API class UClass* Z_Construct_UClass_ABatteryPickup_NoRegister();
+	NMPGAME_API class UClass* Z_Construct_UClass_ABatteryPickup();
 	NMPGAME_API class UPackage* Z_Construct_UPackage__Script_NMPGame();
 	UClass* Z_Construct_UClass_ANMPGameCharacter_NoRegister()
 	{
@@ -243,6 +249,39 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APickup(Z_Construct_UClass_APickup, &APickup::StaticClass, TEXT("APickup"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APickup);
+	UClass* Z_Construct_UClass_ABatteryPickup_NoRegister()
+	{
+		return ABatteryPickup::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ABatteryPickup()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_APickup();
+			Z_Construct_UPackage__Script_NMPGame();
+			OuterClass = ABatteryPickup::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Input"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("BatteryPickup.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("BatteryPickup.h"));
+				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ABatteryPickup(Z_Construct_UClass_ABatteryPickup, &ABatteryPickup::StaticClass, TEXT("ABatteryPickup"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ABatteryPickup);
 	UPackage* Z_Construct_UPackage__Script_NMPGame()
 	{
 		static UPackage* ReturnPackage = NULL;
@@ -251,8 +290,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NMPGame")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xD1595A65;
-			Guid.B = 0x9EAAF71B;
+			Guid.A = 0x6962F3A4;
+			Guid.B = 0x88920808;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

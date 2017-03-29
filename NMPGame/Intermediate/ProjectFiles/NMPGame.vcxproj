@@ -559,7 +559,9 @@
     <NMakeOutput>..\..\Binaries\HTML5\NMPGame-HTML5-Shipping.exe</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\NMPGame\BatteryPickup.cpp" />
     <ClCompile Include="..\..\Source\NMPGame\Pickup.cpp" />
+    <ClInclude Include="..\..\Source\NMPGame\BatteryPickup.h" />
     <ClInclude Include="..\..\Source\NMPGame\Pickup.h" />
     <None Include="..\..\NMPGame.uproject" />
     <None Include="..\..\Source\NMPGame.Target.cs" />

@@ -15,3 +15,6 @@
 #ifndef NMPGAME_Pickup_generated_h
 	#include "Pickup.h"
 #endif
+#ifndef NMPGAME_BatteryPickup_generated_h
+	#include "BatteryPickup.h"
+#endif
