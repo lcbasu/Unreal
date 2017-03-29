@@ -561,8 +561,10 @@
   <ItemGroup>
     <ClCompile Include="..\..\Source\NMPGame\BatteryPickup.cpp" />
     <ClCompile Include="..\..\Source\NMPGame\Pickup.cpp" />
+    <ClCompile Include="..\..\Source\NMPGame\SpawnVolume.cpp" />
     <ClInclude Include="..\..\Source\NMPGame\BatteryPickup.h" />
     <ClInclude Include="..\..\Source\NMPGame\Pickup.h" />
+    <ClInclude Include="..\..\Source\NMPGame\SpawnVolume.h" />
     <None Include="..\..\NMPGame.uproject" />
     <None Include="..\..\Source\NMPGame.Target.cs" />
     <None Include="..\..\Source\NMPGameEditor.Target.cs" />

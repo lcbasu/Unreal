@@ -18,3 +18,6 @@
 #ifndef NMPGAME_BatteryPickup_generated_h
 	#include "BatteryPickup.h"
 #endif
+#ifndef NMPGAME_SpawnVolume_generated_h
+	#include "SpawnVolume.h"
+#endif
