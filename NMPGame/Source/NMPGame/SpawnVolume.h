@@ -29,10 +29,18 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Spawning")
 	FVector GetRandomPointInVolume();
 
+protected:
+	// This is the the pickup to spawn
+	UPROPERTY(EditAnywhere, Category = "Spawning")
+	TSubclassOf<class APickup> WhatToSpawn;
+
 private:
 	// The spawn area where pickups will be created
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category= "Spawning", Meta= (AllowPrivateAccess = "true"))
 	class UBoxComponent* WhereToSpawn;
+
+	// Handle spawning new pickup
+	void SpawnPickup();
 
 	
 	

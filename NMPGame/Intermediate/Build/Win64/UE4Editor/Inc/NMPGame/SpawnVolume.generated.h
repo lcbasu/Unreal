@@ -81,6 +81,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASpawnVolume); \
 
 
 #define NMPGame_Source_NMPGame_SpawnVolume_h_11_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__WhatToSpawn() { return STRUCT_OFFSET(ASpawnVolume, WhatToSpawn); } \
 	FORCEINLINE static uint32 __PPO__WhereToSpawn() { return STRUCT_OFFSET(ASpawnVolume, WhereToSpawn); }
 
 
