@@ -16,8 +16,12 @@ ASpawnVolume::ASpawnVolume()
 	{
 		WhereToSpawn = CreateDefaultSubobject<UBoxComponent>(TEXT("SpawnVolume"));
 		RootComponent = WhereToSpawn;
-	}
 
+		// Set some base values for range
+		SpawnDelayRangeLow = 1.0f;
+		SpawnDelayRangeHigh = 4.5f;
+
+	}
 }
 
 // Called when the game starts or when spawned
@@ -25,6 +29,10 @@ void ASpawnVolume::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	// Set the delay for first spawn
+	SpawnDelay = FMath::FRandRange(SpawnDelayRangeLow, SpawnDelayRangeHigh);
+	GetWorldTimerManager().SetTimer(SpawnTimer, this, &ASpawnVolume::SpawnPickup, SpawnDelay, false);
+
 }
 
 // Called every frame
@@ -69,6 +77,12 @@ void ASpawnVolume::SpawnPickup()
 
 			// drop the new pickup into the world
 			APickup* const SpawnedPickup = World->SpawnActor<APickup>(WhatToSpawn, SpawnLocation, SpawnRotation, SpawnParams);
+
+			// Delay for a bit before spawning the next pickup
+
+			// Set the delay for first spawn
+			SpawnDelay = FMath::FRandRange(SpawnDelayRangeLow, SpawnDelayRangeHigh);
+			GetWorldTimerManager().SetTimer(SpawnTimer, this, &ASpawnVolume::SpawnPickup, SpawnDelay, false);
 		}
 	}
 }

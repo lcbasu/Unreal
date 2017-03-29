@@ -34,6 +34,17 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Spawning")
 	TSubclassOf<class APickup> WhatToSpawn;
 
+	// Access to the timer for recurring spawning
+	FTimerHandle SpawnTimer;
+
+	// Minimum spawn delay in seconds
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
+	float SpawnDelayRangeLow;
+
+	// Maximum spawn delay in seconds
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
+	float SpawnDelayRangeHigh;
+
 private:
 	// The spawn area where pickups will be created
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category= "Spawning", Meta= (AllowPrivateAccess = "true"))
@@ -42,6 +53,7 @@ private:
 	// Handle spawning new pickup
 	void SpawnPickup();
 
-	
+	// Actual time in seconds before spawning the next pickup
+	float SpawnDelay;
 	
 };
