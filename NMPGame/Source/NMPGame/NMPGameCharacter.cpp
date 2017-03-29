@@ -58,6 +58,8 @@ void ANMPGameCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	DOREPLIFETIME(ANMPGameCharacter, CollectionSphereRadius);
+	DOREPLIFETIME(ANMPGameCharacter, InitialPower);
+	DOREPLIFETIME(ANMPGameCharacter, CurrentPower);
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -124,6 +126,25 @@ void ANMPGameCharacter::ServerCollectPickups_Implementation()
 				TestPickup->SetActive(false);
 			}
 		}
+	}
+}
+
+float ANMPGameCharacter::GetInitialPower()
+{
+	return InitialPower;
+}
+
+float ANMPGameCharacter::GetCurrentPower()
+{
+	return CurrentPower;
+}
+
+void ANMPGameCharacter::UpdatePower(float DeltaPower)
+{
+	if (Role == ROLE_Authority)
+	{
+		// Increase or decrease current power
+		CurrentPower += DeltaPower;
 	}
 }
 

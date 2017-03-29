@@ -34,6 +34,31 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_NATIVE_BEGIN; \
 		this->CollectPickups(); \
 		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execUpdatePower) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_DeltaPower); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->UpdatePower(Z_Param_DeltaPower); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetCurrentPower) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=this->GetCurrentPower(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetInitialPower) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=this->GetInitialPower(); \
+		P_NATIVE_END; \
 	}
 
 
@@ -57,6 +82,31 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		this->CollectPickups(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execUpdatePower) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_DeltaPower); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->UpdatePower(Z_Param_DeltaPower); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetCurrentPower) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=this->GetCurrentPower(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetInitialPower) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=this->GetInitialPower(); \
 		P_NATIVE_END; \
 	}
 
@@ -114,7 +164,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANMPGameCharacter); \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ANMPGameCharacter, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ANMPGameCharacter, FollowCamera); } \
 	FORCEINLINE static uint32 __PPO__CollectionSphere() { return STRUCT_OFFSET(ANMPGameCharacter, CollectionSphere); } \
-	FORCEINLINE static uint32 __PPO__CollectionSphereRadius() { return STRUCT_OFFSET(ANMPGameCharacter, CollectionSphereRadius); }
+	FORCEINLINE static uint32 __PPO__InitialPower() { return STRUCT_OFFSET(ANMPGameCharacter, InitialPower); } \
+	FORCEINLINE static uint32 __PPO__CollectionSphereRadius() { return STRUCT_OFFSET(ANMPGameCharacter, CollectionSphereRadius); } \
+	FORCEINLINE static uint32 __PPO__CurrentPower() { return STRUCT_OFFSET(ANMPGameCharacter, CurrentPower); }
 
 
 #define NMPGame_Source_NMPGame_NMPGameCharacter_h_6_PROLOG \

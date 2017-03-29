@@ -33,6 +33,21 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	// Access the character initial power
+	UFUNCTION(BlueprintPure, Category = "Power")
+	float GetInitialPower();
+
+	// Access the character current power
+	UFUNCTION(BlueprintPure, Category = "Power")
+	float GetCurrentPower();
+
+	/**
+	* this updates the character power level
+	* @param DeltaPower This is the amount to change power by, can be + or -
+	*/ 
+	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly,Category = "Power")
+	void UpdatePower(float DeltaPower);
+
 protected:
 
 	/** Resets HMD orientation in VR. */
@@ -78,6 +93,10 @@ protected:
 	bool ServerCollectPickups_Validate();
 	void ServerCollectPickups_Implementation();
 
+	// the character starting power level
+	UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite, Category = "Pickup", Meta = (BlueprintProtected = "true"))
+	float InitialPower;
+
 public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
@@ -90,5 +109,9 @@ private:
 	// variable radius can be changed on server or client
 	UPROPERTY(Replicated, VisibleAnywhere, BlueprintReadOnly, Category= "Battery", Meta = (AllowPrivateAccess = "true"))
 	float CollectionSphereRadius;
+
+	// The character's current power level during gameplay
+	UPROPERTY(Replicated, VisibleAnywhere, Category = "Power")
+	float CurrentPower;
 };
 

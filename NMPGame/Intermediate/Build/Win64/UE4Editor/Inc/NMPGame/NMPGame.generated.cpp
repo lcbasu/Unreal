@@ -21,9 +21,12 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	void ANMPGameCharacter::StaticRegisterNativesANMPGameCharacter()
 	{
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "CollectPickups",(Native)&ANMPGameCharacter::execCollectPickups);
+		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "GetCurrentPower",(Native)&ANMPGameCharacter::execGetCurrentPower);
+		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "GetInitialPower",(Native)&ANMPGameCharacter::execGetInitialPower);
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "ServerCollectPickups",(Native)&ANMPGameCharacter::execServerCollectPickups);
+		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "UpdatePower",(Native)&ANMPGameCharacter::execUpdatePower);
 	}
-	IMPLEMENT_CLASS(ANMPGameCharacter, 1719530951);
+	IMPLEMENT_CLASS(ANMPGameCharacter, 371593706);
 	void ANMPGameGameMode::StaticRegisterNativesANMPGameGameMode()
 	{
 	}
@@ -52,7 +55,7 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	{
 		FNativeFunctionRegistrar::RegisterFunction(ABatteryPickup::StaticClass(), "PickedUpBy",(Native)&ABatteryPickup::execPickedUpBy);
 	}
-	IMPLEMENT_CLASS(ABatteryPickup, 2398910281);
+	IMPLEMENT_CLASS(ABatteryPickup, 2833026833);
 	void ASpawnVolume::StaticRegisterNativesASpawnVolume()
 	{
 		FNativeFunctionRegistrar::RegisterFunction(ASpawnVolume::StaticClass(), "GetRandomPointInVolume",(Native)&ASpawnVolume::execGetRandomPointInVolume);
@@ -72,7 +75,10 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	ENGINE_API class UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 
 	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_CollectPickups();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_GetCurrentPower();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_GetInitialPower();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_ServerCollectPickups();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_UpdatePower();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode_NoRegister();
@@ -110,6 +116,52 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 		}
 		return ReturnFunction;
 	}
+	UFunction* Z_Construct_UFunction_ANMPGameCharacter_GetCurrentPower()
+	{
+		struct NMPGameCharacter_eventGetCurrentPower_Parms
+		{
+			float ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_ANMPGameCharacter();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetCurrentPower"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x14020401, 65535, sizeof(NMPGameCharacter_eventGetCurrentPower_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(ReturnValue, NMPGameCharacter_eventGetCurrentPower_Parms), 0x0010000000000580);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Power"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Access the character current power"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ANMPGameCharacter_GetInitialPower()
+	{
+		struct NMPGameCharacter_eventGetInitialPower_Parms
+		{
+			float ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_ANMPGameCharacter();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetInitialPower"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x14020401, 65535, sizeof(NMPGameCharacter_eventGetInitialPower_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(ReturnValue, NMPGameCharacter_eventGetInitialPower_Parms), 0x0010000000000580);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Power"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Access the character initial power"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UFunction* Z_Construct_UFunction_ANMPGameCharacter_ServerCollectPickups()
 	{
 		UObject* Outer=Z_Construct_UClass_ANMPGameCharacter();
@@ -123,6 +175,29 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
 			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
 			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Called on server to actually process the collection of pickups"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ANMPGameCharacter_UpdatePower()
+	{
+		struct NMPGameCharacter_eventUpdatePower_Parms
+		{
+			float DeltaPower;
+		};
+		UObject* Outer=Z_Construct_UClass_ANMPGameCharacter();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("UpdatePower"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04020405, 65535, sizeof(NMPGameCharacter_eventUpdatePower_Parms));
+			UProperty* NewProp_DeltaPower = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("DeltaPower"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(DeltaPower, NMPGameCharacter_eventUpdatePower_Parms), 0x0010000000000080);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Power"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("this updates the character power level\n@param DeltaPower This is the amount to change power by, can be + or -"));
 #endif
 		}
 		return ReturnFunction;
@@ -145,10 +220,15 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 				OuterClass->ClassFlags |= 0x20800080;
 
 				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_CollectPickups());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_GetCurrentPower());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_GetInitialPower());
 				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_ServerCollectPickups());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_UpdatePower());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_CurrentPower = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CurrentPower"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(CurrentPower, ANMPGameCharacter), 0x0040000000020021);
 				UProperty* NewProp_CollectionSphereRadius = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CollectionSphereRadius"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(CollectionSphereRadius, ANMPGameCharacter), 0x0040000000020035);
+				UProperty* NewProp_InitialPower = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("InitialPower"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(InitialPower, ANMPGameCharacter), 0x0020080000000025);
 				UProperty* NewProp_BaseLookUpRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("BaseLookUpRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(BaseLookUpRate, ANMPGameCharacter), 0x0010000000020015);
 				UProperty* NewProp_BaseTurnRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("BaseTurnRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(BaseTurnRate, ANMPGameCharacter), 0x0010000000020015);
 				UProperty* NewProp_CollectionSphere = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CollectionSphere"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(CollectionSphere, ANMPGameCharacter), 0x00400000000a001d, Z_Construct_UClass_USphereComponent_NoRegister());
@@ -156,7 +236,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_CameraBoom = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CameraBoom"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(CameraBoom, ANMPGameCharacter), 0x00400000000a001d, Z_Construct_UClass_USpringArmComponent_NoRegister());
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_CollectPickups(), "CollectPickups"); // 2714781345
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_GetCurrentPower(), "GetCurrentPower"); // 1827564159
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_GetInitialPower(), "GetInitialPower"); // 443617448
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_ServerCollectPickups(), "ServerCollectPickups"); // 4034027075
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_UpdatePower(), "UpdatePower"); // 2092868971
 				OuterClass->ClassConfigName = FName(TEXT("Game"));
 				OuterClass->StaticLink();
 #if WITH_METADATA
@@ -164,10 +247,17 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Navigation"));
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("NMPGameCharacter.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+				MetaData->SetValue(NewProp_CurrentPower, TEXT("Category"), TEXT("Power"));
+				MetaData->SetValue(NewProp_CurrentPower, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+				MetaData->SetValue(NewProp_CurrentPower, TEXT("ToolTip"), TEXT("The character's current power level during gameplay"));
 				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("AllowPrivateAccess"), TEXT("true"));
 				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("Category"), TEXT("Battery"));
 				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
 				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("ToolTip"), TEXT("variable radius can be changed on server or client"));
+				MetaData->SetValue(NewProp_InitialPower, TEXT("BlueprintProtected"), TEXT("true"));
+				MetaData->SetValue(NewProp_InitialPower, TEXT("Category"), TEXT("Pickup"));
+				MetaData->SetValue(NewProp_InitialPower, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+				MetaData->SetValue(NewProp_InitialPower, TEXT("ToolTip"), TEXT("the character starting power level"));
 				MetaData->SetValue(NewProp_BaseLookUpRate, TEXT("Category"), TEXT("Camera"));
 				MetaData->SetValue(NewProp_BaseLookUpRate, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
 				MetaData->SetValue(NewProp_BaseLookUpRate, TEXT("ToolTip"), TEXT("Base look up/down rate, in deg/sec. Other scaling may affect final rate."));
@@ -452,6 +542,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 				OuterClass->LinkChild(Z_Construct_UFunction_ABatteryPickup_PickedUpBy());
 
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_BatteryPower = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("BatteryPower"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(BatteryPower, ABatteryPickup), 0x0020080000000025);
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ABatteryPickup_PickedUpBy(), "PickedUpBy"); // 684628949
 				OuterClass->StaticLink();
 #if WITH_METADATA
@@ -460,6 +553,10 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("BatteryPickup.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("BatteryPickup.h"));
 				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+				MetaData->SetValue(NewProp_BatteryPower, TEXT("BlueprintProtected"), TEXT("true"));
+				MetaData->SetValue(NewProp_BatteryPower, TEXT("Category"), TEXT("Power"));
+				MetaData->SetValue(NewProp_BatteryPower, TEXT("ModuleRelativePath"), TEXT("BatteryPickup.h"));
+				MetaData->SetValue(NewProp_BatteryPower, TEXT("ToolTip"), TEXT("Set the amount of power the battery holds"));
 #endif
 			}
 		}
@@ -552,8 +649,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NMPGame")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xA56C20C0;
-			Guid.B = 0x9FA4CD00;
+			Guid.A = 0xC739E90B;
+			Guid.B = 0x460594A6;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
