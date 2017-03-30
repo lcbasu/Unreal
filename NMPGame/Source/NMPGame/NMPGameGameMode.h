@@ -29,7 +29,6 @@ protected:
 	// The rate at which characters loose power 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power", Meta = (BleprintProtected = "true"))
 	float DecayRate;
-
 private:
 
 	// Darin power from characters and update gameplay

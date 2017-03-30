@@ -15,6 +15,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	virtual bool ServerCollectPickups_Validate(); \
 	virtual void ServerCollectPickups_Implementation(); \
  \
+	DECLARE_FUNCTION(execOnRep_CurrentPower) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnRep_CurrentPower(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execServerCollectPickups) \
 	{ \
 		P_FINISH; \
@@ -64,6 +72,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execOnRep_CurrentPower) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnRep_CurrentPower(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execServerCollectPickups) \
 	{ \
 		P_FINISH; \
@@ -112,6 +128,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_EVENT_PARMS
+extern NMPGAME_API  FName NMPGAME_PowerChangeEffect;
 extern NMPGAME_API  FName NMPGAME_ServerCollectPickups;
 #define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_CALLBACK_WRAPPERS
 #define NMPGame_Source_NMPGame_NMPGameCharacter_h_9_INCLASS_NO_PURE_DECLS \
@@ -165,6 +182,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANMPGameCharacter); \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ANMPGameCharacter, FollowCamera); } \
 	FORCEINLINE static uint32 __PPO__CollectionSphere() { return STRUCT_OFFSET(ANMPGameCharacter, CollectionSphere); } \
 	FORCEINLINE static uint32 __PPO__InitialPower() { return STRUCT_OFFSET(ANMPGameCharacter, InitialPower); } \
+	FORCEINLINE static uint32 __PPO__BaseSpeed() { return STRUCT_OFFSET(ANMPGameCharacter, BaseSpeed); } \
+	FORCEINLINE static uint32 __PPO__SpeedFactor() { return STRUCT_OFFSET(ANMPGameCharacter, SpeedFactor); } \
 	FORCEINLINE static uint32 __PPO__CollectionSphereRadius() { return STRUCT_OFFSET(ANMPGameCharacter, CollectionSphereRadius); } \
 	FORCEINLINE static uint32 __PPO__CurrentPower() { return STRUCT_OFFSET(ANMPGameCharacter, CurrentPower); }
 

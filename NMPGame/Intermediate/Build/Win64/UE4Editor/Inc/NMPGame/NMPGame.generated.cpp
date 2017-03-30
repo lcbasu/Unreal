@@ -12,8 +12,13 @@ PRAGMA_DISABLE_OPTIMIZATION
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCode1NMPGame() {}
 FName NMPGAME_ClientOnPickedBy = FName(TEXT("ClientOnPickedBy"));
+FName NMPGAME_PowerChangeEffect = FName(TEXT("PowerChangeEffect"));
 FName NMPGAME_ServerCollectPickups = FName(TEXT("ServerCollectPickups"));
 FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
+	void ANMPGameCharacter::PowerChangeEffect()
+	{
+		ProcessEvent(FindFunctionChecked(NMPGAME_PowerChangeEffect),NULL);
+	}
 	void ANMPGameCharacter::ServerCollectPickups()
 	{
 		ProcessEvent(FindFunctionChecked(NMPGAME_ServerCollectPickups),NULL);
@@ -23,15 +28,16 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "CollectPickups",(Native)&ANMPGameCharacter::execCollectPickups);
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "GetCurrentPower",(Native)&ANMPGameCharacter::execGetCurrentPower);
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "GetInitialPower",(Native)&ANMPGameCharacter::execGetInitialPower);
+		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "OnRep_CurrentPower",(Native)&ANMPGameCharacter::execOnRep_CurrentPower);
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "ServerCollectPickups",(Native)&ANMPGameCharacter::execServerCollectPickups);
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "UpdatePower",(Native)&ANMPGameCharacter::execUpdatePower);
 	}
-	IMPLEMENT_CLASS(ANMPGameCharacter, 796468099);
+	IMPLEMENT_CLASS(ANMPGameCharacter, 3880093591);
 	void ANMPGameGameMode::StaticRegisterNativesANMPGameGameMode()
 	{
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameGameMode::StaticClass(), "GetDecayRate",(Native)&ANMPGameGameMode::execGetDecayRate);
 	}
-	IMPLEMENT_CLASS(ANMPGameGameMode, 631585855);
+	IMPLEMENT_CLASS(ANMPGameGameMode, 4043357334);
 	void APickup::ClientOnPickedBy(APawn* Pawn)
 	{
 		Pickup_eventClientOnPickedBy_Parms Parms;
@@ -78,6 +84,8 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_CollectPickups();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_GetCurrentPower();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_GetInitialPower();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_OnRep_CurrentPower();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_PowerChangeEffect();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_ServerCollectPickups();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_UpdatePower();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter_NoRegister();
@@ -164,6 +172,41 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 		}
 		return ReturnFunction;
 	}
+	UFunction* Z_Construct_UFunction_ANMPGameCharacter_OnRep_CurrentPower()
+	{
+		UObject* Outer=Z_Construct_UClass_ANMPGameCharacter();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnRep_CurrentPower"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00040401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Power level updated on clients"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ANMPGameCharacter_PowerChangeEffect()
+	{
+		UObject* Outer=Z_Construct_UClass_ANMPGameCharacter();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("PowerChangeEffect"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x08080800, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Power"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("update character visuals based on current power level"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UFunction* Z_Construct_UFunction_ANMPGameCharacter_ServerCollectPickups()
 	{
 		UObject* Outer=Z_Construct_UClass_ANMPGameCharacter();
@@ -224,12 +267,17 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_CollectPickups());
 				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_GetCurrentPower());
 				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_GetInitialPower());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_OnRep_CurrentPower());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_PowerChangeEffect());
 				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_ServerCollectPickups());
 				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameCharacter_UpdatePower());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-				UProperty* NewProp_CurrentPower = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CurrentPower"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(CurrentPower, ANMPGameCharacter), 0x0040000000020021);
+				UProperty* NewProp_CurrentPower = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CurrentPower"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(CurrentPower, ANMPGameCharacter), 0x0040000100020021);
+				NewProp_CurrentPower->RepNotifyFunc = FName(TEXT("Onrep_CurrentPower"));
 				UProperty* NewProp_CollectionSphereRadius = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CollectionSphereRadius"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(CollectionSphereRadius, ANMPGameCharacter), 0x0040000000020035);
+				UProperty* NewProp_SpeedFactor = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("SpeedFactor"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(SpeedFactor, ANMPGameCharacter), 0x0020080000000005);
+				UProperty* NewProp_BaseSpeed = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("BaseSpeed"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(BaseSpeed, ANMPGameCharacter), 0x0020080000000005);
 				UProperty* NewProp_InitialPower = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("InitialPower"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(InitialPower, ANMPGameCharacter), 0x0020080000000025);
 				UProperty* NewProp_BaseLookUpRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("BaseLookUpRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(BaseLookUpRate, ANMPGameCharacter), 0x0010000000020015);
 				UProperty* NewProp_BaseTurnRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("BaseTurnRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(BaseTurnRate, ANMPGameCharacter), 0x0010000000020015);
@@ -240,6 +288,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_CollectPickups(), "CollectPickups"); // 2714781345
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_GetCurrentPower(), "GetCurrentPower"); // 1827564159
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_GetInitialPower(), "GetInitialPower"); // 443617448
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_OnRep_CurrentPower(), "OnRep_CurrentPower"); // 1880923721
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_PowerChangeEffect(), "PowerChangeEffect"); // 4199044714
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_ServerCollectPickups(), "ServerCollectPickups"); // 4034027075
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameCharacter_UpdatePower(), "UpdatePower"); // 2092868971
 				OuterClass->ClassConfigName = FName(TEXT("Game"));
@@ -256,6 +306,14 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("Category"), TEXT("Battery"));
 				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
 				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("ToolTip"), TEXT("variable radius can be changed on server or client"));
+				MetaData->SetValue(NewProp_SpeedFactor, TEXT("BleprintProtected"), TEXT("true"));
+				MetaData->SetValue(NewProp_SpeedFactor, TEXT("Category"), TEXT("Power"));
+				MetaData->SetValue(NewProp_SpeedFactor, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+				MetaData->SetValue(NewProp_SpeedFactor, TEXT("ToolTip"), TEXT("Multiplier for controlling current speed depending on power level"));
+				MetaData->SetValue(NewProp_BaseSpeed, TEXT("BleprintProtected"), TEXT("true"));
+				MetaData->SetValue(NewProp_BaseSpeed, TEXT("Category"), TEXT("Power"));
+				MetaData->SetValue(NewProp_BaseSpeed, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
+				MetaData->SetValue(NewProp_BaseSpeed, TEXT("ToolTip"), TEXT("Speed when power level is zero"));
 				MetaData->SetValue(NewProp_InitialPower, TEXT("BlueprintProtected"), TEXT("true"));
 				MetaData->SetValue(NewProp_InitialPower, TEXT("Category"), TEXT("Power"));
 				MetaData->SetValue(NewProp_InitialPower, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
@@ -333,7 +391,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_DecayRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DecayRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(DecayRate, ANMPGameGameMode), 0x0020080000010005);
-				UProperty* NewProp_PowerDrainDelay = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PowerDrainDelay"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(PowerDrainDelay, ANMPGameGameMode), 0x0010000000010015);
+				UProperty* NewProp_PowerDrainDelay = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PowerDrainDelay"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(PowerDrainDelay, ANMPGameGameMode), 0x0020080000010015);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameGameMode_GetDecayRate(), "GetDecayRate"); // 30202788
 				OuterClass->StaticLink();
@@ -687,8 +745,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NMPGame")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x6A9C5CC1;
-			Guid.B = 0x1C412087;
+			Guid.A = 0x37958FA5;
+			Guid.B = 0x4C820623;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

@@ -80,6 +80,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANMPGameGameMode); \
 
 
 #define NMPGame_Source_NMPGame_NMPGameGameMode_h_9_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__PowerDrainDelay() { return STRUCT_OFFSET(ANMPGameGameMode, PowerDrainDelay); } \
 	FORCEINLINE static uint32 __PPO__DecayRate() { return STRUCT_OFFSET(ANMPGameGameMode, DecayRate); }
 
 

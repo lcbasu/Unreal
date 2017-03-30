@@ -58,6 +58,9 @@ ANMPGameCharacter::ANMPGameCharacter()
 	InitialPower = 2000.0f;
 	CurrentPower = InitialPower;
 
+	// base values for controlling movement speed
+	BaseSpeed = 10.0f;
+	SpeedFactor = 0.75f;
 }
 
 void ANMPGameCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -171,6 +174,14 @@ void ANMPGameCharacter::UpdatePower(float DeltaPower)
 	{
 		// Increase or decrease current power
 		CurrentPower += DeltaPower;
+
+		// Set movement speed based on power level
+		GetCharacterMovement()->MaxWalkSpeed = BaseSpeed + SpeedFactor * CurrentPower;
+
+		// fake the rep notify as it doesn't get called on the listening server
+		// so calling it manually on server
+		// Listen server does not get the RepNotify automatically
+		OnRep_CurrentPower();
 	}
 }
 
@@ -228,4 +239,9 @@ void ANMPGameCharacter::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
+}
+
+void ANMPGameCharacter::OnRep_CurrentPower()
+{
+	PowerChangeEffect();
 }

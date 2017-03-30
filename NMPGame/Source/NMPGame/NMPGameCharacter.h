@@ -97,6 +97,18 @@ protected:
 	UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite, Category = "Power", Meta = (BlueprintProtected = "true"))
 	float InitialPower;
 
+	// Speed when power level is zero
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Power", Meta = (BleprintProtected = "true"))
+	float BaseSpeed;
+
+	// Multiplier for controlling current speed depending on power level
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Power", Meta = (BleprintProtected = "true"))
+	float SpeedFactor;
+	
+	// update character visuals based on current power level
+	UFUNCTION(BlueprintImplementableEvent, Category = "Power")
+	void PowerChangeEffect();
+
 public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
@@ -111,7 +123,11 @@ private:
 	float CollectionSphereRadius;
 
 	// The character's current power level during gameplay
-	UPROPERTY(Replicated, VisibleAnywhere, Category = "Power")
+	UPROPERTY(ReplicatedUsing = Onrep_CurrentPower, VisibleAnywhere, Category = "Power")
 	float CurrentPower;
+
+	// Power level updated on clients
+	UFUNCTION()
+	void OnRep_CurrentPower();
 };
 

@@ -65,7 +65,7 @@
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoreUObject.lib"
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InputCore.lib"
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-HeadMountedDisplay.lib"
-/OUT:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Binaries\Win64\UE4Editor-NMPGame-2204.dll"
-/IMPLIB:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-NMPGame-2204.suppressed.lib"
-/PDB:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Binaries\Win64\UE4Editor-NMPGame-2204.pdb"
+/OUT:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Binaries\Win64\UE4Editor-NMPGame-5740.dll"
+/IMPLIB:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-NMPGame-5740.suppressed.lib"
+/PDB:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Binaries\Win64\UE4Editor-NMPGame-5740.pdb"
 /ignore:4078
