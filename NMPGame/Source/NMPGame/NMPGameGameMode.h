@@ -18,6 +18,7 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Power")
 	float GetDecayRate();
 
+protected:
 	// How many times per second to update characters power and check game rules
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Power")
 	float PowerDrainDelay;
@@ -25,9 +26,6 @@ public:
 	// Access the timer for recurring power draining
 	FTimerHandle PowerDrainTimer;
 
-
-
-protected:
 	// The rate at which characters loose power 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power", Meta = (BleprintProtected = "true"))
 	float DecayRate;
