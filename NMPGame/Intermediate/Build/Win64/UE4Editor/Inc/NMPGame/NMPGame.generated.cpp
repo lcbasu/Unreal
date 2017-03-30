@@ -26,7 +26,7 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "ServerCollectPickups",(Native)&ANMPGameCharacter::execServerCollectPickups);
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameCharacter::StaticClass(), "UpdatePower",(Native)&ANMPGameCharacter::execUpdatePower);
 	}
-	IMPLEMENT_CLASS(ANMPGameCharacter, 371593706);
+	IMPLEMENT_CLASS(ANMPGameCharacter, 796468099);
 	void ANMPGameGameMode::StaticRegisterNativesANMPGameGameMode()
 	{
 	}
@@ -255,7 +255,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
 				MetaData->SetValue(NewProp_CollectionSphereRadius, TEXT("ToolTip"), TEXT("variable radius can be changed on server or client"));
 				MetaData->SetValue(NewProp_InitialPower, TEXT("BlueprintProtected"), TEXT("true"));
-				MetaData->SetValue(NewProp_InitialPower, TEXT("Category"), TEXT("Pickup"));
+				MetaData->SetValue(NewProp_InitialPower, TEXT("Category"), TEXT("Power"));
 				MetaData->SetValue(NewProp_InitialPower, TEXT("ModuleRelativePath"), TEXT("NMPGameCharacter.h"));
 				MetaData->SetValue(NewProp_InitialPower, TEXT("ToolTip"), TEXT("the character starting power level"));
 				MetaData->SetValue(NewProp_BaseLookUpRate, TEXT("Category"), TEXT("Camera"));
@@ -649,7 +649,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NMPGame")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xC739E90B;
+			Guid.A = 0xAC967283;
 			Guid.B = 0x460594A6;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;

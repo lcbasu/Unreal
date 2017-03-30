@@ -94,7 +94,7 @@ protected:
 	void ServerCollectPickups_Implementation();
 
 	// the character starting power level
-	UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite, Category = "Pickup", Meta = (BlueprintProtected = "true"))
+	UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite, Category = "Power", Meta = (BlueprintProtected = "true"))
 	float InitialPower;
 
 public:

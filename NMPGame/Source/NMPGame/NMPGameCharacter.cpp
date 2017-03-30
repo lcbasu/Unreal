@@ -5,6 +5,9 @@
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
 #include "NMPGameCharacter.h"
 #include "Pickup.h"
+#include "BatteryPickup.h"
+#include <EngineGlobals.h>
+#include <Runtime/Engine/Classes/Engine/Engine.h>
 
 //////////////////////////////////////////////////////////////////////////
 // ANMPGameCharacter
@@ -50,6 +53,10 @@ ANMPGameCharacter::ANMPGameCharacter()
 	CollectionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollectionSphere"));
 	CollectionSphere->SetupAttachment(RootComponent);
 	CollectionSphere->SetSphereRadius(CollectionSphereRadius);
+
+	// Set base values for character power
+	InitialPower = 2000.0f;
+	CurrentPower = InitialPower;
 
 }
 
@@ -109,6 +116,10 @@ void ANMPGameCharacter::ServerCollectPickups_Implementation()
 {
 	if (Role == ROLE_Authority)
 	{
+		// Track the total power found in batteries
+		float TotalPower = 0.0f;
+
+
 		// Get all overlapping actors and store them in an array
 		TArray<AActor*> CollectedActors;
 		CollectionSphere->GetOverlappingActors(CollectedActors);
@@ -121,11 +132,26 @@ void ANMPGameCharacter::ServerCollectPickups_Implementation()
 			// If it is a pickup and it is valid and active
 			if (TestPickup != NULL && !TestPickup->IsPendingKill() && TestPickup->IsActive())
 			{
+				// Add power if we found the battery
+				if (ABatteryPickup* const TestBattery = Cast<ABatteryPickup>(TestPickup))
+				{
+					GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Add total power"));
+					TotalPower += TestBattery->GetPower();
+				}
+
 				// Collect the pickup and deactivate
 				TestPickup->PickedUpBy(this);
 				TestPickup->SetActive(false);
 			}
 		}
+
+		// Change the character power based in what we picked up
+		if (!FMath::IsNearlyZero(TotalPower, 0.001f))
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Update Power of character"));
+			UpdatePower(TotalPower);
+		}
+
 	}
 }
 
