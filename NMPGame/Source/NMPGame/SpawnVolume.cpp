@@ -29,9 +29,12 @@ void ASpawnVolume::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	// Set the delay for first spawn
-	SpawnDelay = FMath::FRandRange(SpawnDelayRangeLow, SpawnDelayRangeHigh);
-	GetWorldTimerManager().SetTimer(SpawnTimer, this, &ASpawnVolume::SpawnPickup, SpawnDelay, false);
+	if (Role == ROLE_Authority)
+	{
+		// Set the delay for first spawn
+		SpawnDelay = FMath::FRandRange(SpawnDelayRangeLow, SpawnDelayRangeHigh);
+		GetWorldTimerManager().SetTimer(SpawnTimer, this, &ASpawnVolume::SpawnPickup, SpawnDelay, false);
+	}
 
 }
 

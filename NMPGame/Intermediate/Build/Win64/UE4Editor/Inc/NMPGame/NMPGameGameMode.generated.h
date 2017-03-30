@@ -11,8 +11,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NMPGAME_NMPGameGameMode_generated_h
 
-#define NMPGame_Source_NMPGame_NMPGameGameMode_h_9_RPC_WRAPPERS
-#define NMPGame_Source_NMPGame_NMPGameGameMode_h_9_RPC_WRAPPERS_NO_PURE_DECLS
+#define NMPGame_Source_NMPGame_NMPGameGameMode_h_9_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetDecayRate) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=this->GetDecayRate(); \
+		P_NATIVE_END; \
+	}
+
+
+#define NMPGame_Source_NMPGame_NMPGameGameMode_h_9_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetDecayRate) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=this->GetDecayRate(); \
+		P_NATIVE_END; \
+	}
+
+
 #define NMPGame_Source_NMPGame_NMPGameGameMode_h_9_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesANMPGameGameMode(); \
@@ -59,7 +79,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANMPGameGameMode); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANMPGameGameMode)
 
 
-#define NMPGame_Source_NMPGame_NMPGameGameMode_h_9_PRIVATE_PROPERTY_OFFSET
+#define NMPGame_Source_NMPGame_NMPGameGameMode_h_9_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__DecayRate() { return STRUCT_OFFSET(ANMPGameGameMode, DecayRate); }
+
+
 #define NMPGame_Source_NMPGame_NMPGameGameMode_h_6_PROLOG
 #define NMPGame_Source_NMPGame_NMPGameGameMode_h_9_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

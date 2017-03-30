@@ -29,8 +29,9 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	IMPLEMENT_CLASS(ANMPGameCharacter, 796468099);
 	void ANMPGameGameMode::StaticRegisterNativesANMPGameGameMode()
 	{
+		FNativeFunctionRegistrar::RegisterFunction(ANMPGameGameMode::StaticClass(), "GetDecayRate",(Native)&ANMPGameGameMode::execGetDecayRate);
 	}
-	IMPLEMENT_CLASS(ANMPGameGameMode, 800014594);
+	IMPLEMENT_CLASS(ANMPGameGameMode, 631585855);
 	void APickup::ClientOnPickedBy(APawn* Pawn)
 	{
 		Pickup_eventClientOnPickedBy_Parms Parms;
@@ -81,6 +82,7 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameCharacter_UpdatePower();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameGameMode_GetDecayRate();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_ClientOnPickedBy();
@@ -287,6 +289,29 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ANMPGameCharacter(Z_Construct_UClass_ANMPGameCharacter, &ANMPGameCharacter::StaticClass, TEXT("ANMPGameCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ANMPGameCharacter);
+	UFunction* Z_Construct_UFunction_ANMPGameGameMode_GetDecayRate()
+	{
+		struct NMPGameGameMode_eventGetDecayRate_Parms
+		{
+			float ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_ANMPGameGameMode();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetDecayRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x14020401, 65535, sizeof(NMPGameGameMode_eventGetDecayRate_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(ReturnValue, NMPGameGameMode_eventGetDecayRate_Parms), 0x0010000000000580);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Power"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NMPGameGameMode.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Get the current rate of decay"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ANMPGameGameMode_NoRegister()
 	{
 		return ANMPGameGameMode::StaticClass();
@@ -304,7 +329,13 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20880288;
 
+				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameGameMode_GetDecayRate());
 
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_DecayRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DecayRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(DecayRate, ANMPGameGameMode), 0x0020080000010005);
+				UProperty* NewProp_PowerDrainDelay = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PowerDrainDelay"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(PowerDrainDelay, ANMPGameGameMode), 0x0010000000010015);
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameGameMode_GetDecayRate(), "GetDecayRate"); // 30202788
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
@@ -312,6 +343,13 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("NMPGameGameMode.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("NMPGameGameMode.h"));
 				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+				MetaData->SetValue(NewProp_DecayRate, TEXT("BleprintProtected"), TEXT("true"));
+				MetaData->SetValue(NewProp_DecayRate, TEXT("Category"), TEXT("Power"));
+				MetaData->SetValue(NewProp_DecayRate, TEXT("ModuleRelativePath"), TEXT("NMPGameGameMode.h"));
+				MetaData->SetValue(NewProp_DecayRate, TEXT("ToolTip"), TEXT("The rate at which characters loose power"));
+				MetaData->SetValue(NewProp_PowerDrainDelay, TEXT("Category"), TEXT("Power"));
+				MetaData->SetValue(NewProp_PowerDrainDelay, TEXT("ModuleRelativePath"), TEXT("NMPGameGameMode.h"));
+				MetaData->SetValue(NewProp_PowerDrainDelay, TEXT("ToolTip"), TEXT("How many times per second to update characters power and check game rules"));
 #endif
 			}
 		}
@@ -649,8 +687,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NMPGame")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xAC967283;
-			Guid.B = 0x460594A6;
+			Guid.A = 0x6A9C5CC1;
+			Guid.B = 0x1C412087;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
