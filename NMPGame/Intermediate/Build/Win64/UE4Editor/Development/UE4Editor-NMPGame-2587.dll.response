@@ -70,7 +70,7 @@
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InputCore.lib"
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-HeadMountedDisplay.lib"
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-UMG.lib"
-/OUT:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Binaries\Win64\UE4Editor-NMPGame-1303.dll"
-/IMPLIB:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-NMPGame-1303.suppressed.lib"
-/PDB:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Binaries\Win64\UE4Editor-NMPGame-1303.pdb"
+/OUT:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Binaries\Win64\UE4Editor-NMPGame-2587.dll"
+/IMPLIB:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-NMPGame-2587.suppressed.lib"
+/PDB:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Binaries\Win64\UE4Editor-NMPGame-2587.pdb"
 /ignore:4078

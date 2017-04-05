@@ -32,6 +32,9 @@ ANMPGameGameMode::ANMPGameGameMode()
 
 	// Set the base value for power to win multiplier
 	PowerToWinMultiplier = 1.25f;
+
+	// Reset stats
+	DeadPlayerCount = 0;
 }
 
 void ANMPGameGameMode::BeginPlay()
@@ -45,6 +48,12 @@ void ANMPGameGameMode::BeginPlay()
 	// game state
 	ANMPGameGameState* MyGameState = Cast<ANMPGameGameState>(GameState);
 	check(MyGameState);
+
+	// Reset stats
+	DeadPlayerCount = 0;
+
+	// Transitioning the game to the playing state
+	MyGameState->SetCurrentState(EBatteryPlayState::Eplaying);
 
 	// Go through all the characters in the game
 	for (FConstControllerIterator It = World->GetControllerIterator(); It; It++)
@@ -77,6 +86,10 @@ void ANMPGameGameMode::DrainPowerOverTime()
 	UWorld* World = GetWorld();
 	check(World);
 
+	// Game state
+	ANMPGameGameState* MyGameState = Cast<ANMPGameGameState>(GameState);
+	check(MyGameState);
+
 	// Go through all the characters in the game
 	// and darin power for each
 	for (FConstControllerIterator It = World->GetControllerIterator(); It; It++)
@@ -85,9 +98,28 @@ void ANMPGameGameMode::DrainPowerOverTime()
 		{
 			if (ANMPGameCharacter* BatteryCharacter = Cast<ANMPGameCharacter>(PlayerController->GetPawn()))
 			{
-				if (BatteryCharacter->GetCurrentPower() > 0)
+				if (BatteryCharacter->GetCurrentPower() > MyGameState->PowerToWin)
+				{
+					MyGameState->SetCurrentState(EBatteryPlayState::EWon);
+				}
+				else if (BatteryCharacter->GetCurrentPower() > 0)
 				{
 					BatteryCharacter->UpdatePower(-PowerDrainDelay * DecayRate * (BatteryCharacter->GetInitialPower()));
+				}
+				else
+				{
+					// Player is dead
+
+					BatteryCharacter->DetachFromControllerPendingDestroy();
+
+					GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Poor player died!"));
+					DeadPlayerCount++;
+
+					// See if this is the palst plaer to die and end the game if so
+					if (DeadPlayerCount >= GetNumPlayers())
+					{
+						MyGameState->SetCurrentState(EBatteryPlayState::EGameOver);
+					}
 				}
 			}
 		}

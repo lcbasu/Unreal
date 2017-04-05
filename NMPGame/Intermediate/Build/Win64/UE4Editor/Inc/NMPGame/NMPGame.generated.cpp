@@ -39,10 +39,24 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameGameMode::StaticClass(), "GetPowerToWinMultiplier",(Native)&ANMPGameGameMode::execGetPowerToWinMultiplier);
 	}
 	IMPLEMENT_CLASS(ANMPGameGameMode, 3814244733);
+static class UEnum* EBatteryPlayState_StaticEnum()
+{
+	extern NMPGAME_API class UPackage* Z_Construct_UPackage__Script_NMPGame();
+	static class UEnum* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern NMPGAME_API class UEnum* Z_Construct_UEnum_NMPGame_EBatteryPlayState();
+		Singleton = GetStaticEnum(Z_Construct_UEnum_NMPGame_EBatteryPlayState, Z_Construct_UPackage__Script_NMPGame(), TEXT("EBatteryPlayState"));
+	}
+	return Singleton;
+}
+static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EBatteryPlayState(EBatteryPlayState_StaticEnum, TEXT("/Script/NMPGame"), TEXT("EBatteryPlayState"), false, nullptr, nullptr);
 	void ANMPGameGameState::StaticRegisterNativesANMPGameGameState()
 	{
+		FNativeFunctionRegistrar::RegisterFunction(ANMPGameGameState::StaticClass(), "GetCurrentState",(Native)&ANMPGameGameState::execGetCurrentState);
+		FNativeFunctionRegistrar::RegisterFunction(ANMPGameGameState::StaticClass(), "OnRep_CurrentState",(Native)&ANMPGameGameState::execOnRep_CurrentState);
 	}
-	IMPLEMENT_CLASS(ANMPGameGameState, 1647060230);
+	IMPLEMENT_CLASS(ANMPGameGameState, 3732582782);
 	void ANMPGameHUD::StaticRegisterNativesANMPGameHUD()
 	{
 	}
@@ -105,6 +119,9 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWinMultiplier();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode();
+	NMPGAME_API class UEnum* Z_Construct_UEnum_NMPGame_EBatteryPlayState();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameGameState_GetCurrentState();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameGameState_OnRep_CurrentState();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameState_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameState();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameHUD_NoRegister();
@@ -462,6 +479,72 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ANMPGameGameMode(Z_Construct_UClass_ANMPGameGameMode, &ANMPGameGameMode::StaticClass, TEXT("ANMPGameGameMode"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ANMPGameGameMode);
+	UEnum* Z_Construct_UEnum_NMPGame_EBatteryPlayState()
+	{
+		UPackage* Outer=Z_Construct_UPackage__Script_NMPGame();
+		extern uint32 Get_Z_Construct_UEnum_NMPGame_EBatteryPlayState_CRC();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EBatteryPlayState"), 0, Get_Z_Construct_UEnum_NMPGame_EBatteryPlayState_CRC(), false);
+		if (!ReturnEnum)
+		{
+			ReturnEnum = new(EC_InternalUseOnlyConstructor, Outer, TEXT("EBatteryPlayState"), RF_Public|RF_Transient|RF_MarkAsNative) UEnum(FObjectInitializer());
+			TArray<TPair<FName, int64>> EnumNames;
+			EnumNames.Add(TPairInitializer<FName, int64>(FName(TEXT("Eplaying")), 0));
+			EnumNames.Add(TPairInitializer<FName, int64>(FName(TEXT("EGameOver")), 1));
+			EnumNames.Add(TPairInitializer<FName, int64>(FName(TEXT("EWon")), 2));
+			EnumNames.Add(TPairInitializer<FName, int64>(FName(TEXT("EUnkown")), 3));
+			EnumNames.Add(TPairInitializer<FName, int64>(FName(TEXT("EBatteryPlayState_MAX")), 4));
+			ReturnEnum->SetEnums(EnumNames, UEnum::ECppForm::Regular);
+			ReturnEnum->CppType = TEXT("EBatteryPlayState");
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnEnum->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnEnum, TEXT("BlueprintType"), TEXT("true"));
+			MetaData->SetValue(ReturnEnum, TEXT("ModuleRelativePath"), TEXT("NMPGameGameState.h"));
+			MetaData->SetValue(ReturnEnum, TEXT("ToolTip"), TEXT("Putting this enum in game state because we need this on client and server both"));
+#endif
+		}
+		return ReturnEnum;
+	}
+	uint32 Get_Z_Construct_UEnum_NMPGame_EBatteryPlayState_CRC() { return 3811587263U; }
+	UFunction* Z_Construct_UFunction_ANMPGameGameState_GetCurrentState()
+	{
+		struct NMPGameGameState_eventGetCurrentState_Parms
+		{
+			TEnumAsByte<EBatteryPlayState> ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_ANMPGameGameState();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetCurrentState"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x54020401, 65535, sizeof(NMPGameGameState_eventGetCurrentState_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UByteProperty(CPP_PROPERTY_BASE(ReturnValue, NMPGameGameState_eventGetCurrentState_Parms), 0x0010000000000580, Z_Construct_UEnum_NMPGame_EBatteryPlayState());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Power"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NMPGameGameState.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Returns the current state of gameplay"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ANMPGameGameState_OnRep_CurrentState()
+	{
+		UObject* Outer=Z_Construct_UClass_ANMPGameGameState();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnRep_CurrentState"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00020401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NMPGameGameState.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Rep notify fired on client to allow for client-side changes based on changes in gameplay state"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ANMPGameGameState_NoRegister()
 	{
 		return ANMPGameGameState::StaticClass();
@@ -479,10 +562,16 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20900280;
 
+				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameGameState_GetCurrentState());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameGameState_OnRep_CurrentState());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_CurrentState = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CurrentState"), RF_Public|RF_Transient|RF_MarkAsNative) UByteProperty(CPP_PROPERTY_BASE(CurrentState, ANMPGameGameState), 0x0040000100000020, Z_Construct_UEnum_NMPGame_EBatteryPlayState());
+				NewProp_CurrentState->RepNotifyFunc = FName(TEXT("OnRep_CurrentState"));
 				UProperty* NewProp_PowerToWin = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PowerToWin"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(PowerToWin, ANMPGameGameState), 0x0010000000000034);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameGameState_GetCurrentState(), "GetCurrentState"); // 1487374374
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameGameState_OnRep_CurrentState(), "OnRep_CurrentState"); // 3034595309
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
@@ -490,6 +579,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("NMPGameGameState.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("NMPGameGameState.h"));
 				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+				MetaData->SetValue(NewProp_CurrentState, TEXT("ModuleRelativePath"), TEXT("NMPGameGameState.h"));
+				MetaData->SetValue(NewProp_CurrentState, TEXT("ToolTip"), TEXT("Track the current playing state"));
 				MetaData->SetValue(NewProp_PowerToWin, TEXT("Category"), TEXT("Power"));
 				MetaData->SetValue(NewProp_PowerToWin, TEXT("ModuleRelativePath"), TEXT("NMPGameGameState.h"));
 				MetaData->SetValue(NewProp_PowerToWin, TEXT("ToolTip"), TEXT("To track power level needed to win the game"));
@@ -864,8 +955,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NMPGame")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xA32C5E7A;
-			Guid.B = 0x5367AA85;
+			Guid.A = 0xBF8761F9;
+			Guid.B = 0xD534696F;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

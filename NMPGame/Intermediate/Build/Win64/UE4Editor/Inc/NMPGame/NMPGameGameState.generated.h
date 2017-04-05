@@ -11,9 +11,45 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NMPGAME_NMPGameGameState_generated_h
 
-#define NMPGame_Source_NMPGame_NMPGameGameState_h_14_RPC_WRAPPERS
-#define NMPGame_Source_NMPGame_NMPGameGameState_h_14_RPC_WRAPPERS_NO_PURE_DECLS
-#define NMPGame_Source_NMPGame_NMPGameGameState_h_14_INCLASS_NO_PURE_DECLS \
+#define NMPGame_Source_NMPGame_NMPGameGameState_h_25_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnRep_CurrentState) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnRep_CurrentState(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetCurrentState) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TEnumAsByte<EBatteryPlayState>*)Z_Param__Result=this->GetCurrentState(); \
+		P_NATIVE_END; \
+	}
+
+
+#define NMPGame_Source_NMPGame_NMPGameGameState_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnRep_CurrentState) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnRep_CurrentState(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetCurrentState) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TEnumAsByte<EBatteryPlayState>*)Z_Param__Result=this->GetCurrentState(); \
+		P_NATIVE_END; \
+	}
+
+
+#define NMPGame_Source_NMPGame_NMPGameGameState_h_25_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesANMPGameGameState(); \
 	friend NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameState(); \
@@ -24,7 +60,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define NMPGame_Source_NMPGame_NMPGameGameState_h_14_INCLASS \
+#define NMPGame_Source_NMPGame_NMPGameGameState_h_25_INCLASS \
 	private: \
 	static void StaticRegisterNativesANMPGameGameState(); \
 	friend NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameState(); \
@@ -35,7 +71,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define NMPGame_Source_NMPGame_NMPGameGameState_h_14_STANDARD_CONSTRUCTORS \
+#define NMPGame_Source_NMPGame_NMPGameGameState_h_25_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ANMPGameGameState(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ANMPGameGameState) \
@@ -48,7 +84,7 @@ private: \
 public:
 
 
-#define NMPGame_Source_NMPGame_NMPGameGameState_h_14_ENHANCED_CONSTRUCTORS \
+#define NMPGame_Source_NMPGame_NMPGameGameState_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ANMPGameGameState(ANMPGameGameState&&); \
@@ -59,26 +95,29 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANMPGameGameState); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANMPGameGameState)
 
 
-#define NMPGame_Source_NMPGame_NMPGameGameState_h_14_PRIVATE_PROPERTY_OFFSET
-#define NMPGame_Source_NMPGame_NMPGameGameState_h_11_PROLOG
-#define NMPGame_Source_NMPGame_NMPGameGameState_h_14_GENERATED_BODY_LEGACY \
+#define NMPGame_Source_NMPGame_NMPGameGameState_h_25_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__CurrentState() { return STRUCT_OFFSET(ANMPGameGameState, CurrentState); }
+
+
+#define NMPGame_Source_NMPGame_NMPGameGameState_h_22_PROLOG
+#define NMPGame_Source_NMPGame_NMPGameGameState_h_25_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	NMPGame_Source_NMPGame_NMPGameGameState_h_14_PRIVATE_PROPERTY_OFFSET \
-	NMPGame_Source_NMPGame_NMPGameGameState_h_14_RPC_WRAPPERS \
-	NMPGame_Source_NMPGame_NMPGameGameState_h_14_INCLASS \
-	NMPGame_Source_NMPGame_NMPGameGameState_h_14_STANDARD_CONSTRUCTORS \
+	NMPGame_Source_NMPGame_NMPGameGameState_h_25_PRIVATE_PROPERTY_OFFSET \
+	NMPGame_Source_NMPGame_NMPGameGameState_h_25_RPC_WRAPPERS \
+	NMPGame_Source_NMPGame_NMPGameGameState_h_25_INCLASS \
+	NMPGame_Source_NMPGame_NMPGameGameState_h_25_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define NMPGame_Source_NMPGame_NMPGameGameState_h_14_GENERATED_BODY \
+#define NMPGame_Source_NMPGame_NMPGameGameState_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	NMPGame_Source_NMPGame_NMPGameGameState_h_14_PRIVATE_PROPERTY_OFFSET \
-	NMPGame_Source_NMPGame_NMPGameGameState_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	NMPGame_Source_NMPGame_NMPGameGameState_h_14_INCLASS_NO_PURE_DECLS \
-	NMPGame_Source_NMPGame_NMPGameGameState_h_14_ENHANCED_CONSTRUCTORS \
+	NMPGame_Source_NMPGame_NMPGameGameState_h_25_PRIVATE_PROPERTY_OFFSET \
+	NMPGame_Source_NMPGame_NMPGameGameState_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	NMPGame_Source_NMPGame_NMPGameGameState_h_25_INCLASS_NO_PURE_DECLS \
+	NMPGame_Source_NMPGame_NMPGameGameState_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -87,4 +126,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #define CURRENT_FILE_ID NMPGame_Source_NMPGame_NMPGameGameState_h
 
 
+#define FOREACH_ENUM_EBATTERYPLAYSTATE(op) \
+	op(Eplaying) \
+	op(EGameOver) \
+	op(EWon) \
+	op(EUnkown) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

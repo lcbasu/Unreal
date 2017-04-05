@@ -38,6 +38,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power", Meta = (BleprintProtected = "true"))
 	float PowerToWinMultiplier;
 
+	// Track the number of players who have run out of energy and been eliminated from the game
+	int32 DeadPlayerCount;
+
 private:
 
 	// Darin power from characters and update gameplay

@@ -31,6 +31,7 @@
 "E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\NMPGame\NMPGame.cpp.obj"
 "E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\NMPGame\NMPGameCharacter.cpp.obj"
 "E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\NMPGame\NMPGameGameMode.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\NMPGame\NMPGameGameState.cpp.obj"
 "E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\NMPGame\NMPGameHUD.cpp.obj"
 "E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\NMPGame\Pickup.cpp.obj"
 "E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\NMPGame\SpawnVolume.cpp.obj"
@@ -69,7 +70,7 @@
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InputCore.lib"
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-HeadMountedDisplay.lib"
 "C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-UMG.lib"
-/OUT:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Binaries\Win64\UE4Editor-NMPGame-6604.dll"
-/IMPLIB:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-NMPGame-6604.suppressed.lib"
-/PDB:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Binaries\Win64\UE4Editor-NMPGame-6604.pdb"
+/OUT:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Binaries\Win64\UE4Editor-NMPGame-1263.dll"
+/IMPLIB:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-NMPGame-1263.suppressed.lib"
+/PDB:"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Binaries\Win64\UE4Editor-NMPGame-1263.pdb"
 /ignore:4078
