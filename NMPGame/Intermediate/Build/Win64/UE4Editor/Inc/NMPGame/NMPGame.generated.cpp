@@ -36,9 +36,13 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	void ANMPGameGameMode::StaticRegisterNativesANMPGameGameMode()
 	{
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameGameMode::StaticClass(), "GetDecayRate",(Native)&ANMPGameGameMode::execGetDecayRate);
-		FNativeFunctionRegistrar::RegisterFunction(ANMPGameGameMode::StaticClass(), "GetPowerToWin",(Native)&ANMPGameGameMode::execGetPowerToWin);
+		FNativeFunctionRegistrar::RegisterFunction(ANMPGameGameMode::StaticClass(), "GetPowerToWinMultiplier",(Native)&ANMPGameGameMode::execGetPowerToWinMultiplier);
 	}
-	IMPLEMENT_CLASS(ANMPGameGameMode, 1730921780);
+	IMPLEMENT_CLASS(ANMPGameGameMode, 3814244733);
+	void ANMPGameGameState::StaticRegisterNativesANMPGameGameState()
+	{
+	}
+	IMPLEMENT_CLASS(ANMPGameGameState, 1647060230);
 	void ANMPGameHUD::StaticRegisterNativesANMPGameHUD()
 	{
 	}
@@ -80,6 +84,7 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
+	ENGINE_API class UClass* Z_Construct_UClass_AGameStateBase();
 	ENGINE_API class UClass* Z_Construct_UClass_AHUD();
 	ENGINE_API class UClass* Z_Construct_UClass_APawn_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AStaticMeshActor();
@@ -97,9 +102,11 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameGameMode_GetDecayRate();
-	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWin();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWinMultiplier();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode();
+	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameState_NoRegister();
+	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameState();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameHUD_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameHUD();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_ClientOnPickedBy();
@@ -379,9 +386,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		}
 		return ReturnFunction;
 	}
-	UFunction* Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWin()
+	UFunction* Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWinMultiplier()
 	{
-		struct NMPGameGameMode_eventGetPowerToWin_Parms
+		struct NMPGameGameMode_eventGetPowerToWinMultiplier_Parms
 		{
 			float ReturnValue;
 		};
@@ -389,8 +396,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		static UFunction* ReturnFunction = NULL;
 		if (!ReturnFunction)
 		{
-			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetPowerToWin"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x14020401, 65535, sizeof(NMPGameGameMode_eventGetPowerToWin_Parms));
-			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(ReturnValue, NMPGameGameMode_eventGetPowerToWin_Parms), 0x0010000000000580);
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetPowerToWinMultiplier"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x14020401, 65535, sizeof(NMPGameGameMode_eventGetPowerToWinMultiplier_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(ReturnValue, NMPGameGameMode_eventGetPowerToWinMultiplier_Parms), 0x0010000000000580);
 			ReturnFunction->Bind();
 			ReturnFunction->StaticLink();
 #if WITH_METADATA
@@ -420,15 +427,15 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->ClassFlags |= 0x20880288;
 
 				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameGameMode_GetDecayRate());
-				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWin());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWinMultiplier());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-				UProperty* NewProp_PowerToWin = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PowerToWin"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(PowerToWin, ANMPGameGameMode), 0x0020080000000004);
+				UProperty* NewProp_PowerToWinMultiplier = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PowerToWinMultiplier"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(PowerToWinMultiplier, ANMPGameGameMode), 0x0020080000010005);
 				UProperty* NewProp_DecayRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DecayRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(DecayRate, ANMPGameGameMode), 0x0020080000010005);
 				UProperty* NewProp_PowerDrainDelay = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PowerDrainDelay"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(PowerDrainDelay, ANMPGameGameMode), 0x0020080000010015);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameGameMode_GetDecayRate(), "GetDecayRate"); // 30202788
-				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWin(), "GetPowerToWin"); // 2589161842
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWinMultiplier(), "GetPowerToWinMultiplier"); // 4195316942
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
@@ -436,9 +443,10 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("NMPGameGameMode.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("NMPGameGameMode.h"));
 				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
-				MetaData->SetValue(NewProp_PowerToWin, TEXT("Category"), TEXT("Power"));
-				MetaData->SetValue(NewProp_PowerToWin, TEXT("ModuleRelativePath"), TEXT("NMPGameGameMode.h"));
-				MetaData->SetValue(NewProp_PowerToWin, TEXT("ToolTip"), TEXT("Power level needed to win the game"));
+				MetaData->SetValue(NewProp_PowerToWinMultiplier, TEXT("BleprintProtected"), TEXT("true"));
+				MetaData->SetValue(NewProp_PowerToWinMultiplier, TEXT("Category"), TEXT("Power"));
+				MetaData->SetValue(NewProp_PowerToWinMultiplier, TEXT("ModuleRelativePath"), TEXT("NMPGameGameMode.h"));
+				MetaData->SetValue(NewProp_PowerToWinMultiplier, TEXT("ToolTip"), TEXT("Power level needed to win the game"));
 				MetaData->SetValue(NewProp_DecayRate, TEXT("BleprintProtected"), TEXT("true"));
 				MetaData->SetValue(NewProp_DecayRate, TEXT("Category"), TEXT("Power"));
 				MetaData->SetValue(NewProp_DecayRate, TEXT("ModuleRelativePath"), TEXT("NMPGameGameMode.h"));
@@ -454,6 +462,45 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ANMPGameGameMode(Z_Construct_UClass_ANMPGameGameMode, &ANMPGameGameMode::StaticClass, TEXT("ANMPGameGameMode"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ANMPGameGameMode);
+	UClass* Z_Construct_UClass_ANMPGameGameState_NoRegister()
+	{
+		return ANMPGameGameState::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ANMPGameGameState()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AGameStateBase();
+			Z_Construct_UPackage__Script_NMPGame();
+			OuterClass = ANMPGameGameState::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900280;
+
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_PowerToWin = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PowerToWin"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(PowerToWin, ANMPGameGameState), 0x0010000000000034);
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Input Movement Collision Rendering Utilities|Transformation"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("NMPGameGameState.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("NMPGameGameState.h"));
+				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+				MetaData->SetValue(NewProp_PowerToWin, TEXT("Category"), TEXT("Power"));
+				MetaData->SetValue(NewProp_PowerToWin, TEXT("ModuleRelativePath"), TEXT("NMPGameGameState.h"));
+				MetaData->SetValue(NewProp_PowerToWin, TEXT("ToolTip"), TEXT("To track power level needed to win the game"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ANMPGameGameState(Z_Construct_UClass_ANMPGameGameState, &ANMPGameGameState::StaticClass, TEXT("ANMPGameGameState"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ANMPGameGameState);
 	UClass* Z_Construct_UClass_ANMPGameHUD_NoRegister()
 	{
 		return ANMPGameHUD::StaticClass();
@@ -817,8 +864,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NMPGame")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x6A975425;
-			Guid.B = 0x2FDE1D5F;
+			Guid.A = 0xA32C5E7A;
+			Guid.B = 0x5367AA85;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

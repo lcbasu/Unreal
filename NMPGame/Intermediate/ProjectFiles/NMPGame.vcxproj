@@ -560,10 +560,12 @@
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\NMPGame\BatteryPickup.cpp" />
+    <ClCompile Include="..\..\Source\NMPGame\NMPGameGameState.cpp" />
     <ClCompile Include="..\..\Source\NMPGame\NMPGameHUD.cpp" />
     <ClCompile Include="..\..\Source\NMPGame\Pickup.cpp" />
     <ClCompile Include="..\..\Source\NMPGame\SpawnVolume.cpp" />
     <ClInclude Include="..\..\Source\NMPGame\BatteryPickup.h" />
+    <ClInclude Include="..\..\Source\NMPGame\NMPGameGameState.h" />
     <ClInclude Include="..\..\Source\NMPGame\NMPGameHUD.h" />
     <ClInclude Include="..\..\Source\NMPGame\Pickup.h" />
     <ClInclude Include="..\..\Source\NMPGame\SpawnVolume.h" />

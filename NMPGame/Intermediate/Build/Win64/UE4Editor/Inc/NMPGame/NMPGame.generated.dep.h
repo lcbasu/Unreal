@@ -12,6 +12,9 @@
 #ifndef NMPGAME_NMPGameGameMode_generated_h
 	#include "NMPGameGameMode.h"
 #endif
+#ifndef NMPGAME_NMPGameGameState_generated_h
+	#include "NMPGameGameState.h"
+#endif
 #ifndef NMPGAME_NMPGameHUD_generated_h
 	#include "NMPGameHUD.h"
 #endif

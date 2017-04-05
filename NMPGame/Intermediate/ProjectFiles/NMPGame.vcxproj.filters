@@ -67,6 +67,9 @@
     <ClInclude Include="..\..\Source\NMPGame\NMPGameHUD.h">
       <Filter>Source\NMPGame</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\NMPGame\NMPGameGameState.h">
+      <Filter>Source\NMPGame</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\NMPGame\Pickup.cpp">
@@ -79,6 +82,9 @@
       <Filter>Source\NMPGame</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\NMPGame\NMPGameHUD.cpp">
+      <Filter>Source\NMPGame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NMPGame\NMPGameGameState.cpp">
       <Filter>Source\NMPGame</Filter>
     </ClCompile>
   </ItemGroup>
