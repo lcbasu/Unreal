@@ -13,6 +13,13 @@ ANMPGameGameMode::ANMPGameGameMode()
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
 
+	// Set the type of HUD used in the game
+	static ConstructorHelpers::FClassFinder<AHUD> PlayerHUDClass(TEXT("/Game/Blueprints/NMPGameHUD_BP"));
+	if (PlayerHUDClass.Class != NULL)
+	{
+		HUDClass = PlayerHUDClass.Class;
+	}
+
 	// base values
 	DecayRate = 0.02f;
 
@@ -23,11 +30,34 @@ ANMPGameGameMode::ANMPGameGameMode()
 void ANMPGameGameMode::BeginPlay()
 {
 	GetWorldTimerManager().SetTimer(PowerDrainTimer, this, &ANMPGameGameMode::DrainPowerOverTime, PowerDrainDelay, true);
+
+	// Access the world to get to the players
+	UWorld* World = GetWorld();
+	check(World);
+
+	// Go through all the characters in the game
+	for (FConstControllerIterator It = World->GetControllerIterator(); It; It++)
+	{
+		if (APlayerController* PlayerController = Cast<APlayerController>(*It))
+		{
+			if (ANMPGameCharacter* BatteryCharacter = Cast<ANMPGameCharacter>(PlayerController->GetPawn()))
+			{
+				PowerToWin = BatteryCharacter->GetInitialPower() * 1.25f;
+				break; // Set the power to win for only the character which is active for that machine
+			}
+		}
+	}
+
 }
 
 float ANMPGameGameMode::GetDecayRate()
 {
 	return DecayRate;
+}
+
+float ANMPGameGameMode::GetPowerToWin()
+{
+	return PowerToWin;
 }
 
 void ANMPGameGameMode::DrainPowerOverTime()

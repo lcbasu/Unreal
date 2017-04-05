@@ -325,8 +325,8 @@
 /FI"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Source\NMPGame\NMPGame.h"
 /Yu"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Source\NMPGame\NMPGame.h"
 /Fp"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\NMPGame\PCH.NMPGame.h.pch"
-"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Source\NMPGame\SpawnVolume.cpp"
-/Fo"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\NMPGame\SpawnVolume.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Source\NMPGame\NMPGameHUD.cpp"
+/Fo"E:\Lokesh Basu\GitHub\Unreal\NMPGame\Intermediate\Build\Win64\UE4Editor\Development\NMPGame\NMPGameHUD.cpp.obj"
 /TP
 /GR-
 /W4

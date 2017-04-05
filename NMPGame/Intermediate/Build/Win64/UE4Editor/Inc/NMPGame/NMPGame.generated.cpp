@@ -36,8 +36,13 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	void ANMPGameGameMode::StaticRegisterNativesANMPGameGameMode()
 	{
 		FNativeFunctionRegistrar::RegisterFunction(ANMPGameGameMode::StaticClass(), "GetDecayRate",(Native)&ANMPGameGameMode::execGetDecayRate);
+		FNativeFunctionRegistrar::RegisterFunction(ANMPGameGameMode::StaticClass(), "GetPowerToWin",(Native)&ANMPGameGameMode::execGetPowerToWin);
 	}
-	IMPLEMENT_CLASS(ANMPGameGameMode, 4043357334);
+	IMPLEMENT_CLASS(ANMPGameGameMode, 1730921780);
+	void ANMPGameHUD::StaticRegisterNativesANMPGameHUD()
+	{
+	}
+	IMPLEMENT_CLASS(ANMPGameHUD, 3952114489);
 	void APickup::ClientOnPickedBy(APawn* Pawn)
 	{
 		Pickup_eventClientOnPickedBy_Parms Parms;
@@ -75,6 +80,7 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
+	ENGINE_API class UClass* Z_Construct_UClass_AHUD();
 	ENGINE_API class UClass* Z_Construct_UClass_APawn_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AStaticMeshActor();
 	COREUOBJECT_API class UScriptStruct* Z_Construct_UScriptStruct_FVector();
@@ -91,8 +97,11 @@ FName NMPGAME_WasCollected = FName(TEXT("WasCollected"));
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameCharacter();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameGameMode_GetDecayRate();
+	NMPGAME_API class UFunction* Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWin();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode_NoRegister();
 	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameGameMode();
+	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameHUD_NoRegister();
+	NMPGAME_API class UClass* Z_Construct_UClass_ANMPGameHUD();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_ClientOnPickedBy();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_IsActive();
 	NMPGAME_API class UFunction* Z_Construct_UFunction_APickup_OnRep_IsActive();
@@ -370,6 +379,29 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		}
 		return ReturnFunction;
 	}
+	UFunction* Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWin()
+	{
+		struct NMPGameGameMode_eventGetPowerToWin_Parms
+		{
+			float ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_ANMPGameGameMode();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetPowerToWin"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x14020401, 65535, sizeof(NMPGameGameMode_eventGetPowerToWin_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(ReturnValue, NMPGameGameMode_eventGetPowerToWin_Parms), 0x0010000000000580);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Power"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NMPGameGameMode.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Access the power level required to win the game"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ANMPGameGameMode_NoRegister()
 	{
 		return ANMPGameGameMode::StaticClass();
@@ -388,12 +420,15 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->ClassFlags |= 0x20880288;
 
 				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameGameMode_GetDecayRate());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWin());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_PowerToWin = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PowerToWin"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(PowerToWin, ANMPGameGameMode), 0x0020080000000004);
 				UProperty* NewProp_DecayRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DecayRate"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(DecayRate, ANMPGameGameMode), 0x0020080000010005);
 				UProperty* NewProp_PowerDrainDelay = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PowerDrainDelay"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(PowerDrainDelay, ANMPGameGameMode), 0x0020080000010015);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameGameMode_GetDecayRate(), "GetDecayRate"); // 30202788
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ANMPGameGameMode_GetPowerToWin(), "GetPowerToWin"); // 2589161842
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
@@ -401,6 +436,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("NMPGameGameMode.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("NMPGameGameMode.h"));
 				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+				MetaData->SetValue(NewProp_PowerToWin, TEXT("Category"), TEXT("Power"));
+				MetaData->SetValue(NewProp_PowerToWin, TEXT("ModuleRelativePath"), TEXT("NMPGameGameMode.h"));
+				MetaData->SetValue(NewProp_PowerToWin, TEXT("ToolTip"), TEXT("Power level needed to win the game"));
 				MetaData->SetValue(NewProp_DecayRate, TEXT("BleprintProtected"), TEXT("true"));
 				MetaData->SetValue(NewProp_DecayRate, TEXT("Category"), TEXT("Power"));
 				MetaData->SetValue(NewProp_DecayRate, TEXT("ModuleRelativePath"), TEXT("NMPGameGameMode.h"));
@@ -416,6 +454,40 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ANMPGameGameMode(Z_Construct_UClass_ANMPGameGameMode, &ANMPGameGameMode::StaticClass, TEXT("ANMPGameGameMode"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ANMPGameGameMode);
+	UClass* Z_Construct_UClass_ANMPGameHUD_NoRegister()
+	{
+		return ANMPGameHUD::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ANMPGameHUD()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AHUD();
+			Z_Construct_UPackage__Script_NMPGame();
+			OuterClass = ANMPGameHUD::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x2090028C;
+
+
+				OuterClass->ClassConfigName = FName(TEXT("Game"));
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Rendering Actor Input Replication"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("NMPGameHUD.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("NMPGameHUD.h"));
+				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ANMPGameHUD(Z_Construct_UClass_ANMPGameHUD, &ANMPGameHUD::StaticClass, TEXT("ANMPGameHUD"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ANMPGameHUD);
 	UFunction* Z_Construct_UFunction_APickup_ClientOnPickedBy()
 	{
 		UObject* Outer=Z_Construct_UClass_APickup();
@@ -745,8 +817,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/NMPGame")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x37958FA5;
-			Guid.B = 0x4C820623;
+			Guid.A = 0x6A975425;
+			Guid.B = 0x2FDE1D5F;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
