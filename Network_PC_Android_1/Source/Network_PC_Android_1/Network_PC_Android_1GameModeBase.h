@@ -18,7 +18,4 @@ public:
 	ANetwork_PC_Android_1GameModeBase();
 
 	virtual void BeginPlay() override;
-
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 };

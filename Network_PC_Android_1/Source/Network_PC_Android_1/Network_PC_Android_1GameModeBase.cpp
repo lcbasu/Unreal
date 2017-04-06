@@ -8,7 +8,7 @@
 
 ANetwork_PC_Android_1GameModeBase::ANetwork_PC_Android_1GameModeBase()
 {
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 }
 
 void ANetwork_PC_Android_1GameModeBase::BeginPlay()
@@ -19,16 +19,9 @@ void ANetwork_PC_Android_1GameModeBase::BeginPlay()
 
 	// Instantiate the Sin Actor
 
-	FVector Location(0.0f, 0.0f, 0.0f);
+	FVector Location(0.0f, 0.0f, 400.0f);
 	FRotator Rotation(0.0f, 0.0f, 0.0f);
 	FActorSpawnParameters SpawnInfo;
 	GetWorld()->SpawnActor<ASinCurveActor>(Location, Rotation, SpawnInfo);
 
-}
-
-void ANetwork_PC_Android_1GameModeBase::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-	UE_LOG(LogTemp, Warning, TEXT("Called Every Frame"));
 }

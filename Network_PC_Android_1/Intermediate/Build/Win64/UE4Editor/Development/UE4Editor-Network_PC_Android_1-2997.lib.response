@@ -1,0 +1,25 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Network_PC_Android_1-2997.dll"
+/IGNORE:4221
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"E:\Lokesh Basu\GitHub\Unreal\Network_PC_Android_1\Intermediate\Build\Win64\UE4Editor\Development\Network_PC_Android_1\PCH.Network_PC_Android_1.h.obj"
+"E:\Lokesh Basu\GitHub\Unreal\Network_PC_Android_1\Intermediate\Build\Win64\UE4Editor\Development\Network_PC_Android_1\Network_PC_Android_1.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\Network_PC_Android_1\Intermediate\Build\Win64\UE4Editor\Development\Network_PC_Android_1\Network_PC_Android_1GameModeBase.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\Network_PC_Android_1\Intermediate\Build\Win64\UE4Editor\Development\Network_PC_Android_1\SinCurveActor.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\Network_PC_Android_1\Intermediate\Build\Win64\UE4Editor\Development\Network_PC_Android_1\Network_PC_Android_1.generated.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\Network_PC_Android_1\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"E:\Lokesh Basu\GitHub\Unreal\Network_PC_Android_1\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Network_PC_Android_1-2997.lib"

@@ -14,8 +14,6 @@ public:
 	// Sets default values for this actor's properties
 	ASinCurveActor();
 
-	float FrameCount;
-
 	FORCEINLINE class UStaticMeshComponent *GetMesh() const { return SinCurveActorMesh; };
 
 protected:
@@ -25,6 +23,8 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	float RunningTime;
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SinCurveActor", meta = (AllowPrivateAccess = "true"))
