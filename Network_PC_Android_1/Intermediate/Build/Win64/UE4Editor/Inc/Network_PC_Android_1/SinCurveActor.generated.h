@@ -59,7 +59,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASinCurveActor); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASinCurveActor)
 
 
-#define Network_PC_Android_1_Source_Network_PC_Android_1_SinCurveActor_h_11_PRIVATE_PROPERTY_OFFSET
+#define Network_PC_Android_1_Source_Network_PC_Android_1_SinCurveActor_h_11_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__SinCurveActorMesh() { return STRUCT_OFFSET(ASinCurveActor, SinCurveActorMesh); }
+
+
 #define Network_PC_Android_1_Source_Network_PC_Android_1_SinCurveActor_h_8_PROLOG
 #define Network_PC_Android_1_Source_Network_PC_Android_1_SinCurveActor_h_11_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

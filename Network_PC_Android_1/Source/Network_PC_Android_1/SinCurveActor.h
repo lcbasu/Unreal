@@ -16,6 +16,8 @@ public:
 
 	float FrameCount;
 
+	FORCEINLINE class UStaticMeshComponent *GetMesh() const { return SinCurveActorMesh; };
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -24,6 +26,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	
-	
+private:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SinCurveActor", meta = (AllowPrivateAccess = "true"))
+	class UStaticMeshComponent* SinCurveActorMesh;
 };

@@ -11,6 +11,17 @@ ASinCurveActor::ASinCurveActor()
 	PrimaryActorTick.bCanEverTick = true;
 
 	FrameCount = 0;
+
+	SinCurveActorMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SinCurveActorMesh"));
+
+	//Mesh
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> pSphere(TEXT("StaticMesh'/Game/Blueprints/Sphere.Sphere'"));
+	if (pSphere.Object)
+	{
+		SinCurveActorMesh->SetStaticMesh(pSphere.Object);
+	}
+
+	RootComponent = SinCurveActorMesh;
 }
 
 // Called when the game starts or when spawned
