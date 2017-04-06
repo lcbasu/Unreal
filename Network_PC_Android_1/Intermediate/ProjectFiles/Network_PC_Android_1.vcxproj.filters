@@ -1,46 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\Network_PC_Android_1.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{777C9628-7F94-497B-A962-8FDBB74187A5}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\Network_PC_Android_1.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\Network_PC_Android_1Editor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{B10D19D6-F34A-4E80-9C01-9950F8F70382}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\Network_PC_Android_1">
-			<UniqueIdentifier>{52B2BEFB-77B9-43B9-B132-8ACF8C6CB988}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\Network_PC_Android_1\Network_PC_Android_1.Build.cs">
-			<Filter>Source\Network_PC_Android_1</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\Network_PC_Android_1\Network_PC_Android_1.cpp">
-			<Filter>Source\Network_PC_Android_1</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\Network_PC_Android_1\Network_PC_Android_1.h">
-			<Filter>Source\Network_PC_Android_1</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\Network_PC_Android_1\Network_PC_Android_1GameModeBase.cpp">
-			<Filter>Source\Network_PC_Android_1</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\Network_PC_Android_1\Network_PC_Android_1GameModeBase.h">
-			<Filter>Source\Network_PC_Android_1</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Network_PC_Android_1.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{777C9628-7F94-497B-A962-8FDBB74187A5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Network_PC_Android_1.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Network_PC_Android_1Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{B10D19D6-F34A-4E80-9C01-9950F8F70382}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Network_PC_Android_1">
+      <UniqueIdentifier>{52B2BEFB-77B9-43B9-B132-8ACF8C6CB988}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Network_PC_Android_1\Network_PC_Android_1.Build.cs">
+      <Filter>Source\Network_PC_Android_1</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Network_PC_Android_1\Network_PC_Android_1.cpp">
+      <Filter>Source\Network_PC_Android_1</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Network_PC_Android_1\Network_PC_Android_1.h">
+      <Filter>Source\Network_PC_Android_1</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Network_PC_Android_1\Network_PC_Android_1GameModeBase.cpp">
+      <Filter>Source\Network_PC_Android_1</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Network_PC_Android_1\Network_PC_Android_1GameModeBase.h">
+      <Filter>Source\Network_PC_Android_1</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Network_PC_Android_1\SinCurveActor.h">
+      <Filter>Source\Network_PC_Android_1</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Network_PC_Android_1\SinCurveActor.cpp">
+      <Filter>Source\Network_PC_Android_1</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

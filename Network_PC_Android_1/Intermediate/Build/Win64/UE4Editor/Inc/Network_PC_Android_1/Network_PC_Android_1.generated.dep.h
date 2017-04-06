@@ -9,3 +9,6 @@
 #ifndef NETWORK_PC_ANDROID_1_Network_PC_Android_1GameModeBase_generated_h
 	#include "Network_PC_Android_1GameModeBase.h"
 #endif
+#ifndef NETWORK_PC_ANDROID_1_SinCurveActor_generated_h
+	#include "SinCurveActor.h"
+#endif

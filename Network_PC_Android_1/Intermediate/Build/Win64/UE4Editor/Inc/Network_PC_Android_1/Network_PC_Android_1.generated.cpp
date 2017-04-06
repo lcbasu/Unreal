@@ -15,12 +15,19 @@ void EmptyLinkFunctionForGeneratedCode1Network_PC_Android_1() {}
 	{
 	}
 	IMPLEMENT_CLASS(ANetwork_PC_Android_1GameModeBase, 2382438176);
+	void ASinCurveActor::StaticRegisterNativesASinCurveActor()
+	{
+	}
+	IMPLEMENT_CLASS(ASinCurveActor, 2195303622);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
+	ENGINE_API class UClass* Z_Construct_UClass_AActor();
 
 	NETWORK_PC_ANDROID_1_API class UClass* Z_Construct_UClass_ANetwork_PC_Android_1GameModeBase_NoRegister();
 	NETWORK_PC_ANDROID_1_API class UClass* Z_Construct_UClass_ANetwork_PC_Android_1GameModeBase();
+	NETWORK_PC_ANDROID_1_API class UClass* Z_Construct_UClass_ASinCurveActor_NoRegister();
+	NETWORK_PC_ANDROID_1_API class UClass* Z_Construct_UClass_ASinCurveActor();
 	NETWORK_PC_ANDROID_1_API class UPackage* Z_Construct_UPackage__Script_Network_PC_Android_1();
 	UClass* Z_Construct_UClass_ANetwork_PC_Android_1GameModeBase_NoRegister()
 	{
@@ -55,6 +62,37 @@ void EmptyLinkFunctionForGeneratedCode1Network_PC_Android_1() {}
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ANetwork_PC_Android_1GameModeBase(Z_Construct_UClass_ANetwork_PC_Android_1GameModeBase, &ANetwork_PC_Android_1GameModeBase::StaticClass, TEXT("ANetwork_PC_Android_1GameModeBase"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ANetwork_PC_Android_1GameModeBase);
+	UClass* Z_Construct_UClass_ASinCurveActor_NoRegister()
+	{
+		return ASinCurveActor::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ASinCurveActor()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AActor();
+			Z_Construct_UPackage__Script_Network_PC_Android_1();
+			OuterClass = ASinCurveActor::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("SinCurveActor.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("SinCurveActor.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ASinCurveActor(Z_Construct_UClass_ASinCurveActor, &ASinCurveActor::StaticClass, TEXT("ASinCurveActor"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ASinCurveActor);
 	UPackage* Z_Construct_UPackage__Script_Network_PC_Android_1()
 	{
 		static UPackage* ReturnPackage = NULL;
@@ -63,8 +101,8 @@ void EmptyLinkFunctionForGeneratedCode1Network_PC_Android_1() {}
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/Network_PC_Android_1")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x45124230;
-			Guid.B = 0x36BE36A8;
+			Guid.A = 0x3394096D;
+			Guid.B = 0x4A365409;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

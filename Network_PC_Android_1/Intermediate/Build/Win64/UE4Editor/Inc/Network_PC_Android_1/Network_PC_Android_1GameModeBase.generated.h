@@ -37,7 +37,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define Network_PC_Android_1_Source_Network_PC_Android_1_Network_PC_Android_1GameModeBase_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ANetwork_PC_Android_1GameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API ANetwork_PC_Android_1GameModeBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ANetwork_PC_Android_1GameModeBase) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ANetwork_PC_Android_1GameModeBase); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANetwork_PC_Android_1GameModeBase); \
@@ -49,8 +49,6 @@ public:
 
 
 #define Network_PC_Android_1_Source_Network_PC_Android_1_Network_PC_Android_1GameModeBase_h_14_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ANetwork_PC_Android_1GameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ANetwork_PC_Android_1GameModeBase(ANetwork_PC_Android_1GameModeBase&&); \
@@ -58,7 +56,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ANetwork_PC_Android_1GameModeBase); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANetwork_PC_Android_1GameModeBase); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ANetwork_PC_Android_1GameModeBase)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANetwork_PC_Android_1GameModeBase)
 
 
 #define Network_PC_Android_1_Source_Network_PC_Android_1_Network_PC_Android_1GameModeBase_h_14_PRIVATE_PROPERTY_OFFSET
