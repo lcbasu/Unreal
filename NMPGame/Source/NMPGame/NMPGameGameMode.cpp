@@ -109,9 +109,7 @@ void ANMPGameGameMode::DrainPowerOverTime()
 				else
 				{
 					// Player is dead
-
 					BatteryCharacter->DetachFromControllerPendingDestroy();
-
 					GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Poor player died!"));
 					DeadPlayerCount++;
 
