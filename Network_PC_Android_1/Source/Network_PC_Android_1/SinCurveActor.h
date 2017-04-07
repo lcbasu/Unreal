@@ -14,6 +14,9 @@ public:
 	// Sets default values for this actor's properties
 	ASinCurveActor();
 
+	// require network scaffolding
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 	FORCEINLINE class UStaticMeshComponent *GetMesh() const { return SinCurveActorMesh; };
 
 protected:

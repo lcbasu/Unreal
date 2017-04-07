@@ -2,26 +2,48 @@
 
 #include "Network_PC_Android_1.h"
 #include "SinCurveActor.h"
+#include "Net/UnrealNetwork.h"
 #include <EngineGlobals.h>
 #include <Runtime/Engine/Classes/Engine/Engine.h>
 
 // Sets default values
 ASinCurveActor::ASinCurveActor()
 {
+
+	// Replicate this actor
+	bReplicates = true;
+
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	SinCurveActorMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SinCurveActorMesh"));
 
 	//Mesh
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> pSphere(TEXT("StaticMesh'/Game/Blueprints/Sphere.Sphere'"));
-	if (pSphere.Object)
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> pCube(TEXT("StaticMesh'/Game/Blueprints/Cube.Cube'"));
+	if (pCube.Object)
 	{
-		SinCurveActorMesh->SetStaticMesh(pSphere.Object);
+		SinCurveActorMesh->SetStaticMesh(pCube.Object);
 	}
 
 	RootComponent = SinCurveActorMesh;
+
+	// Keep movement synced from server to clients
+	bReplicateMovement = true;
+
+	// To be able to move over network, we need to make this movable object
+	GetMesh()->SetMobility(EComponentMobility::Movable);
+	//// This pickup is physics enabled and should move
+	//GetMesh()->SetSimulatePhysics(true);
 }
+
+
+void ASinCurveActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	//DOREPLIFETIME(ASinCurveActor, BatteryPower);
+}
+
 
 // Called when the game starts or when spawned
 void ASinCurveActor::BeginPlay()
