@@ -2,7 +2,8 @@
 
 #include "Network_PC_Android_1.h"
 #include "SinCurveActor.h"
-
+#include <EngineGlobals.h>
+#include <Runtime/Engine/Classes/Engine/Engine.h>
 
 // Sets default values
 ASinCurveActor::ASinCurveActor()
@@ -26,14 +27,6 @@ ASinCurveActor::ASinCurveActor()
 void ASinCurveActor::BeginPlay()
 {
 	Super::BeginPlay();
-
-	ULineBatchComponent* const LineBatcher = GetWorld()->PersistentLineBatcher;
-	TArray<struct FBatchedLine, FDefaultAllocator > Lines;
-	Lines.Empty();
-	Lines.Add(FBatchedLine(FVector(0.0f + 0.05, 0.0f, 0.0f), FVector(0.0f + 0.05, 0.0f, 0.0f), FColor(255.0f, 0.0f, 0.0f), 100.0f, 1.0f, 8));
-	Lines.Add(FBatchedLine(FVector(0.0f + 0.10, 0.0f, 0.0f), FVector(0.0f + 0.15, 0.0f, 0.0f), FColor(255.0f, 0.0f, 0.0f), 100.0f, 1.0f, 8));
-	LineBatcher->BatchedLines.Append(Lines);
-	LineBatcher->MarkRenderStateDirty();
 }
 
 // Called every frame
@@ -46,6 +39,11 @@ void ASinCurveActor::Tick(float DeltaTime)
 	NewLocation.Z += DeltaHeight * 200.0f;       //Scale our height by a factor of 20
 	NewLocation.Y += DeltaTime * 100.0f;
 	RunningTime += DeltaTime;
+
+	static const FString OnScreenLogMessage(TEXT("NewLocation: "));
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, OnScreenLogMessage + FString(NewLocation.ToString()));
+
 	SetActorLocation(NewLocation);
 }
 

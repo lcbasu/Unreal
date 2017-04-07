@@ -11,6 +11,10 @@
 PRAGMA_DISABLE_OPTIMIZATION
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCode1Network_PC_Android_1() {}
+	void ACustomGameStateBase::StaticRegisterNativesACustomGameStateBase()
+	{
+	}
+	IMPLEMENT_CLASS(ACustomGameStateBase, 3528137051);
 	void ANetwork_PC_Android_1GameModeBase::StaticRegisterNativesANetwork_PC_Android_1GameModeBase()
 	{
 	}
@@ -21,15 +25,51 @@ void EmptyLinkFunctionForGeneratedCode1Network_PC_Android_1() {}
 	IMPLEMENT_CLASS(ASinCurveActor, 727970997);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
+	ENGINE_API class UClass* Z_Construct_UClass_AGameStateBase();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
 	ENGINE_API class UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 
+	NETWORK_PC_ANDROID_1_API class UClass* Z_Construct_UClass_ACustomGameStateBase_NoRegister();
+	NETWORK_PC_ANDROID_1_API class UClass* Z_Construct_UClass_ACustomGameStateBase();
 	NETWORK_PC_ANDROID_1_API class UClass* Z_Construct_UClass_ANetwork_PC_Android_1GameModeBase_NoRegister();
 	NETWORK_PC_ANDROID_1_API class UClass* Z_Construct_UClass_ANetwork_PC_Android_1GameModeBase();
 	NETWORK_PC_ANDROID_1_API class UClass* Z_Construct_UClass_ASinCurveActor_NoRegister();
 	NETWORK_PC_ANDROID_1_API class UClass* Z_Construct_UClass_ASinCurveActor();
 	NETWORK_PC_ANDROID_1_API class UPackage* Z_Construct_UPackage__Script_Network_PC_Android_1();
+	UClass* Z_Construct_UClass_ACustomGameStateBase_NoRegister()
+	{
+		return ACustomGameStateBase::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ACustomGameStateBase()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AGameStateBase();
+			Z_Construct_UPackage__Script_Network_PC_Android_1();
+			OuterClass = ACustomGameStateBase::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900280;
+
+
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Input Movement Collision Rendering Utilities|Transformation"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("CustomGameStateBase.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("CustomGameStateBase.h"));
+				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ACustomGameStateBase(Z_Construct_UClass_ACustomGameStateBase, &ACustomGameStateBase::StaticClass, TEXT("ACustomGameStateBase"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ACustomGameStateBase);
 	UClass* Z_Construct_UClass_ANetwork_PC_Android_1GameModeBase_NoRegister()
 	{
 		return ANetwork_PC_Android_1GameModeBase::StaticClass();
@@ -109,8 +149,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/Network_PC_Android_1")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x3638FDB4;
-			Guid.B = 0x4A365409;
+			Guid.A = 0xE3AA4F5C;
+			Guid.B = 0x4FBE7B13;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

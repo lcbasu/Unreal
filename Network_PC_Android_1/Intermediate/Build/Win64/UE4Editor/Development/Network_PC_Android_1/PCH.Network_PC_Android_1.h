@@ -116,4 +116,5 @@
 #define MESHUTILITIES_API 
 #define KISMET_API DLLIMPORT
 #define NETWORKREPLAYSTREAMING_API 
+#define PROCEDURALMESHCOMPONENT_API DLLIMPORT
 #include "E:\Lokesh Basu\GitHub\Unreal\Network_PC_Android_1\Source\Network_PC_Android_1\Network_PC_Android_1.h"

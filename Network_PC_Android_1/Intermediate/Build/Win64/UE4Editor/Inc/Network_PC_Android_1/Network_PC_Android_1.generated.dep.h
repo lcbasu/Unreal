@@ -6,6 +6,9 @@
 ===========================================================================*/
 
 #include "GeneratedCppIncludes.h"
+#ifndef NETWORK_PC_ANDROID_1_CustomGameStateBase_generated_h
+	#include "CustomGameStateBase.h"
+#endif
 #ifndef NETWORK_PC_ANDROID_1_Network_PC_Android_1GameModeBase_generated_h
 	#include "Network_PC_Android_1GameModeBase.h"
 #endif

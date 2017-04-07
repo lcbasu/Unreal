@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Network_PC_Android_1.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{777C9628-7F94-497B-A962-8FDBB74187A5}</UniqueIdentifier>
+      <UniqueIdentifier>{54CB0DDD-8EB2-4766-947E-EA6296D1C16C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Network_PC_Android_1.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{B10D19D6-F34A-4E80-9C01-9950F8F70382}</UniqueIdentifier>
+      <UniqueIdentifier>{CE490479-C016-4358-8C8B-72C9EFF442BB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,7 +24,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Network_PC_Android_1">
-      <UniqueIdentifier>{52B2BEFB-77B9-43B9-B132-8ACF8C6CB988}</UniqueIdentifier>
+      <UniqueIdentifier>{E0CA10F0-2800-4DA0-8E0A-6975EF5834CE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Network_PC_Android_1\Network_PC_Android_1.Build.cs">
       <Filter>Source\Network_PC_Android_1</Filter>
@@ -41,14 +41,20 @@
     <ClInclude Include="..\..\Source\Network_PC_Android_1\Network_PC_Android_1GameModeBase.h">
       <Filter>Source\Network_PC_Android_1</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="..\..\Source\Network_PC_Android_1\SinCurveActor.cpp">
+      <Filter>Source\Network_PC_Android_1</Filter>
+    </ClCompile>
     <ClInclude Include="..\..\Source\Network_PC_Android_1\SinCurveActor.h">
       <Filter>Source\Network_PC_Android_1</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\Network_PC_Android_1\SinCurveActor.cpp">
+    <ClInclude Include="..\..\Source\Network_PC_Android_1\CustomGameStateBase.h">
+      <Filter>Source\Network_PC_Android_1</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Network_PC_Android_1\CustomGameStateBase.cpp">
       <Filter>Source\Network_PC_Android_1</Filter>
     </ClCompile>
   </ItemGroup>
