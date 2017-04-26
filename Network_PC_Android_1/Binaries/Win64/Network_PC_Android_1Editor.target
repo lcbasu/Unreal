@@ -2,7 +2,7 @@
 	"TargetName" : "Network_PC_Android_1Editor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "6a8540fb-f99d-40ee-b542-46ffb970ce3c",
+	"BuildId" : "",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -17,15 +17,15 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-Network_PC_Android_1-8325.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-Network_PC_Android_1.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-Network_PC_Android_1-8325.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-Network_PC_Android_1.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-Network_PC_Android_1-8325.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-Network_PC_Android_1.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -213,6 +213,10 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/WindowsMoviePlayer.uplugin",
+			"Type" : "UFS"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/UE4-GameLift/GameLift.uplugin",
 			"Type" : "UFS"
 		},
 		{
