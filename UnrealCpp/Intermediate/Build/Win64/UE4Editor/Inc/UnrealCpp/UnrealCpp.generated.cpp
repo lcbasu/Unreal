@@ -11,6 +11,10 @@
 PRAGMA_DISABLE_OPTIMIZATION
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
+	void AMyActor::StaticRegisterNativesAMyActor()
+	{
+	}
+	IMPLEMENT_CLASS(AMyActor, 1212221189);
 	void AUnrealCppCharacter::StaticRegisterNativesAUnrealCppCharacter()
 	{
 	}
@@ -30,6 +34,9 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 	IMPLEMENT_CLASS(AUnrealCppProjectile, 1405095451);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
+	ENGINE_API class UClass* Z_Construct_UClass_AActor();
+	ENGINE_API class UClass* Z_Construct_UClass_UMeshComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_UShapeComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
 	ENGINE_API class UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USoundBase_NoRegister();
@@ -43,10 +50,11 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 	ENGINE_API class UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API class UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor_NoRegister();
-	ENGINE_API class UClass* Z_Construct_UClass_AActor();
 	ENGINE_API class UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 
+	UNREALCPP_API class UClass* Z_Construct_UClass_AMyActor_NoRegister();
+	UNREALCPP_API class UClass* Z_Construct_UClass_AMyActor();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AUnrealCppCharacter_NoRegister();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AUnrealCppCharacter();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AUnrealCppGameMode_NoRegister();
@@ -57,6 +65,47 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 	UNREALCPP_API class UClass* Z_Construct_UClass_AUnrealCppProjectile_NoRegister();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AUnrealCppProjectile();
 	UNREALCPP_API class UPackage* Z_Construct_UPackage__Script_UnrealCpp();
+	UClass* Z_Construct_UClass_AMyActor_NoRegister()
+	{
+		return AMyActor::StaticClass();
+	}
+	UClass* Z_Construct_UClass_AMyActor()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AActor();
+			Z_Construct_UPackage__Script_UnrealCpp();
+			OuterClass = AMyActor::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_MyMesh = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("MyMesh"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(MyMesh, AMyActor), 0x0010000000080009, Z_Construct_UClass_UMeshComponent_NoRegister());
+				UProperty* NewProp_Root = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Root"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(Root, AMyActor), 0x0010000000080009, Z_Construct_UClass_UShapeComponent_NoRegister());
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("MyActor.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("MyActor.h"));
+				MetaData->SetValue(NewProp_MyMesh, TEXT("Category"), TEXT("MyActor"));
+				MetaData->SetValue(NewProp_MyMesh, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_MyMesh, TEXT("ModuleRelativePath"), TEXT("MyActor.h"));
+				MetaData->SetValue(NewProp_Root, TEXT("Category"), TEXT("MyActor"));
+				MetaData->SetValue(NewProp_Root, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_Root, TEXT("ModuleRelativePath"), TEXT("MyActor.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_AMyActor(Z_Construct_UClass_AMyActor, &AMyActor::StaticClass, TEXT("AMyActor"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(AMyActor);
 	UClass* Z_Construct_UClass_AUnrealCppCharacter_NoRegister()
 	{
 		return AUnrealCppCharacter::StaticClass();
@@ -319,8 +368,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/UnrealCpp")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x38E334B7;
-			Guid.B = 0x537460F1;
+			Guid.A = 0x0B6A47EF;
+			Guid.B = 0xA586BEE0;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

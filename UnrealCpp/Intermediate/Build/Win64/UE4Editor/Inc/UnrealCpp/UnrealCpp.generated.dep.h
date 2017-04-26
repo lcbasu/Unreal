@@ -6,6 +6,9 @@
 ===========================================================================*/
 
 #include "GeneratedCppIncludes.h"
+#ifndef UNREALCPP_MyActor_generated_h
+	#include "MyActor.h"
+#endif
 #ifndef UNREALCPP_UnrealCppCharacter_generated_h
 	#include "UnrealCppCharacter.h"
 #endif

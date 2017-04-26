@@ -2,7 +2,7 @@
 	"TargetName" : "UnrealCppEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "",
+	"BuildId" : "0b1e63c0-0eaa-40ae-9799-f67a8a178832",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -17,15 +17,15 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-UnrealCpp.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-UnrealCpp-8605.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-UnrealCpp.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-UnrealCpp-8605.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-UnrealCpp.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-UnrealCpp-8605.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
