@@ -28,6 +28,7 @@ public:
 	UPROPERTY(EditAnywhere)
 		UMeshComponent* MyMesh;
 
+	float RunningTime;
 	
 	
 };
