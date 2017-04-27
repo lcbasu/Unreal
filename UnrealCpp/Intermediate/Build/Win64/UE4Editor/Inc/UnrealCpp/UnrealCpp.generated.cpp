@@ -11,6 +11,11 @@
 PRAGMA_DISABLE_OPTIMIZATION
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
+	void AFinishLineActor::StaticRegisterNativesAFinishLineActor()
+	{
+		FNativeFunctionRegistrar::RegisterFunction(AFinishLineActor::StaticClass(), "OnOverlapBegin",(Native)&AFinishLineActor::execOnOverlapBegin);
+	}
+	IMPLEMENT_CLASS(AFinishLineActor, 4071197501);
 	void AMyActor::StaticRegisterNativesAMyActor()
 	{
 		FNativeFunctionRegistrar::RegisterFunction(AMyActor::StaticClass(), "OnOverlapBegin",(Native)&AMyActor::execOnOverlapBegin);
@@ -40,8 +45,8 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 	ENGINE_API class UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
-	ENGINE_API class UClass* Z_Construct_UClass_UMeshComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UShapeComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_UMeshComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
 	ENGINE_API class UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USoundBase_NoRegister();
@@ -55,6 +60,9 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 	ENGINE_API class UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 
+	UNREALCPP_API class UFunction* Z_Construct_UFunction_AFinishLineActor_OnOverlapBegin();
+	UNREALCPP_API class UClass* Z_Construct_UClass_AFinishLineActor_NoRegister();
+	UNREALCPP_API class UClass* Z_Construct_UClass_AFinishLineActor();
 	UNREALCPP_API class UFunction* Z_Construct_UFunction_AMyActor_OnOverlapBegin();
 	UNREALCPP_API class UFunction* Z_Construct_UFunction_AMyActor_OnOverlapEnd();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AMyActor_NoRegister();
@@ -69,6 +77,80 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 	UNREALCPP_API class UClass* Z_Construct_UClass_AUnrealCppProjectile_NoRegister();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AUnrealCppProjectile();
 	UNREALCPP_API class UPackage* Z_Construct_UPackage__Script_UnrealCpp();
+	UFunction* Z_Construct_UFunction_AFinishLineActor_OnOverlapBegin()
+	{
+		struct FinishLineActor_eventOnOverlapBegin_Parms
+		{
+			UPrimitiveComponent* OverlappedComp;
+			AActor* OtherActor;
+			UPrimitiveComponent* OtherComp;
+			int32 OtherBodyIndex;
+			bool bFromSweep;
+			FHitResult SweepResult;
+		};
+		UObject* Outer=Z_Construct_UClass_AFinishLineActor();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnOverlapBegin"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00420401, 65535, sizeof(FinishLineActor_eventOnOverlapBegin_Parms));
+			UProperty* NewProp_SweepResult = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("SweepResult"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(SweepResult, FinishLineActor_eventOnOverlapBegin_Parms), 0x0010008008000182, Z_Construct_UScriptStruct_FHitResult());
+			CPP_BOOL_PROPERTY_BITMASK_STRUCT(bFromSweep, FinishLineActor_eventOnOverlapBegin_Parms, bool);
+			UProperty* NewProp_bFromSweep = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("bFromSweep"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bFromSweep, FinishLineActor_eventOnOverlapBegin_Parms), 0x0010000000000080, CPP_BOOL_PROPERTY_BITMASK(bFromSweep, FinishLineActor_eventOnOverlapBegin_Parms), sizeof(bool), true);
+			UProperty* NewProp_OtherBodyIndex = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherBodyIndex"), RF_Public|RF_Transient|RF_MarkAsNative) UIntProperty(CPP_PROPERTY_BASE(OtherBodyIndex, FinishLineActor_eventOnOverlapBegin_Parms), 0x0010000000000080);
+			UProperty* NewProp_OtherComp = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherComp, FinishLineActor_eventOnOverlapBegin_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
+			UProperty* NewProp_OtherActor = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherActor"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherActor, FinishLineActor_eventOnOverlapBegin_Parms), 0x0010000000000080, Z_Construct_UClass_AActor_NoRegister());
+			UProperty* NewProp_OverlappedComp = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OverlappedComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OverlappedComp, FinishLineActor_eventOnOverlapBegin_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("FinishLineActor.h"));
+			MetaData->SetValue(NewProp_SweepResult, TEXT("NativeConst"), TEXT(""));
+			MetaData->SetValue(NewProp_OtherComp, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_OverlappedComp, TEXT("EditInline"), TEXT("true"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UClass* Z_Construct_UClass_AFinishLineActor_NoRegister()
+	{
+		return AFinishLineActor::StaticClass();
+	}
+	UClass* Z_Construct_UClass_AFinishLineActor()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AActor();
+			Z_Construct_UPackage__Script_UnrealCpp();
+			OuterClass = AFinishLineActor::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+				OuterClass->LinkChild(Z_Construct_UFunction_AFinishLineActor_OnOverlapBegin());
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_FinishLineBox = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("FinishLineBox"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(FinishLineBox, AFinishLineActor), 0x0010000000080009, Z_Construct_UClass_UShapeComponent_NoRegister());
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AFinishLineActor_OnOverlapBegin(), "OnOverlapBegin"); // 2411358328
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("FinishLineActor.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("FinishLineActor.h"));
+				MetaData->SetValue(NewProp_FinishLineBox, TEXT("Category"), TEXT("FinishLineActor"));
+				MetaData->SetValue(NewProp_FinishLineBox, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_FinishLineBox, TEXT("ModuleRelativePath"), TEXT("FinishLineActor.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_AFinishLineActor(Z_Construct_UClass_AFinishLineActor, &AFinishLineActor::StaticClass, TEXT("AFinishLineActor"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(AFinishLineActor);
 	UFunction* Z_Construct_UFunction_AMyActor_OnOverlapBegin()
 	{
 		struct MyActor_eventOnOverlapBegin_Parms
@@ -443,8 +525,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/UnrealCpp")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xA51C69C5;
-			Guid.B = 0xF2C0509A;
+			Guid.A = 0xB379D1D4;
+			Guid.B = 0xA984D63D;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

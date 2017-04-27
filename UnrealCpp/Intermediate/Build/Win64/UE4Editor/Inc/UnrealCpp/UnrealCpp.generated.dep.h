@@ -6,6 +6,9 @@
 ===========================================================================*/
 
 #include "GeneratedCppIncludes.h"
+#ifndef UNREALCPP_FinishLineActor_generated_h
+	#include "FinishLineActor.h"
+#endif
 #ifndef UNREALCPP_MyActor_generated_h
 	#include "MyActor.h"
 #endif

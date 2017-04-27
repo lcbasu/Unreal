@@ -70,9 +70,15 @@
     <ClInclude Include="..\..\Source\UnrealCpp\MyActor.h">
       <Filter>Source\UnrealCpp</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\UnrealCpp\FinishLineActor.h">
+      <Filter>Source\UnrealCpp</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\UnrealCpp\MyActor.cpp">
+      <Filter>Source\UnrealCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UnrealCpp\FinishLineActor.cpp">
       <Filter>Source\UnrealCpp</Filter>
     </ClCompile>
   </ItemGroup>
