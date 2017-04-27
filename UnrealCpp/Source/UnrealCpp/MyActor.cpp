@@ -11,9 +11,15 @@ AMyActor::AMyActor()
 	PrimaryActorTick.bCanEverTick = true;
 
 	// Initialization
+	BoxSize = FVector(1.5f, 1.5f, 1.5f);
+
 	Box = CreateDefaultSubobject<UBoxComponent>(TEXT("Box"));
 	Box->bGenerateOverlapEvents = true;
+	Box->OnComponentBeginOverlap.AddDynamic(this, &AMyActor::OnOverlapBegin);
 	
+	Box->SetRelativeScale3D(BoxSize);
+	
+
 	// Set Root as the Root Component
 	RootComponent = Box;
 
@@ -50,12 +56,12 @@ void AMyActor::Tick(float DeltaTime)
 	SetActorLocation(NewLocation);
 }
 
-void AMyActor::TriggerEnter(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-
+	// When player is hit by the rock, teleport them back to the start
+	OtherActor->SetActorLocation(PlayerStartingLocation);
 }
 
-void AMyActor::TriggerExit(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+void AMyActor::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
-
 }

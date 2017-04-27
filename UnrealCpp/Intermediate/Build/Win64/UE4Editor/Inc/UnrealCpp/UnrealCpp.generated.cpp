@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 	void AMyActor::StaticRegisterNativesAMyActor()
 	{
-		FNativeFunctionRegistrar::RegisterFunction(AMyActor::StaticClass(), "TriggerEnter",(Native)&AMyActor::execTriggerEnter);
-		FNativeFunctionRegistrar::RegisterFunction(AMyActor::StaticClass(), "TriggerExit",(Native)&AMyActor::execTriggerExit);
+		FNativeFunctionRegistrar::RegisterFunction(AMyActor::StaticClass(), "OnOverlapBegin",(Native)&AMyActor::execOnOverlapBegin);
+		FNativeFunctionRegistrar::RegisterFunction(AMyActor::StaticClass(), "OnOverlapEnd",(Native)&AMyActor::execOnOverlapEnd);
 	}
-	IMPLEMENT_CLASS(AMyActor, 834181225);
+	IMPLEMENT_CLASS(AMyActor, 3447716973);
 	void AUnrealCppCharacter::StaticRegisterNativesAUnrealCppCharacter()
 	{
 	}
@@ -55,8 +55,8 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 	ENGINE_API class UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 
-	UNREALCPP_API class UFunction* Z_Construct_UFunction_AMyActor_TriggerEnter();
-	UNREALCPP_API class UFunction* Z_Construct_UFunction_AMyActor_TriggerExit();
+	UNREALCPP_API class UFunction* Z_Construct_UFunction_AMyActor_OnOverlapBegin();
+	UNREALCPP_API class UFunction* Z_Construct_UFunction_AMyActor_OnOverlapEnd();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AMyActor_NoRegister();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AMyActor();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AUnrealCppCharacter_NoRegister();
@@ -69,10 +69,11 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 	UNREALCPP_API class UClass* Z_Construct_UClass_AUnrealCppProjectile_NoRegister();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AUnrealCppProjectile();
 	UNREALCPP_API class UPackage* Z_Construct_UPackage__Script_UnrealCpp();
-	UFunction* Z_Construct_UFunction_AMyActor_TriggerEnter()
+	UFunction* Z_Construct_UFunction_AMyActor_OnOverlapBegin()
 	{
-		struct MyActor_eventTriggerEnter_Parms
+		struct MyActor_eventOnOverlapBegin_Parms
 		{
+			UPrimitiveComponent* OverlappedComp;
 			AActor* OtherActor;
 			UPrimitiveComponent* OtherComp;
 			int32 OtherBodyIndex;
@@ -83,13 +84,14 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 		static UFunction* ReturnFunction = NULL;
 		if (!ReturnFunction)
 		{
-			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("TriggerEnter"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00420401, 65535, sizeof(MyActor_eventTriggerEnter_Parms));
-			UProperty* NewProp_SweepResult = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("SweepResult"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(SweepResult, MyActor_eventTriggerEnter_Parms), 0x0010008008000182, Z_Construct_UScriptStruct_FHitResult());
-			CPP_BOOL_PROPERTY_BITMASK_STRUCT(bFromSweep, MyActor_eventTriggerEnter_Parms, bool);
-			UProperty* NewProp_bFromSweep = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("bFromSweep"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bFromSweep, MyActor_eventTriggerEnter_Parms), 0x0010000000000080, CPP_BOOL_PROPERTY_BITMASK(bFromSweep, MyActor_eventTriggerEnter_Parms), sizeof(bool), true);
-			UProperty* NewProp_OtherBodyIndex = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherBodyIndex"), RF_Public|RF_Transient|RF_MarkAsNative) UIntProperty(CPP_PROPERTY_BASE(OtherBodyIndex, MyActor_eventTriggerEnter_Parms), 0x0010000000000080);
-			UProperty* NewProp_OtherComp = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherComp, MyActor_eventTriggerEnter_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
-			UProperty* NewProp_OtherActor = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherActor"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherActor, MyActor_eventTriggerEnter_Parms), 0x0010000000000080, Z_Construct_UClass_AActor_NoRegister());
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnOverlapBegin"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00420401, 65535, sizeof(MyActor_eventOnOverlapBegin_Parms));
+			UProperty* NewProp_SweepResult = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("SweepResult"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(SweepResult, MyActor_eventOnOverlapBegin_Parms), 0x0010008008000182, Z_Construct_UScriptStruct_FHitResult());
+			CPP_BOOL_PROPERTY_BITMASK_STRUCT(bFromSweep, MyActor_eventOnOverlapBegin_Parms, bool);
+			UProperty* NewProp_bFromSweep = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("bFromSweep"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bFromSweep, MyActor_eventOnOverlapBegin_Parms), 0x0010000000000080, CPP_BOOL_PROPERTY_BITMASK(bFromSweep, MyActor_eventOnOverlapBegin_Parms), sizeof(bool), true);
+			UProperty* NewProp_OtherBodyIndex = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherBodyIndex"), RF_Public|RF_Transient|RF_MarkAsNative) UIntProperty(CPP_PROPERTY_BASE(OtherBodyIndex, MyActor_eventOnOverlapBegin_Parms), 0x0010000000000080);
+			UProperty* NewProp_OtherComp = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherComp, MyActor_eventOnOverlapBegin_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
+			UProperty* NewProp_OtherActor = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherActor"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherActor, MyActor_eventOnOverlapBegin_Parms), 0x0010000000000080, Z_Construct_UClass_AActor_NoRegister());
+			UProperty* NewProp_OverlappedComp = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OverlappedComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OverlappedComp, MyActor_eventOnOverlapBegin_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
 			ReturnFunction->Bind();
 			ReturnFunction->StaticLink();
 #if WITH_METADATA
@@ -97,14 +99,16 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("MyActor.h"));
 			MetaData->SetValue(NewProp_SweepResult, TEXT("NativeConst"), TEXT(""));
 			MetaData->SetValue(NewProp_OtherComp, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_OverlappedComp, TEXT("EditInline"), TEXT("true"));
 #endif
 		}
 		return ReturnFunction;
 	}
-	UFunction* Z_Construct_UFunction_AMyActor_TriggerExit()
+	UFunction* Z_Construct_UFunction_AMyActor_OnOverlapEnd()
 	{
-		struct MyActor_eventTriggerExit_Parms
+		struct MyActor_eventOnOverlapEnd_Parms
 		{
+			UPrimitiveComponent* OverlappedComp;
 			AActor* OtherActor;
 			UPrimitiveComponent* OtherComp;
 			int32 OtherBodyIndex;
@@ -113,16 +117,18 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 		static UFunction* ReturnFunction = NULL;
 		if (!ReturnFunction)
 		{
-			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("TriggerExit"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00020401, 65535, sizeof(MyActor_eventTriggerExit_Parms));
-			UProperty* NewProp_OtherBodyIndex = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherBodyIndex"), RF_Public|RF_Transient|RF_MarkAsNative) UIntProperty(CPP_PROPERTY_BASE(OtherBodyIndex, MyActor_eventTriggerExit_Parms), 0x0010000000000080);
-			UProperty* NewProp_OtherComp = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherComp, MyActor_eventTriggerExit_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
-			UProperty* NewProp_OtherActor = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherActor"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherActor, MyActor_eventTriggerExit_Parms), 0x0010000000000080, Z_Construct_UClass_AActor_NoRegister());
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnOverlapEnd"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00020401, 65535, sizeof(MyActor_eventOnOverlapEnd_Parms));
+			UProperty* NewProp_OtherBodyIndex = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherBodyIndex"), RF_Public|RF_Transient|RF_MarkAsNative) UIntProperty(CPP_PROPERTY_BASE(OtherBodyIndex, MyActor_eventOnOverlapEnd_Parms), 0x0010000000000080);
+			UProperty* NewProp_OtherComp = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherComp, MyActor_eventOnOverlapEnd_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
+			UProperty* NewProp_OtherActor = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OtherActor"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OtherActor, MyActor_eventOnOverlapEnd_Parms), 0x0010000000000080, Z_Construct_UClass_AActor_NoRegister());
+			UProperty* NewProp_OverlappedComp = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OverlappedComp"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OverlappedComp, MyActor_eventOnOverlapEnd_Parms), 0x0010000000080080, Z_Construct_UClass_UPrimitiveComponent_NoRegister());
 			ReturnFunction->Bind();
 			ReturnFunction->StaticLink();
 #if WITH_METADATA
 			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
 			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("MyActor.h"));
 			MetaData->SetValue(NewProp_OtherComp, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_OverlappedComp, TEXT("EditInline"), TEXT("true"));
 #endif
 		}
 		return ReturnFunction;
@@ -144,16 +150,16 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20900080;
 
-				OuterClass->LinkChild(Z_Construct_UFunction_AMyActor_TriggerEnter());
-				OuterClass->LinkChild(Z_Construct_UFunction_AMyActor_TriggerExit());
+				OuterClass->LinkChild(Z_Construct_UFunction_AMyActor_OnOverlapBegin());
+				OuterClass->LinkChild(Z_Construct_UFunction_AMyActor_OnOverlapEnd());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_SpeedScale = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("SpeedScale"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(SpeedScale, AMyActor), 0x0010000000000001);
 				UProperty* NewProp_MyMesh = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("MyMesh"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(MyMesh, AMyActor), 0x0010000000080009, Z_Construct_UClass_UMeshComponent_NoRegister());
 				UProperty* NewProp_Box = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Box"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(Box, AMyActor), 0x0010000000080009, Z_Construct_UClass_UShapeComponent_NoRegister());
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
-				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AMyActor_TriggerEnter(), "TriggerEnter"); // 4003644210
-				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AMyActor_TriggerExit(), "TriggerExit"); // 336961830
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AMyActor_OnOverlapBegin(), "OnOverlapBegin"); // 549236918
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AMyActor_OnOverlapEnd(), "OnOverlapEnd"); // 247757675
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
@@ -437,8 +443,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/UnrealCpp")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xC8981391;
-			Guid.B = 0x902365C7;
+			Guid.A = 0xA51C69C5;
+			Guid.B = 0xF2C0509A;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
