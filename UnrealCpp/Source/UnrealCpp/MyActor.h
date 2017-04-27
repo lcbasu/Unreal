@@ -23,12 +23,23 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere)
-		UShapeComponent* Root;
+		UShapeComponent* Box;
 
 	UPROPERTY(EditAnywhere)
 		UMeshComponent* MyMesh;
 
+	UPROPERTY(EditAnywhere)
+		float SpeedScale;
+
+	FVector PlayerStartingLocation;
+
 	float RunningTime;
+
+	UFUNCTION()
+		void TriggerEnter(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+	UFUNCTION()
+		void TriggerExit(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 	
 	
 };

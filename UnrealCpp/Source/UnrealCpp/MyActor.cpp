@@ -11,15 +11,20 @@ AMyActor::AMyActor()
 	PrimaryActorTick.bCanEverTick = true;
 
 	// Initialization
-	Root = CreateDefaultSubobject<UBoxComponent>(TEXT("Root"));
+	Box = CreateDefaultSubobject<UBoxComponent>(TEXT("Box"));
+	Box->bGenerateOverlapEvents = true;
 	
 	// Set Root as the Root Component
-	RootComponent = Root;
+	RootComponent = Box;
 
 	MyMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MyMesh"));
 
 	// Attach the mesh to root component
 	MyMesh->AttachTo(RootComponent);
+
+	SpeedScale = 0.0f;
+
+	PlayerStartingLocation = FVector(-351.0f, -99.0f, 235.0f);
 
 }
 
@@ -39,11 +44,18 @@ void AMyActor::Tick(float DeltaTime)
 
 	float DeltaHeight = FMath::Sin(RunningTime + DeltaTime) - FMath::Sin(RunningTime);
 
-	float Scale = 100.0f;
-
-	NewLocation.Z += DeltaHeight * Scale;
+	NewLocation.Y += DeltaHeight * SpeedScale;
 	RunningTime += DeltaTime;
 
 	SetActorLocation(NewLocation);
 }
 
+void AMyActor::TriggerEnter(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+
+}
+
+void AMyActor::TriggerExit(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+
+}
