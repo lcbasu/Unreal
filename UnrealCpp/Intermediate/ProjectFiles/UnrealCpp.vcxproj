@@ -568,9 +568,11 @@
     <None Include="..\..\Config\DefaultGame.ini" />
     <None Include="..\..\Config\DefaultInput.ini" />
     <None Include="..\..\Source\UnrealCpp\UnrealCpp.Build.cs" />
+    <ClCompile Include="..\..\Source\UnrealCpp\CameraUtility.cpp" />
     <ClCompile Include="..\..\Source\UnrealCpp\FinishLineActor.cpp" />
     <ClCompile Include="..\..\Source\UnrealCpp\MyActor.cpp" />
     <ClCompile Include="..\..\Source\UnrealCpp\UnrealCpp.cpp" />
+    <ClInclude Include="..\..\Source\UnrealCpp\CameraUtility.h" />
     <ClInclude Include="..\..\Source\UnrealCpp\FinishLineActor.h" />
     <ClInclude Include="..\..\Source\UnrealCpp\MyActor.h" />
     <ClInclude Include="..\..\Source\UnrealCpp\UnrealCpp.h" />

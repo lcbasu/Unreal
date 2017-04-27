@@ -6,6 +6,9 @@
 ===========================================================================*/
 
 #include "GeneratedCppIncludes.h"
+#ifndef UNREALCPP_CameraUtility_generated_h
+	#include "CameraUtility.h"
+#endif
 #ifndef UNREALCPP_FinishLineActor_generated_h
 	#include "FinishLineActor.h"
 #endif

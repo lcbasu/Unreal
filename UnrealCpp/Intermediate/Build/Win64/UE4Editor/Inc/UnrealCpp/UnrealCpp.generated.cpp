@@ -11,6 +11,10 @@
 PRAGMA_DISABLE_OPTIMIZATION
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
+	void ACameraUtility::StaticRegisterNativesACameraUtility()
+	{
+	}
+	IMPLEMENT_CLASS(ACameraUtility, 4252813830);
 	void AFinishLineActor::StaticRegisterNativesAFinishLineActor()
 	{
 		FNativeFunctionRegistrar::RegisterFunction(AFinishLineActor::StaticClass(), "OnOverlapBegin",(Native)&AFinishLineActor::execOnOverlapBegin);
@@ -41,10 +45,10 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 	IMPLEMENT_CLASS(AUnrealCppProjectile, 1405095451);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
+	ENGINE_API class UClass* Z_Construct_UClass_AActor();
+	ENGINE_API class UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API class UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API class UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
-	ENGINE_API class UClass* Z_Construct_UClass_AActor_NoRegister();
-	ENGINE_API class UClass* Z_Construct_UClass_AActor();
 	ENGINE_API class UClass* Z_Construct_UClass_UShapeComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UMeshComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
@@ -60,6 +64,8 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 	ENGINE_API class UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 
+	UNREALCPP_API class UClass* Z_Construct_UClass_ACameraUtility_NoRegister();
+	UNREALCPP_API class UClass* Z_Construct_UClass_ACameraUtility();
 	UNREALCPP_API class UFunction* Z_Construct_UFunction_AFinishLineActor_OnOverlapBegin();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AFinishLineActor_NoRegister();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AFinishLineActor();
@@ -77,6 +83,45 @@ void EmptyLinkFunctionForGeneratedCode1UnrealCpp() {}
 	UNREALCPP_API class UClass* Z_Construct_UClass_AUnrealCppProjectile_NoRegister();
 	UNREALCPP_API class UClass* Z_Construct_UClass_AUnrealCppProjectile();
 	UNREALCPP_API class UPackage* Z_Construct_UPackage__Script_UnrealCpp();
+	UClass* Z_Construct_UClass_ACameraUtility_NoRegister()
+	{
+		return ACameraUtility::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ACameraUtility()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AActor();
+			Z_Construct_UPackage__Script_UnrealCpp();
+			OuterClass = ACameraUtility::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_CameraTwo = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CameraTwo"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(CameraTwo, ACameraUtility), 0x0010000000000001, Z_Construct_UClass_AActor_NoRegister());
+				UProperty* NewProp_CameraOne = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CameraOne"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(CameraOne, ACameraUtility), 0x0010000000000001, Z_Construct_UClass_AActor_NoRegister());
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("CameraUtility.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("CameraUtility.h"));
+				MetaData->SetValue(NewProp_CameraTwo, TEXT("Category"), TEXT("CameraUtility"));
+				MetaData->SetValue(NewProp_CameraTwo, TEXT("ModuleRelativePath"), TEXT("CameraUtility.h"));
+				MetaData->SetValue(NewProp_CameraOne, TEXT("Category"), TEXT("CameraUtility"));
+				MetaData->SetValue(NewProp_CameraOne, TEXT("ModuleRelativePath"), TEXT("CameraUtility.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ACameraUtility(Z_Construct_UClass_ACameraUtility, &ACameraUtility::StaticClass, TEXT("ACameraUtility"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ACameraUtility);
 	UFunction* Z_Construct_UFunction_AFinishLineActor_OnOverlapBegin()
 	{
 		struct FinishLineActor_eventOnOverlapBegin_Parms
@@ -525,8 +570,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/UnrealCpp")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xB379D1D4;
-			Guid.B = 0xA984D63D;
+			Guid.A = 0x5A78656E;
+			Guid.B = 0xFF261EE9;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
