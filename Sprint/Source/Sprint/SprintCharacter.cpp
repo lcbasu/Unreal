@@ -7,6 +7,7 @@
 #include "GameFramework/InputSettings.h"
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
 #include "MotionControllerComponent.h"
+#include "Engine/Engine.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -108,6 +109,9 @@ void ASprintCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 {
 	// set up gameplay key bindings
 	check(PlayerInputComponent);
+
+	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &ASprintCharacter::BeginSprint);
+	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &ASprintCharacter::EndSprint);
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
@@ -252,8 +256,12 @@ void ASprintCharacter::MoveForward(float Value)
 {
 	if (Value != 0.0f)
 	{
+		if (bIsSprinting)
+		{
+			Value *= 2;
+		}
 		// add movement in that direction
-		AddMovementInput(GetActorForwardVector(), Value);
+		AddMovementInput(GetActorForwardVector(), Value/2);
 	}
 }
 
@@ -261,9 +269,25 @@ void ASprintCharacter::MoveRight(float Value)
 {
 	if (Value != 0.0f)
 	{
+		if (bIsSprinting)
+		{
+			Value *= 2;
+		}
 		// add movement in that direction
-		AddMovementInput(GetActorRightVector(), Value);
+		AddMovementInput(GetActorRightVector(), Value/2);
 	}
+}
+
+void ASprintCharacter::BeginSprint()
+{
+	bIsSprinting = true;
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("You are sprinting"));
+}
+
+void ASprintCharacter::EndSprint()
+{
+	bIsSprinting = false;
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("You are no longer sprinting"));
 }
 
 void ASprintCharacter::TurnAtRate(float Rate)

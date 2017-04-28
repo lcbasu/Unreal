@@ -91,6 +91,14 @@ protected:
 	/** Handles stafing movement, left and right */
 	void MoveRight(float Val);
 
+	/** Handles player sprinting, begin and end */
+	void BeginSprint();
+
+	void EndSprint();
+
+	bool bIsSprinting = false;
+
+
 	/**
 	 * Called via input to turn at a given rate.
 	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate

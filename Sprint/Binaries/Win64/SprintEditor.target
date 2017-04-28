@@ -2,7 +2,7 @@
 	"TargetName" : "SprintEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "",
+	"BuildId" : "ba6124dd-0cc1-4978-976b-8c956654fed5",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -17,15 +17,15 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-Sprint.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-Sprint-2995.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-Sprint.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-Sprint-2995.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-Sprint.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-Sprint-2995.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
