@@ -286,6 +286,10 @@ void AItemSystemCharacter::EndPickup()
 
 void AItemSystemCharacter::ShowInventory()
 {
+	for (auto& Item : Inventory)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, FString(Item));
+	}
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Inventory Items:"));
 }
 
