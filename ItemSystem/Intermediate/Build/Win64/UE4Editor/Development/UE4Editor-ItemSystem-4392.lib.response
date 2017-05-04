@@ -1,0 +1,28 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-ItemSystem-4392.dll"
+/IGNORE:4221
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\PCH.ItemSystem.h.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\Item.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\ItemSystem.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\ItemSystemCharacter.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\ItemSystemGameMode.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\ItemSystemHUD.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\ItemSystemProjectile.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\ItemSystem.generated.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ItemSystem-4392.lib"

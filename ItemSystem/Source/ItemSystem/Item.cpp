@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "ItemSystem.h"
+#include "Engine/Engine.h"
 #include "Item.h"
 
 
@@ -35,18 +36,32 @@ void AItem::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (MyPlayerController != NULL)
+	{
+		if (MyPlayerController->bIsPickingUp && bItemIsWithinRange)
+		{
+			Pickup();
+		}
+	}
 }
 
 void AItem::Pickup()
 {
+	MyPlayerController->Inventory.Add(*ItemName);
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("You picked up the item"));
+	Destroy();
 }
 
-void AItem::GetPlayer(AActor * player)
+void AItem::GetPlayer(AActor * Player)
 {
+	MyPlayerController = Cast<AItemSystemCharacter>(Player);
 }
 
 void AItem::OnOverlapBegin(UPrimitiveComponent * OverlappedComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
 {
+	bItemIsWithinRange = true;
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, FString("Press E to pickup:" + ItemName));
+	GetPlayer(OtherActor);
 }
 
 void AItem::OnOverlapEnd(UPrimitiveComponent * OverlappedComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex)
