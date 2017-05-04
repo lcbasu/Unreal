@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\MenuDesign.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{9C9C199E-E141-4F54-A0A7-B541386E5EA8}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\MenuDesign.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\MenuDesignEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{F22088B3-F7B4-48AF-A892-0B73AC35BA33}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\MenuDesign">
+			<UniqueIdentifier>{85BC8ED1-5DA7-46B2-95C3-78D7D0C17C9D}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\MenuDesign\MenuDesign.Build.cs">
+			<Filter>Source\MenuDesign</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\MenuDesign\MenuDesign.cpp">
+			<Filter>Source\MenuDesign</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\MenuDesign\MenuDesign.h">
+			<Filter>Source\MenuDesign</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\MenuDesign\MenuDesignGameModeBase.cpp">
+			<Filter>Source\MenuDesign</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\MenuDesign\MenuDesignGameModeBase.h">
+			<Filter>Source\MenuDesign</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>

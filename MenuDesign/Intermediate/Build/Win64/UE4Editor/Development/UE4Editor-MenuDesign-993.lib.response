@@ -1,0 +1,24 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-MenuDesign-993.dll"
+/IGNORE:4221
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"E:\Lokesh Basu\GitHub\Unreal\MenuDesign\Intermediate\Build\Win64\UE4Editor\Development\MenuDesign\PCH.MenuDesign.h.obj"
+"E:\Lokesh Basu\GitHub\Unreal\MenuDesign\Intermediate\Build\Win64\UE4Editor\Development\MenuDesign\MenuDesign.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\MenuDesign\Intermediate\Build\Win64\UE4Editor\Development\MenuDesign\MenuDesignGameModeBase.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\MenuDesign\Intermediate\Build\Win64\UE4Editor\Development\MenuDesign\MenuDesign.generated.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\MenuDesign\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"E:\Lokesh Basu\GitHub\Unreal\MenuDesign\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-MenuDesign-993.lib"
