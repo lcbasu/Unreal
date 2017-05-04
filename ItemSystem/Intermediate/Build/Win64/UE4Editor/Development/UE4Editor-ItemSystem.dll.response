@@ -1,0 +1,70 @@
+/MANIFEST:NO
+/NOLOGO
+/DEBUG
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/FIXED:No
+/NXCOMPAT
+/STACK:5000000
+/DELAY:UNLOAD
+/DLL
+/PDBALTPATH:%_PDB%
+/OPT:NOREF
+/OPT:NOICF
+/INCREMENTAL:NO
+/ignore:4199
+/ignore:4099
+/DELAYLOAD:"d3d12.dll"
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\PCH.ItemSystem.h.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\ItemSystem.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\ItemSystemCharacter.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\ItemSystemGameMode.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\ItemSystemHUD.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\ItemSystemProjectile.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\ItemSystem.generated.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ItemSystem\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+"delayimp.lib"
+"wininet.lib"
+"rpcrt4.lib"
+"ws2_32.lib"
+"dbghelp.lib"
+"comctl32.lib"
+"Winmm.lib"
+"kernel32.lib"
+"user32.lib"
+"gdi32.lib"
+"winspool.lib"
+"comdlg32.lib"
+"advapi32.lib"
+"shell32.lib"
+"ole32.lib"
+"oleaut32.lib"
+"uuid.lib"
+"odbc32.lib"
+"odbccp32.lib"
+"netapi32.lib"
+"iphlpapi.lib"
+"setupapi.lib"
+"dwmapi.lib"
+"imm32.lib"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Core.lib"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoreUObject.lib"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Engine.lib"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InputCore.lib"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-HeadMountedDisplay.lib"
+/OUT:"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Binaries\Win64\UE4Editor-ItemSystem.dll"
+/IMPLIB:"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ItemSystem.suppressed.lib"
+/PDB:"E:\Lokesh Basu\GitHub\Unreal\ItemSystem\Binaries\Win64\UE4Editor-ItemSystem.pdb"
+/ignore:4078
