@@ -2,7 +2,7 @@
 	"TargetName" : "ItemSystemEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "",
+	"BuildId" : "4f684756-697c-498f-ac5f-d1ef1875f92e",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -17,15 +17,15 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-ItemSystem.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-ItemSystem-7217.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-ItemSystem.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-ItemSystem-7217.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-ItemSystem.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-ItemSystem-7217.lib",
 			"Type" : "ImportLibrary"
 		},
 		{

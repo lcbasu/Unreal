@@ -9,6 +9,9 @@
 #ifndef ITEMSYSTEM_ItemSystemCharacter_generated_h
 	#include "ItemSystemCharacter.h"
 #endif
+#ifndef ITEMSYSTEM_Item_generated_h
+	#include "Item.h"
+#endif
 #ifndef ITEMSYSTEM_ItemSystemGameMode_generated_h
 	#include "ItemSystemGameMode.h"
 #endif

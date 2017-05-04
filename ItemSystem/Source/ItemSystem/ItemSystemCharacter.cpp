@@ -6,6 +6,7 @@
 #include "Animation/AnimInstance.h"
 #include "GameFramework/InputSettings.h"
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
+#include "Engine/Engine.h"
 #include "MotionControllerComponent.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
@@ -17,6 +18,8 @@ AItemSystemCharacter::AItemSystemCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
+
+	bIsPickingUp = false;
 
 	// set our turn rates for input
 	BaseTurnRate = 45.f;
@@ -108,6 +111,11 @@ void AItemSystemCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 {
 	// set up gameplay key bindings
 	check(PlayerInputComponent);
+
+	PlayerInputComponent->BindAction("Pickup", IE_Pressed, this, &AItemSystemCharacter::BeginPickup);
+	PlayerInputComponent->BindAction("Pickup", IE_Released, this, &AItemSystemCharacter::EndPickup);
+
+	PlayerInputComponent->BindAction("ShowInventory", IE_Pressed, this, &AItemSystemCharacter::ShowInventory);
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
@@ -264,6 +272,21 @@ void AItemSystemCharacter::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(GetActorRightVector(), Value);
 	}
+}
+
+void AItemSystemCharacter::BeginPickup()
+{
+	bIsPickingUp = true;
+}
+
+void AItemSystemCharacter::EndPickup()
+{
+	bIsPickingUp = false;
+}
+
+void AItemSystemCharacter::ShowInventory()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Inventory Items:"));
 }
 
 void AItemSystemCharacter::TurnAtRate(float Rate)

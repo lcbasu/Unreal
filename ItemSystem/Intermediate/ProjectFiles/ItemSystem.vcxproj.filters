@@ -1,70 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\ItemSystem.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{B5880B8A-5317-4420-8B7C-51A5634A1474}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\ItemSystem.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\ItemSystemEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{5BEF567E-CCBB-4EC8-A1ED-8A8C8EBD363C}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultInput.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\ItemSystem">
-			<UniqueIdentifier>{F999E7F1-133E-4C42-943C-DACD8862313D}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\ItemSystem\ItemSystem.Build.cs">
-			<Filter>Source\ItemSystem</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\ItemSystem\ItemSystem.cpp">
-			<Filter>Source\ItemSystem</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\ItemSystem\ItemSystem.h">
-			<Filter>Source\ItemSystem</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\ItemSystem\ItemSystemCharacter.cpp">
-			<Filter>Source\ItemSystem</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\ItemSystem\ItemSystemCharacter.h">
-			<Filter>Source\ItemSystem</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\ItemSystem\ItemSystemGameMode.cpp">
-			<Filter>Source\ItemSystem</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\ItemSystem\ItemSystemGameMode.h">
-			<Filter>Source\ItemSystem</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\ItemSystem\ItemSystemHUD.cpp">
-			<Filter>Source\ItemSystem</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\ItemSystem\ItemSystemHUD.h">
-			<Filter>Source\ItemSystem</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\ItemSystem\ItemSystemProjectile.cpp">
-			<Filter>Source\ItemSystem</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\ItemSystem\ItemSystemProjectile.h">
-			<Filter>Source\ItemSystem</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\ItemSystem.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{B5880B8A-5317-4420-8B7C-51A5634A1474}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ItemSystem.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ItemSystemEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{5BEF567E-CCBB-4EC8-A1ED-8A8C8EBD363C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\ItemSystem">
+      <UniqueIdentifier>{F999E7F1-133E-4C42-943C-DACD8862313D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ItemSystem\ItemSystem.Build.cs">
+      <Filter>Source\ItemSystem</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\ItemSystem\ItemSystem.cpp">
+      <Filter>Source\ItemSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ItemSystem\ItemSystem.h">
+      <Filter>Source\ItemSystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ItemSystem\ItemSystemCharacter.cpp">
+      <Filter>Source\ItemSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ItemSystem\ItemSystemCharacter.h">
+      <Filter>Source\ItemSystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ItemSystem\ItemSystemGameMode.cpp">
+      <Filter>Source\ItemSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ItemSystem\ItemSystemGameMode.h">
+      <Filter>Source\ItemSystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ItemSystem\ItemSystemHUD.cpp">
+      <Filter>Source\ItemSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ItemSystem\ItemSystemHUD.h">
+      <Filter>Source\ItemSystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ItemSystem\ItemSystemProjectile.cpp">
+      <Filter>Source\ItemSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ItemSystem\ItemSystemProjectile.h">
+      <Filter>Source\ItemSystem</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\ItemSystem\Item.h">
+      <Filter>Source\ItemSystem</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\ItemSystem\Item.cpp">
+      <Filter>Source\ItemSystem</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

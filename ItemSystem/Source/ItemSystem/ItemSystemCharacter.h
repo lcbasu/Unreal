@@ -49,6 +49,10 @@ protected:
 	virtual void BeginPlay();
 
 public:
+
+	TArray<FString> Inventory;
+	bool bIsPickingUp;
+
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseTurnRate;
@@ -90,6 +94,10 @@ protected:
 
 	/** Handles stafing movement, left and right */
 	void MoveRight(float Val);
+
+	void BeginPickup();
+	void EndPickup();
+	void ShowInventory();
 
 	/**
 	 * Called via input to turn at a given rate.
