@@ -3,11 +3,11 @@
 #pragma once
 
 #include "GameFramework/Actor.h"
-//#include "ProceduralMeshComponent.h"
-//#include "KismetProceduralMeshLibrary.h"
-//#include "assimp/scene.h"
-//#include "assimp/postprocess.h"
-//#include "assimp/Importer.hpp"
+#include "ProceduralMeshComponent.h"
+#include "KismetProceduralMeshLibrary.h"
+#include "assimp/scene.h"
+#include "assimp/postprocess.h"
+#include "assimp/Importer.hpp"
 #include "AssimpActor.generated.h"
 
 UCLASS()
