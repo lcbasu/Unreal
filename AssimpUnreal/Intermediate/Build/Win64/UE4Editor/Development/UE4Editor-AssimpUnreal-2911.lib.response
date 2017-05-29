@@ -1,0 +1,28 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-AssimpUnreal-2911.dll"
+/IGNORE:4221
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"E:\Lokesh Basu\GitHub\Unreal\AssimpUnreal\Intermediate\Build\Win64\UE4Editor\Development\AssimpUnreal\PCH.AssimpUnreal.h.obj"
+"E:\Lokesh Basu\GitHub\Unreal\AssimpUnreal\Intermediate\Build\Win64\UE4Editor\Development\AssimpUnreal\AssimpActor.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\AssimpUnreal\Intermediate\Build\Win64\UE4Editor\Development\AssimpUnreal\AssimpUnreal.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\AssimpUnreal\Intermediate\Build\Win64\UE4Editor\Development\AssimpUnreal\AssimpUnrealCharacter.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\AssimpUnreal\Intermediate\Build\Win64\UE4Editor\Development\AssimpUnreal\AssimpUnrealGameMode.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\AssimpUnreal\Intermediate\Build\Win64\UE4Editor\Development\AssimpUnreal\AssimpUnrealHUD.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\AssimpUnreal\Intermediate\Build\Win64\UE4Editor\Development\AssimpUnreal\AssimpUnrealProjectile.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\AssimpUnreal\Intermediate\Build\Win64\UE4Editor\Development\AssimpUnreal\AssimpUnreal.generated.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\AssimpUnreal\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"E:\Lokesh Basu\GitHub\Unreal\AssimpUnreal\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-AssimpUnreal-2911.lib"

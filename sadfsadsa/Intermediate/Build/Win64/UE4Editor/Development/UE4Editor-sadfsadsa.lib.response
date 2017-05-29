@@ -1,0 +1,27 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-sadfsadsa.dll"
+/IGNORE:4221
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"E:\Lokesh Basu\GitHub\Unreal\sadfsadsa\Intermediate\Build\Win64\UE4Editor\Development\sadfsadsa\PCH.sadfsadsa.h.obj"
+"E:\Lokesh Basu\GitHub\Unreal\sadfsadsa\Intermediate\Build\Win64\UE4Editor\Development\sadfsadsa\sadfsadsa.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\sadfsadsa\Intermediate\Build\Win64\UE4Editor\Development\sadfsadsa\sadfsadsaCharacter.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\sadfsadsa\Intermediate\Build\Win64\UE4Editor\Development\sadfsadsa\sadfsadsaGameMode.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\sadfsadsa\Intermediate\Build\Win64\UE4Editor\Development\sadfsadsa\sadfsadsaHUD.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\sadfsadsa\Intermediate\Build\Win64\UE4Editor\Development\sadfsadsa\sadfsadsaProjectile.cpp.obj"
+"E:\Lokesh Basu\GitHub\Unreal\sadfsadsa\Intermediate\Build\Win64\UE4Editor\Development\sadfsadsa\sadfsadsa.generated.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\sadfsadsa\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"E:\Lokesh Basu\GitHub\Unreal\sadfsadsa\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-sadfsadsa.lib"

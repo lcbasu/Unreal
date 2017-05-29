@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\sadfsadsa.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{3C5A876F-11B9-48EE-A99D-DDF0FF28931D}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\sadfsadsa.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\sadfsadsaEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{33391DA8-BF59-463B-87A6-B0EF71195F0A}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\sadfsadsa">
+			<UniqueIdentifier>{D519646B-BA7E-40AD-AC9C-20BCF4C42AB7}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\sadfsadsa\sadfsadsa.Build.cs">
+			<Filter>Source\sadfsadsa</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\sadfsadsa\sadfsadsa.cpp">
+			<Filter>Source\sadfsadsa</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\sadfsadsa\sadfsadsa.h">
+			<Filter>Source\sadfsadsa</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\sadfsadsa\sadfsadsaCharacter.cpp">
+			<Filter>Source\sadfsadsa</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\sadfsadsa\sadfsadsaCharacter.h">
+			<Filter>Source\sadfsadsa</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\sadfsadsa\sadfsadsaGameMode.cpp">
+			<Filter>Source\sadfsadsa</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\sadfsadsa\sadfsadsaGameMode.h">
+			<Filter>Source\sadfsadsa</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\sadfsadsa\sadfsadsaHUD.cpp">
+			<Filter>Source\sadfsadsa</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\sadfsadsa\sadfsadsaHUD.h">
+			<Filter>Source\sadfsadsa</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\sadfsadsa\sadfsadsaProjectile.cpp">
+			<Filter>Source\sadfsadsa</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\sadfsadsa\sadfsadsaProjectile.h">
+			<Filter>Source\sadfsadsa</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>

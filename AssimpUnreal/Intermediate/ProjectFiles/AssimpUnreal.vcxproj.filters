@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\AssimpUnreal.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{67EB0E24-204E-4362-B94A-53CA20E0B476}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\AssimpUnreal.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\AssimpUnrealEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{98776B45-96EF-461C-B04A-07BF16517F9B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\AssimpUnreal">
+      <UniqueIdentifier>{13784822-1B97-46FC-BB12-AA80A6081142}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\AssimpUnreal\AssimpUnreal.Build.cs">
+      <Filter>Source\AssimpUnreal</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\AssimpUnreal\AssimpUnreal.cpp">
+      <Filter>Source\AssimpUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AssimpUnreal\AssimpUnreal.h">
+      <Filter>Source\AssimpUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AssimpUnreal\AssimpUnrealCharacter.cpp">
+      <Filter>Source\AssimpUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AssimpUnreal\AssimpUnrealCharacter.h">
+      <Filter>Source\AssimpUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AssimpUnreal\AssimpUnrealGameMode.cpp">
+      <Filter>Source\AssimpUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AssimpUnreal\AssimpUnrealGameMode.h">
+      <Filter>Source\AssimpUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AssimpUnreal\AssimpUnrealHUD.cpp">
+      <Filter>Source\AssimpUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AssimpUnreal\AssimpUnrealHUD.h">
+      <Filter>Source\AssimpUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AssimpUnreal\AssimpUnrealProjectile.cpp">
+      <Filter>Source\AssimpUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AssimpUnreal\AssimpUnrealProjectile.h">
+      <Filter>Source\AssimpUnreal</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\AssimpUnreal\AssimpActor.h">
+      <Filter>Source\AssimpUnreal</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\AssimpUnreal\AssimpActor.cpp">
+      <Filter>Source\AssimpUnreal</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
